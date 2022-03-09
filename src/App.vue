@@ -1,7 +1,11 @@
 <template>
-  <Navbar/>
-  <Footer/>
-  <router-view/>
+  <Navbar :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
+  <div class="container">
+    <div class="row">
+      <router-view />
+    </div>
+  </div>
+  <Footer :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
 </template>
 
 <script>
@@ -12,6 +16,13 @@ export default {
   components: {
     Navbar,
     Footer
+  },
+  data() {
+    return {
+      logo_url: process.env.VUE_APP_LOGO_URL,
+      logo_alt: process.env.VUE_APP_NAME,
+      project_name: process.env.VUE_APP_NAME
+    }
   }
 }
 </script><style>
