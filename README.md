@@ -1,5 +1,5 @@
 # vue-visual-simulator
-This page was developed in order to allow you to simulate your character costume using a render API.
+This page was developed in order to allow you to simulate your character costume using a render [API](https://github.com/zhad3/zrenderer).
 
 It's very easy to use, just select the equipments that you want to test.
 
