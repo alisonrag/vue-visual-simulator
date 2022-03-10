@@ -1,4 +1,19 @@
 # vue-visual-simulator
+This page was developed in order to allow you to simulate your character costume using a render API.
+
+It's very easy to use, just select the equipments that you want to test.
+
+Credits for images go to Divine-Pride, where they are being pulled.
+
+Access: https://alisonrag.github.io/vue-visual-simulator/
+
+# Technologies
+- Vue.js
+- Bootstrap 5
+- HTML
+
+# Screenshots
+
 
 ## Project setup
 ```
