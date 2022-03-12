@@ -5,9 +5,8 @@
                 <img
                     :src="require('../assets/color/color' + color.id + '_off.png')"
                     :alt="color.name"
-                    :id="'color' + color.id"
-                    :name="color.id"
-                    class="img-hair-color"
+                    :id="color.id"
+                     class="img-hair-color"
                     @click="clickHairColor($event)"
                     @mouseover="overHairColor($event)"
                     @mouseleave="leaveHairColor($event)"
@@ -66,22 +65,22 @@ export default {
     methods: {
         clickHairColor: function (event) {
             if (this.active)
-                this.active.target.src = require('../assets/color/color' + this.active.target.name + '_off.png')
+                this.active.target.src = require('../assets/color/color' + this.active.target.id + '_off.png')
 
             this.active = event
-            event.target.src = require('../assets/color/color' + event.target.name + '_press.png')
+            event.target.src = require('../assets/color/color' + event.target.id + '_press.png')
             setTimeout(function () {
-                event.target.src = require('../assets/color/color' + event.target.name + '_on.png')
+                event.target.src = require('../assets/color/color' + event.target.id + '_on.png')
             }, 200)
-
+            this.$emit("changeHairColor", parseInt(event.target.id))
         },
         overHairColor: function (event) {
             if (this.active && this.active.target.id != event.target.id)
-                event.target.src = require('../assets/color/color' + event.target.name + '_over.png')
+                event.target.src = require('../assets/color/color' + event.target.id + '_over.png')
         },
         leaveHairColor: function (event) {
             if (this.active && this.active.target.id != event.target.id)
-                event.target.src = require('../assets/color/color' + event.target.name + '_off.png')
+                event.target.src = require('../assets/color/color' + event.target.id + '_off.png')
         }
     }
 

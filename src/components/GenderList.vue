@@ -50,6 +50,7 @@ export default {
                     this.male_btn_src = require('../assets/gender/bt_male_off.png')
                 }
             }
+            this.$emit("changeSex", id)
         },
         overSexBtn: function (id) {
             if (id) {

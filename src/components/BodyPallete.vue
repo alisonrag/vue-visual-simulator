@@ -1,7 +1,7 @@
 <template>
   <div class="container-body-pallete">
       <ul class="ul-body-pallete-list">
-          <li v-for="(pallete, index) in body_pallete_list" :key="index" class="li-body-pallete">
+          <li v-for="(pallete, index) in body_pallete_list" :key="index" class="li-body-pallete" @click="clickBodyPallete(pallete.id)">
               <span :tooltip="pallete.name">{{pallete.id}}</span>
           </li>
       </ul>
@@ -31,6 +31,10 @@ export default {
                     name: 'green'
                 },
             ]
+        }
+    }, methods: {
+        clickBodyPallete: function(id) {
+            this.$emit("changeBodyPallete", id)
         }
     }
 }

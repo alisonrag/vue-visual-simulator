@@ -2,7 +2,12 @@
     <div class="container-jobs">
         <ul class="ul-jobs">
             <li v-for="(job, index) in job_list" class="li-job" :key="index">
-                <img :src="require('../assets/job/icon_jobs_'+job.id+'.png')" :alt="job.name">
+                <img
+                    :src="require('../assets/job/icon_jobs_' + job.id + '.png')"
+                    :alt="job.name"
+                    :id="job.id"
+                    @click="clickJob($event)"
+                />
             </li>
         </ul>
     </div>
@@ -382,15 +387,16 @@ export default {
                     "name": "Trouvere"
                 }
             ]
-
-
+        }
+    }, methods: {
+        clickJob: function (event) {
+            this.$emit("changeJob", parseInt(event.target.id))
         }
     }
 }
 </script>
 
 <style scoped>
-
 .ul-jobs {
     list-style: none;
 }

@@ -5,7 +5,7 @@
                 <img
                     class="li-head-normal"
                     :src="require('../assets/head/img_hairstyle' + head + '.png')"
-                    :id="'human_male' + head"
+                    :id="head"
                     @click="clickHead($event)"
                     @mouseover="overHead($event)"
                     @mouseleave="leaveHead($event)"
@@ -17,7 +17,7 @@
                 <img
                     class="li-head-normal"
                     :src="require('../assets/head/img_hairstyle_girl' + head + '.png')"
-                    :id="'human_female' + head"
+                    :id="head"
                     @click="clickHead($event)"
                     @mouseover="overHead($event)"
                     @mouseleave="leaveHead($event)"
@@ -29,7 +29,7 @@
                 <img
                     class="li-head-normal"
                     :src="require('../assets/head/img_hairstyle_doramboy' + head + '.png')"
-                    :id="'doram_male' + head"
+                    :id="head"
                     @click="clickHead($event)"
                     @mouseover="overHead($event)"
                     @mouseleave="leaveHead($event)"
@@ -41,7 +41,7 @@
                 <img
                     class="li-head-normal"
                     :src="require('../assets/head/img_hairstyle_doramgirl' + head + '.png')"
-                    :id="'doram_female' + head"
+                    :id="head"
                     @click="clickHead($event)"
                     @mouseover="overHead($event)"
                     @mouseleave="leaveHead($event)"
@@ -75,6 +75,7 @@ export default {
             setTimeout(function () {
                 event.target.className = 'li-head-select'
             }, 200)
+            this.$emit("changeHead", parseInt(event.target.id))
         },
         overHead: function (event) {
             if (this.active && this.active.target.id != event.target.id)

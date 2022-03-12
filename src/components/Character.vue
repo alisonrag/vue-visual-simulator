@@ -7,20 +7,10 @@ export default {
     name: "Character",
     data() {
         return {
-            char: {
-                "gender": 0,
-                "job": ["0"],
-                "head": 1,
-                "headPalette": 0,
-                "headdir": 0,
-                "headgear": [0, 0, 0],
-                "garment": 0,
-                "bodyPalette": 0,
-                "action": 0,
-            },
             img_src: ""
         }
     },
+    props: ['char'],
     mounted() {
         this.requestCharacter();
     }, methods: {
@@ -41,7 +31,16 @@ export default {
                 console.log('There has been a problem with character fetch operation: ' + error.message);
             });
         }
-    }
+    },
+    watch: {
+        char: {
+            immediate: true,
+            deep: true,
+            handler(newValue, oldValue) {
+                this.requestCharacter();
+            }
+        }
+    },
 }
 </script>
 
