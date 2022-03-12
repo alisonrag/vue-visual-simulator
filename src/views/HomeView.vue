@@ -30,10 +30,10 @@ export default {
     return {
       gender: 0,
       char: {
-        "gender": 0,
+        "gender": 1,
         "job": ["0"],
         "head": 1,
-        "headPalette": 0,
+        "headPalette": 1,
         "headdir": 0,
         "headgear": [0, 0, 0],
         "garment": 0,
