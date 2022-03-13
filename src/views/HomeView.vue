@@ -1,15 +1,35 @@
 <template>
-  <div class="home">
-    <GenderList v-on:changeSex="updateSex" />
-    <HairColorList v-on:changeHairColor="updateHairColor" />
-    <HeadList v-on:changeHead="updateHead" />
-    <BodyPallete v-on:changeBodyPallete="updateBodyPallete" />
-    <JobList v-on:changeJob="updateJob" />
-    <ItemListHeadTop v-on:changeHeadTop="updateHeadTop" />
-    <ItemListHeadMid v-on:changeHeadMid="updateHeadMid" />
-    <ItemListHeadBottom v-on:changeHeadBottom="updateHeadBottom" />
-    <ItemListGarmet v-on:changeGarmet="updateGarmet" />
-    <Character :char="char" />
+  <div class="row">
+    <div class="col-md-12">
+      <Character :char="char" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <GenderList v-on:changeSex="updateSex" />
+      <BodyPallete v-on:changeBodyPallete="updateBodyPallete" />
+      <HairColorList v-on:changeHairColor="updateHairColor" />
+      <HeadList v-on:changeHead="updateHead" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <JobList v-on:changeJob="updateJob" />
+    </div>
+  </div>
+  <div class="row g-0">
+    <div class="col-3 item-list">
+      <ItemListHeadTop v-on:changeHeadTop="updateHeadTop" />
+    </div>
+    <div class="col-3 item-list">
+      <ItemListHeadMid v-on:changeHeadMid="updateHeadMid" />
+    </div>
+    <div class="col-3 item-list">
+      <ItemListHeadBottom v-on:changeHeadBottom="updateHeadBottom" />
+    </div>
+    <div class="col-3 item-list">
+      <ItemListGarmet v-on:changeGarmet="updateGarmet" />
+    </div>
   </div>
 </template>
 
@@ -88,3 +108,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.item-list {
+  padding: 10px;
+}
+</style>

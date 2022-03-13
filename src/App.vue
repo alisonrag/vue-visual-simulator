@@ -1,9 +1,7 @@
 <template>
   <Navbar :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
   <div class="container">
-    <div class="row">
       <router-view />
-    </div>
   </div>
   <Footer :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
 </template>
