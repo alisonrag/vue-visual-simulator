@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue_visual_simulator"]=self["webpackChunkvue_visual_simulator"]||[]).push([[443],{5035:function(u,t,n){n.r(t),n.d(t,{default:function(){return l}});var a=n(3396);const e={class:"about"};function r(u,t,n,r,i,s){return(0,a.wg)(),(0,a.iD)("div",e)}var i={mounted(){document.title="Ragnarok Online Visual Simulator - About"}},s=n(89);const o=(0,s.Z)(i,[["render",r]]);var l=o}}]);
-//# sourceMappingURL=about.80ff49df.js.map
