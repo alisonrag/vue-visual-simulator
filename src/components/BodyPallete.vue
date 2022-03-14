@@ -1,7 +1,8 @@
 <template>
   <div class="container-body-pallete">
+      <h6>Clothes Color</h6>
       <ul class="ul-body-pallete-list">
-          <li v-for="(pallete, index) in body_pallete_list" :key="index" class="li-body-pallete" @click="clickBodyPallete(pallete.id)">
+          <li v-for="(pallete, index) in body_pallete_list" :key="index" class="li-body-pallete btn btn-secondary" @click="clickBodyPallete(pallete.id)">
               <span :tooltip="pallete.name">{{pallete.id}}</span>
           </li>
       </ul>
@@ -46,8 +47,6 @@ export default {
 }
 .li-body-pallete {
     float: left;
-    border: solid 1px;
-    border-color: black;
     padding: 5px;
     margin: 5px;
 }

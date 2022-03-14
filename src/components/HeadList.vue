@@ -1,6 +1,6 @@
 <template>
     <div class="container-head-list">
-        <ul id="human_male" class="ul-head-list">
+        <ul v-show="human_male" id="human_male" class="ul-head-list">
             <li v-for="(head, index) in heads.human_male" :key="index">
                 <img
                     class="li-head-normal"
@@ -12,7 +12,7 @@
                 />
             </li>
         </ul>
-        <ul id="human_female" class="ul-head-list">
+        <ul v-show="human_female" id="human_female" class="ul-head-list">
             <li v-for="(head, index) in heads.human_female" :key="index">
                 <img
                     class="li-head-normal"
@@ -24,7 +24,7 @@
                 />
             </li>
         </ul>
-        <ul id="doram_male" class="ul-head-list">
+        <ul v-show="doram_male" id="doram_male" class="ul-head-list">
             <li v-for="(head, index) in heads.doram_male" :key="index">
                 <img
                     class="li-head-normal"
@@ -36,7 +36,7 @@
                 />
             </li>
         </ul>
-        <ul id="doram_female" class="ul-head-list">
+        <ul v-show="doram_female" id="doram_female" class="ul-head-list">
             <li v-for="(head, index) in heads.doram_female" :key="index">
                 <img
                     class="li-head-normal"
@@ -54,6 +54,7 @@
 <script>
 export default {
     name: 'HeadList',
+    props: ["char"],
     data() {
         return {
             heads: {
@@ -62,7 +63,11 @@ export default {
                 doram_male: ['01', '02', '03', '04', '05', '06'],
                 doram_female: ['01', '02', '03', '04', '05', '06'],
             },
-            active: false
+            active: false,
+            human_male: true,
+            human_female: false,
+            doram_male: false,
+            doram_female: false,
         }
     },
     methods: {
@@ -84,6 +89,27 @@ export default {
         leaveHead: function (event) {
             if (this.active && this.active.target.id != event.target.id)
                 event.target.className = 'li-head-normal'
+        }
+    },watch: {
+        char: {
+            immediate: true,
+            deep: true,
+            handler(newValue, oldValue) {
+                this.human_male = this.human_female = this.doram_male = this.doram_female = false
+                if(this.char.gender) {
+                    if(parseInt(this.char.job[0]) == 4218) {
+                        this.doram_male = true
+                    } else {
+                        this.human_male = true
+                    }
+                } else {
+                    if(parseInt(this.char.job[0]) == 4218) {
+                        this.doram_female = true
+                    } else {
+                        this.human_female = true
+                    }
+                }
+            }
         }
     }
 }

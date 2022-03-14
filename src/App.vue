@@ -1,9 +1,9 @@
 <template>
-  <Navbar :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
-  <div class="container">
-      <router-view />
+  <div class="container-content">
+    <Navbar :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
+    <router-view />
+    <Footer :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
   </div>
-  <Footer :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
 </template>
 
 <script>
@@ -23,5 +23,12 @@ export default {
     }
   }
 }
-</script><style>
-</style>
+</script>
+
+<style scoped>
+.container-content {
+  background: url("~@/assets/interface/background.jpg");
+  background-size: cover;
+}
+</style>>
+
