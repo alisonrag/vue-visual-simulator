@@ -45,10 +45,7 @@
                               aria-controls="v-pills-home"
                               aria-selected="true"
                             >
-                              <img
-                                src="https://static.divine-pride.net/images/items/item/19547.png"
-                                alt="Item Top Tab"
-                              />
+                              <img :src="item_top_src" alt="Item Top Tab" />
                               <br />Top
                             </button>
                             <button
@@ -61,10 +58,7 @@
                               aria-controls="v-pills-profile"
                               aria-selected="false"
                             >
-                              <img
-                                src="https://static.divine-pride.net/images/items/item/19735.png"
-                                alt="Item Mid Tab"
-                              />
+                              <img :src="item_mid_src" alt="Item Mid Tab" />
                               <br />Mid
                             </button>
                             <button
@@ -77,10 +71,7 @@
                               aria-controls="v-pills-messages"
                               aria-selected="false"
                             >
-                              <img
-                                src="https://static.divine-pride.net/images/items/item/19783.png"
-                                alt="Item Mid Tab"
-                              />
+                              <img :src="item_bot_src" alt="Item Bot Tab" />
                               <br />Bot
                             </button>
                             <button
@@ -93,10 +84,7 @@
                               aria-controls="v-pills-settings"
                               aria-selected="false"
                             >
-                              <img
-                                src="https://static.divine-pride.net/images/items/item/20571.png"
-                                alt="Item Mid Tab"
-                              />
+                              <img :src="item_garmet_src" alt="Item Garmet Tab" />
                               <br />Garmet
                             </button>
                           </div>
@@ -211,6 +199,10 @@ export default {
   data() {
     return {
       gender: 0,
+      item_top_src: 'https://static.divine-pride.net/images/items/item/19547.png',
+      item_mid_src: 'https://static.divine-pride.net/images/items/item/19735.png',
+      item_bot_src: 'https://static.divine-pride.net/images/items/item/19783.png',
+      item_garmet_src: 'https://static.divine-pride.net/images/items/item/20571.png',
       char: {
         "gender": 1,
         "job": ["0"],
@@ -255,17 +247,21 @@ export default {
     updateJob: function (id) {
       this.char.job[0] = id.toString()
     },
-    updateHeadTop: function (viewID) {
-      this.char.headgear[0] = viewID
+    updateHeadTop: function (item) {
+      this.char.headgear[0] = item.viewID
+      this.item_top_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
     },
-    updateHeadMid: function (viewID) {
-      this.char.headgear[1] = viewID
+    updateHeadMid: function (item) {
+      this.char.headgear[1] = item.viewID
+      this.item_mid_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
     },
-    updateHeadBottom: function (viewID) {
-      this.char.headgear[2] = viewID
+    updateHeadBottom: function (item) {
+      this.char.headgear[2] = item.viewID
+      this.item_bot_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
     },
-    updateGarmet: function (viewID) {
-      this.char.garment = viewID
+    updateGarmet: function (item) {
+      this.char.garment = item.viewID
+      this.item_garmet_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
     },
   }
 }
