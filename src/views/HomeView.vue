@@ -286,6 +286,8 @@ export default {
     updateAction: function (id) {
       let action = (this.char.action + 1) % 8;
       this.char.action = id + action - 1
+      if (this.char.action < 0)
+        this.char.action = 0
     }
   }
 }

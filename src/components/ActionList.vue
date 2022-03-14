@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             actions: [
-                { id: 1, name: "idle", class: "simicon sim_a00" },
+                { id: 0, name: "idle", class: "simicon sim_a00" },
                 { id: 8, name: "walk", class: "simicon sim_a01" },
                 { id: 16, name: "sitting", class: "simicon sim_a02" },
                 { id: 24, name: "picking", class: "simicon sim_a03" },
