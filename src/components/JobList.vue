@@ -334,10 +334,16 @@ export default {
                     "id": 4240,
                     "name": "Soul Reaper"
                 },
-            ]
+            ],
+            active: false
         }
     }, methods: {
         clickJob: function (event) {
+            if (this.active)
+                this.active.target.classList.remove('job-selected')
+
+            this.active = event
+            this.active.target.classList.add('job-selected')
             this.$emit("changeJob", parseInt(event.target.id))
         }
     }
@@ -351,5 +357,11 @@ export default {
 .li-job {
     float: left;
     margin: 2px;
+    width: 27px;
+    height: 27px;
+}
+.job-selected {
+    border: 1px solid #FC4F4F;
+    border-radius: 5px;
 }
 </style>
