@@ -146,6 +146,9 @@
                           >
                             <Character :char="char" />
                           </div>
+                          <div class="mb-3 d-flex flex-column align-items-center">
+                            <TurnCharacter v-on:turnCharacter="updateCharacterPosition" />
+                          </div>
                         </div>
                       </div>
                       <div class="row">
@@ -194,6 +197,7 @@ import ItemListHeadMid from "@/components/ItemListHeadMid.vue"
 import ItemListGarmet from "@/components/ItemListGarmet.vue"
 import ItemListHeadBottom from "@/components/ItemListHeadBottom.vue"
 import Character from "@/components/Character.vue"
+import TurnCharacter from "@/components/TurnCharacter.vue"
 
 export default {
   data() {
@@ -226,7 +230,8 @@ export default {
     ItemListHeadMid,
     ItemListHeadBottom,
     ItemListGarmet,
-    Character
+    Character,
+    TurnCharacter
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
@@ -249,20 +254,29 @@ export default {
     },
     updateHeadTop: function (item) {
       this.char.headgear[0] = item.viewID
-      this.item_top_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
+      this.item_top_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
     },
     updateHeadMid: function (item) {
       this.char.headgear[1] = item.viewID
-      this.item_mid_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
+      this.item_mid_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
     },
     updateHeadBottom: function (item) {
       this.char.headgear[2] = item.viewID
-      this.item_bot_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
+      this.item_bot_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
     },
     updateGarmet: function (item) {
       this.char.garment = item.viewID
-      this.item_garmet_src = 'https://static.divine-pride.net/images/items/item/'+item.itemID+'.png'
+      this.item_garmet_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
     },
+    updateCharacterPosition: function (side) {
+      if (side == "left") {
+        let action = (this.char.action + 1) % 8;
+        if (action == 0) { this.char.action -= 7; } else { this.char.action++; }
+      } else {
+        let action = (this.char.action) % 8;
+        if (action == 0) { this.char.action += 7; } else { this.char.action--; }
+      }
+    }
   }
 }
 </script>
@@ -309,6 +323,6 @@ export default {
 }
 
 .container-character {
-  height: 90vh;
+  min-height: 90vh;
 }
 </style>
