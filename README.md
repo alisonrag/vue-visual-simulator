@@ -5,7 +5,7 @@ It's very easy to use, just select the equipments that you want to test.
 
 Credits for images go to Divine-Pride, where they are being pulled.
 
-Access: https://alisonrag.github.io/vue-visual-simulator/
+Access: http://visualrag.herokuapp.com/
 
 # Technologies
 - Vue.js
@@ -13,6 +13,7 @@ Access: https://alisonrag.github.io/vue-visual-simulator/
 - HTML
 
 # Screenshots
+![image](https://user-images.githubusercontent.com/10372732/158092599-c27537ba-78b6-4721-a704-fcb489974fb8.png)
 
 
 ## Project setup
