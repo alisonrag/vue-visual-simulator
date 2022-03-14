@@ -13,10 +13,10 @@
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3">
-                <a class="footer-link" href="#"><i class="fa-brands fa-github"></i></a>
+                <a class="footer-link" :href="projectGit" target="_blank"><i class="fa-brands fa-github"></i></a>
             </li>
             <li class="ms-3">
-                <a class="footer-link" href="#"><i class="fa-brands fa-github-alt"></i></a>
+                <a class="footer-link" :href="authorGit" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
             </li>
             <li class="ms-3">
                 <a class="footer-link" href="#"></a>
@@ -28,7 +28,8 @@
 <script>
 export default {
     name: 'Footer',
-    props: ["logoImage", "logoImageAlt", "projectName"]
+    props: ["projectName", "projectGit", "authorGit"],
+
 }
 </script>
 

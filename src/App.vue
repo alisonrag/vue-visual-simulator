@@ -2,7 +2,7 @@
   <div class="container-content">
     <Navbar :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
     <router-view />
-    <Footer :logoImage="logo_url" :logoImageAlt="logo_alt" :projectName="project_name" />
+    <Footer :projectGit="project_git" :authorGit="author_git" :projectName="project_name" />
   </div>
 </template>
 
@@ -19,7 +19,9 @@ export default {
     return {
       logo_url: process.env.VUE_APP_LOGO_URL,
       logo_alt: process.env.VUE_APP_NAME,
-      project_name: process.env.VUE_APP_NAME
+      project_name: process.env.VUE_APP_NAME,
+      project_git: process.env.VUE_APP_PROJECT_GITHUB_LINK,
+      author_git: process.env.VUE_APP_AUTHOR_GITHUB_LINK
     }
   }
 }
