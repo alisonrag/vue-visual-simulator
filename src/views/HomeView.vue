@@ -177,6 +177,10 @@
                     </div>
                   </div>
                 </div>
+                <div class="row py-4 px-2">
+                  <h6>Actions</h6>
+                  <ActionList v-on:changeAction="updateAction" />
+                </div>
               </div>
             </div>
           </div>
@@ -198,6 +202,7 @@ import ItemListGarmet from "@/components/ItemListGarmet.vue"
 import ItemListHeadBottom from "@/components/ItemListHeadBottom.vue"
 import Character from "@/components/Character.vue"
 import TurnCharacter from "@/components/TurnCharacter.vue"
+import ActionList from "@/components/ActionList.vue"
 
 export default {
   data() {
@@ -231,7 +236,8 @@ export default {
     ItemListHeadBottom,
     ItemListGarmet,
     Character,
-    TurnCharacter
+    TurnCharacter,
+    ActionList
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
@@ -276,6 +282,10 @@ export default {
         let action = (this.char.action) % 8;
         if (action == 0) { this.char.action += 7; } else { this.char.action--; }
       }
+    },
+    updateAction: function (id) {
+      let action = (this.char.action + 1) % 8;
+      this.char.action = id + action - 1
     }
   }
 }
