@@ -203,30 +203,6 @@ export default {
                     "name": "Soul Linker"
                 },
                 {
-                    "id": 4054,
-                    "name": "Rune Knight"
-                },
-                {
-                    "id": 4055,
-                    "name": "Warlock"
-                },
-                {
-                    "id": 4056,
-                    "name": "Ranger"
-                },
-                {
-                    "id": 4057,
-                    "name": "Arch Bishop"
-                },
-                {
-                    "id": 4058,
-                    "name": "Mechanic"
-                },
-                {
-                    "id": 4059,
-                    "name": "Guillotine Cross"
-                },
-                {
                     "id": 4060,
                     "name": "Rune Knight"
                 },
@@ -334,6 +310,58 @@ export default {
                     "id": 4240,
                     "name": "Soul Reaper"
                 },
+                {
+                    "id": 4252,
+                    "name": "Dragon Knight"
+                },
+                {
+                    "id": 4253,
+                    "name": "Meister"
+                },
+                {
+                    "id": 4254,
+                    "name": "Shadow Cross"
+                },
+                {
+                    "id": 4255,
+                    "name": "Arch Mage"
+                },
+                {
+                    "id": 4256,
+                    "name": "Cardinal"
+                },
+                {
+                    "id": 4257,
+                    "name": "Windhawk"
+                },
+                {
+                    "id": 4258,
+                    "name": "Imperial Guard"
+                },
+                {
+                    "id": 4259,
+                    "name": "Biolo"
+                },
+                {
+                    "id": 4260,
+                    "name": "Abyss Chaser"
+                },
+                {
+                    "id": 4261,
+                    "name": "Elemental Master"
+                },
+                {
+                    "id": 4262,
+                    "name": "Inquisitor"
+                },
+                {
+                    "id": 4263,
+                    "name": "Troubadour"
+                },
+                {
+                    "id": 4264,
+                    "name": "Trouvere"
+                }
             ],
             active: false
         }
@@ -361,7 +389,7 @@ export default {
     height: 27px;
 }
 .job-selected {
-    border: 1px solid #FC4F4F;
+    border: 1px solid #fc4f4f;
     border-radius: 5px;
 }
 </style>
