@@ -203,6 +203,7 @@ import ItemListHeadBottom from "@/components/ItemListHeadBottom.vue"
 import Character from "@/components/Character.vue"
 import TurnCharacter from "@/components/TurnCharacter.vue"
 import ActionList from "@/components/ActionList.vue"
+import { Tooltip } from "bootstrap"
 
 export default {
   data() {
@@ -241,6 +242,10 @@ export default {
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl)
+    })
   },
   methods: {
     updateSex: function (gender) {

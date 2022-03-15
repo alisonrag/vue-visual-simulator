@@ -3,10 +3,12 @@
     <li v-for="(item, index) in items" class="li-item" :key="index">
       <img
         :src="'https://static.divine-pride.net/images/items/item/' + item.id + '.png'"
-        :alt="item.name"
         class="img-item"
         :viewID="item.viewID"
         :id="item.id"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        :title="item.name"
         @click="clickItem($event)"
       />
     </li>
