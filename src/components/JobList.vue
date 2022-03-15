@@ -361,7 +361,35 @@ export default {
                 {
                     "id": 4264,
                     "name": "Trouvere"
-                }
+                },
+                {
+                    "id": 4302,
+                    "name": "JT_SKY_EMPEROR"
+                },
+                {
+                    "id": 4303,
+                    "name": "JT_SOUL_ASCETIC"
+                },
+                {
+                    "id": 4304,
+                    "name": "JT_SHINKIRO"
+                },
+                {
+                    "id": 4305,
+                    "name": "JT_SHIRANUI"
+                },
+                {
+                    "id": 4306,
+                    "name": "JT_NIGHT_WATCH"
+                },
+                {
+                    "id": 4307,
+                    "name": "JT_HYPER_NOVICE"
+                },
+                {
+                    "id": 4308,
+                    "name": "JT_SPIRIT_HANDLER"
+                },
             ],
             active: false
         }
