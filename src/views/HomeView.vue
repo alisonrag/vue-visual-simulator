@@ -223,6 +223,7 @@ export default {
         "garment": 0,
         "bodyPalette": 0,
         "action": 0,
+        "canvas": "200x200+100+150"
       }
     }
   },
