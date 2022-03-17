@@ -11,9 +11,7 @@ export default {
         }
     },
     props: ['char'],
-    mounted() {
-        this.requestCharacter();
-    }, methods: {
+    methods: {
         requestCharacter: async function () {
             const character = JSON.stringify(this.char)
             const url = process.env.VUE_APP_API_URL + "&accesstoken=" + process.env.VUE_APP_API_KEY
@@ -30,6 +28,8 @@ export default {
             }).catch(function (error) {
                 console.log('There has been a problem with character fetch operation: ' + error.message);
             });
+            this.char.updated = true
+            localStorage.setItem('character', JSON.stringify(this.char));
         }
     },
     watch: {

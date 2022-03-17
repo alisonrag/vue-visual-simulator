@@ -181,6 +181,9 @@
                   <h6>Actions</h6>
                   <ActionList v-on:changeAction="updateAction" />
                 </div>
+                 <div class="row py-4 px-2">
+                  <ClearCharacterButton v-on:resetCharacter="resetChar" />
+                </div>
               </div>
             </div>
           </div>
@@ -203,6 +206,7 @@ import ItemListHeadBottom from "@/components/ItemListHeadBottom.vue"
 import Character from "@/components/Character.vue"
 import TurnCharacter from "@/components/TurnCharacter.vue"
 import ActionList from "@/components/ActionList.vue"
+import ClearCharacterButton from "@/components/ClearCharacterButton.vue"
 import { Tooltip } from "bootstrap"
 
 export default {
@@ -223,7 +227,8 @@ export default {
         "garment": 0,
         "bodyPalette": 0,
         "action": 0,
-        "canvas": "200x200+100+150"
+        "canvas": "200x200+100+150",
+        "updated": true
       }
     }
   },
@@ -239,14 +244,13 @@ export default {
     ItemListGarmet,
     Character,
     TurnCharacter,
-    ActionList
+    ActionList,
+    ClearCharacterButton
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new Tooltip(tooltipTriggerEl)
-    })
+    this.activeTooltip()
+    this.loadLocalStorage()    
   },
   methods: {
     updateSex: function (gender) {
@@ -294,6 +298,32 @@ export default {
       this.char.action = id + action - 1
       if (this.char.action < 0)
         this.char.action = 0
+    },
+    resetChar: function(character) {
+      this.char = character
+    },
+    activeTooltip: function () {
+      let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new Tooltip(tooltipTriggerEl)
+      })
+    },
+    loadLocalStorage: function () {
+      let character = localStorage.getItem('character')
+
+      if (character != null) {
+        character = JSON.parse(character)
+        this.char.gender = character.gender
+        this.char.job = character.job
+        this.char.head = character.head
+        this.char.headPalette = character.headPalette
+        this.char.headdir = character.headdir
+        this.char.headgear = character.headgear
+        this.char.garment = character.garment
+        this.char.bodyPalette = character.bodyPalette
+        this.char.updated = false   
+      }
+
     }
   }
 }
