@@ -135,7 +135,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="d-flex justify-content-center">
-                            <GenderList v-on:changeSex="updateSex" />
+                            <GenderList v-on:changeSex="updateSex" :char="char" />
                           </div>
                         </div>
                       </div>

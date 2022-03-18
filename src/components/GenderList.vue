@@ -24,9 +24,9 @@ export default {
             male_btn_state: 1,
             female_btn_src: require('../assets/gender/bt_female_off.png'),
             female_btn_state: 0,
-
         }
     },
+    props: ['char'],
     methods: {
         clickSexBtn: function (id) {
             if (id) {
@@ -77,6 +77,12 @@ export default {
                     this.female_btn_src = require('../assets/gender/bt_female_off.png')
                 }
 
+            }
+        }
+    }, watch: {
+        'char.gender': {
+            handler(newValue, oldValue) {
+              this.clickSexBtn(newValue)
             }
         }
     }
