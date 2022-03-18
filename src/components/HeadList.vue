@@ -92,7 +92,6 @@ export default {
         }
     },watch: {
         char: {
-            immediate: true,
             deep: true,
             handler(newValue, oldValue) {
                 this.human_male = this.human_female = this.doram_male = this.doram_female = false
