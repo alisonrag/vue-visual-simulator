@@ -255,34 +255,6 @@ export default {
                     "name": "Shadow Chaser"
                 },
                 {
-                    "id": 4073,
-                    "name": "Royal Guard"
-                },
-                {
-                    "id": 4074,
-                    "name": "Sorcerer"
-                },
-                {
-                    "id": 4075,
-                    "name": "Minstrel"
-                },
-                {
-                    "id": 4076,
-                    "name": "Wanderer"
-                },
-                {
-                    "id": 4077,
-                    "name": "Sura"
-                },
-                {
-                    "id": 4078,
-                    "name": "Genetic"
-                },
-                {
-                    "id": 4079,
-                    "name": "Shadow Chaser"
-                },
-                {
                     "id": 4190,
                     "name": "Ex. Super Novice"
                 },
