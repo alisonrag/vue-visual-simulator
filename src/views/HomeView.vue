@@ -177,12 +177,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="row py-4 px-2">
+                <div class="row py-2 px-2">
                   <h6>Actions</h6>
                   <ActionList v-on:changeAction="updateAction" />
                 </div>
-                 <div class="row py-4 px-2">
-                  <ClearCharacterButton v-on:resetCharacter="resetChar" />
+                <div class="row py-2 px-2">
+                  <div class="col-md-6">
+                    <h6>Costume:</h6>
+                    <OutfitCheckbox v-on:changeOutfit="updateOutfit" />
+                  </div>
+                  <div class="col-md-6">
+                    <ClearCharacterButton v-on:resetCharacter="resetChar" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -207,6 +213,7 @@ import Character from "@/components/Character.vue"
 import TurnCharacter from "@/components/TurnCharacter.vue"
 import ActionList from "@/components/ActionList.vue"
 import ClearCharacterButton from "@/components/ClearCharacterButton.vue"
+import OutfitCheckbox from "@/components/OutfitCheckbox.vue"
 import { Tooltip } from "bootstrap"
 
 export default {
@@ -228,6 +235,7 @@ export default {
         "bodyPalette": 0,
         "action": 0,
         "canvas": "200x200+100+150",
+        "outfit": 0,
         "updated": true
       }
     }
@@ -245,12 +253,13 @@ export default {
     Character,
     TurnCharacter,
     ActionList,
-    ClearCharacterButton
+    ClearCharacterButton,
+    OutfitCheckbox
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
     this.activeTooltip()
-    this.loadLocalStorage()    
+    this.loadLocalStorage()
   },
   methods: {
     updateSex: function (gender) {
@@ -299,7 +308,15 @@ export default {
       if (this.char.action < 0)
         this.char.action = 0
     },
-    resetChar: function(character) {
+    updateOutfit: function (checked) {
+      console.log(checked)
+      if (checked) {
+        this.char.outfit = 1
+      } else {
+        this.char.outfit = 0
+      }
+    },
+    resetChar: function (character) {
       this.char = character
     },
     activeTooltip: function () {
@@ -321,7 +338,8 @@ export default {
         this.char.headgear = character.headgear
         this.char.garment = character.garment
         this.char.bodyPalette = character.bodyPalette
-        this.char.updated = false   
+        this.char.outfit = character.outfit
+        this.char.updated = false
       }
 
     }
