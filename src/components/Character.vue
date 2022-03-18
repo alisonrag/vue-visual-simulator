@@ -34,11 +34,8 @@ export default {
     },
     watch: {
         char: {
-            immediate: true,
             deep: true,
-            handler(newValue, oldValue) {
-                this.requestCharacter();
-            }
+            handler: 'requestCharacter'
         }
     },
 }
