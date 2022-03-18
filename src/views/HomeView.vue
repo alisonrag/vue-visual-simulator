@@ -18,7 +18,7 @@
                 <div class="col-md-12">
                   <div class="card card-job-shadow">
                     <div class="card p-1">
-                      <div class="card-job-inner py-1">
+                      <div class="card-job-inner p-2">
                         <JobList v-on:changeJob="updateJob" />
                       </div>
                     </div>
@@ -183,10 +183,11 @@
                 </div>
                 <div class="row py-2 px-2">
                   <div class="col-md-6">
-                    <h6>Costume:</h6>
+                    <h6>Costume</h6>
                     <OutfitCheckbox v-on:changeOutfit="updateOutfit" />
                   </div>
                   <div class="col-md-6">
+                    <h6>Options</h6>
                     <ClearCharacterButton v-on:resetCharacter="resetChar" />
                   </div>
                 </div>
