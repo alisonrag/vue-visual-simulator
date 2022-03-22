@@ -4,6 +4,7 @@
             <li
                 v-for="action in actions"
                 :key="action.id"
+                class="simicon"
                 :class="action.class"
                 :id="action.id"
                 @click="clickAction($event)"
@@ -18,17 +19,17 @@ export default {
     data() {
         return {
             actions: [
-                { id: 0, name: "idle", class: "simicon sim_a00" },
-                { id: 8, name: "walk", class: "simicon sim_a01" },
-                { id: 16, name: "sitting", class: "simicon sim_a02" },
-                { id: 24, name: "picking", class: "simicon sim_a03" },
-                { id: 32, name: "standby", class: "simicon sim_a04" },
-                { id: 40, name: "attacking", class: "simicon sim_a10" },
-                { id: 48, name: "damage", class: "simicon sim_a06" },
-                { id: 64, name: "dead", class: "simicon sim_a08" },
-                { id: 80, name: "attack", class: "simicon sim_a11" },
-                { id: 88, name: "attack", class: "simicon sim_a12" },
-                { id: 96, name: "casting", class: "simicon sim_a12" },
+                { id: 0, name: "idle", class: "sim_a00" },
+                { id: 8, name: "walk", class: "sim_a01" },
+                { id: 16, name: "sitting", class: "sim_a02" },
+                { id: 24, name: "picking", class: "sim_a03" },
+                { id: 32, name: "standby", class: "sim_a04" },
+                { id: 40, name: "attacking", class: "sim_a10" },
+                { id: 48, name: "damage", class: "sim_a06" },
+                { id: 64, name: "dead", class: "sim_a08" },
+                { id: 80, name: "attack", class: "sim_a11" },
+                { id: 88, name: "attack", class: "sim_a12" },
+                { id: 96, name: "casting", class: "sim_a12" },
             ],
             active: false
         }
