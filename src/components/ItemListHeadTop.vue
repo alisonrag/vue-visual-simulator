@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: "ItemListHeadTop",
   data() {
@@ -27,13 +29,15 @@ export default {
       active: false,
     }
   }, methods: {
+    ...mapMutations(['SAVE_HEADGEAR_TOP', 'SAVE_HEADGEAR_TOP_ID']),
     clickItem: function (event) {
       if (this.active)
         this.active.target.classList.remove('item-selected')
 
       this.active = event
       this.active.target.classList.add('item-selected')
-      this.$emit("changeHeadTop", { 'viewID': parseInt(event.target.getAttribute('viewID')), 'itemID': parseInt(event.target.getAttribute('id')) })
+      this.SAVE_HEADGEAR_TOP(parseInt(event.target.getAttribute('viewID')))
+      this.SAVE_HEADGEAR_TOP_ID(parseInt(event.target.getAttribute('id')))
     }
   }
 }

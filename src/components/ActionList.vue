@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
     name: "ActionList",
     data() {
@@ -34,13 +35,14 @@ export default {
             active: false
         }
     }, methods: {
+        ...mapMutations(['SAVE_ACTION']),
         clickAction: function (event) {
             if (this.active)
                 this.active.target.classList.remove('action-selected')
 
             this.active = event
             this.active.target.classList.add('action-selected')
-            this.$emit("changeAction", parseInt(event.target.id))
+            this.SAVE_ACTION(parseInt(event.target.id))
         }
     }
 }
@@ -65,7 +67,7 @@ export default {
 }
 
 .action-selected {
-    background-color: #3BAAE3;
+    background-color: #3baae3;
 }
 .sim_a00 {
     background-position: 0 0;

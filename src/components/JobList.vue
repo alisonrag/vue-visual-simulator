@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     data() {
         return {
@@ -366,13 +368,14 @@ export default {
             active: false
         }
     }, methods: {
+        ...mapMutations(['SAVE_JOB']),
         clickJob: function (event) {
             if (this.active)
                 this.active.target.classList.remove('job-selected')
 
             this.active = event
             this.active.target.classList.add('job-selected')
-            this.$emit("changeJob", parseInt(event.target.id))
+            this.SAVE_JOB(parseInt(event.target.id))
         }
     }
 }

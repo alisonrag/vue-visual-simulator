@@ -52,9 +52,10 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
     name: 'HeadList',
-    props: ["char"],
     data() {
         return {
             heads: {
@@ -70,7 +71,13 @@ export default {
             doram_female: false,
         }
     },
+    computed: {
+        ...mapState({
+            character: state => state.character
+        })
+    },
     methods: {
+        ...mapMutations(['SAVE_HEAD']),
         clickHead: function (event) {
             if (this.active)
                 this.active.target.className = 'li-head-normal'
@@ -80,7 +87,7 @@ export default {
             setTimeout(function () {
                 event.target.className = 'li-head-select'
             }, 200)
-            this.$emit("changeHead", parseInt(event.target.id))
+            this.SAVE_HEAD(parseInt(event.target.id))
         },
         overHead: function (event) {
             if (this.active && this.active.target.id != event.target.id)
@@ -89,25 +96,35 @@ export default {
         leaveHead: function (event) {
             if (this.active && this.active.target.id != event.target.id)
                 event.target.className = 'li-head-normal'
+        },
+        changeHeadList: function () {
+            this.human_male = this.human_female = this.doram_male = this.doram_female = false
+            if (this.character.gender) {
+                if (parseInt(this.character.job[0]) == 4218 || parseInt(this.character.job[0]) == 4308) {
+                    this.doram_male = true
+                } else {
+                    this.human_male = true
+                }
+            } else {
+                if (parseInt(this.character.job[0]) == 4218 || parseInt(this.character.job[0]) == 4308) {
+                    this.doram_female = true
+                } else {
+                    this.human_female = true
+                }
+            }
         }
-    },watch: {
-        char: {
+
+    }, watch: {
+        '$store.state.character.gender': {
             deep: true,
             handler(newValue, oldValue) {
-                this.human_male = this.human_female = this.doram_male = this.doram_female = false
-                if(this.char.gender) {
-                    if(parseInt(this.char.job[0]) == 4218 || parseInt(this.char.job[0]) == 4308) {
-                        this.doram_male = true
-                    } else {
-                        this.human_male = true
-                    }
-                } else {
-                    if(parseInt(this.char.job[0]) == 4218 || parseInt(this.char.job[0]) == 4308) {
-                        this.doram_female = true
-                    } else {
-                        this.human_female = true
-                    }
-                }
+                this.changeHeadList()
+            }
+        },
+         '$store.state.character.job': {
+            deep: true,
+            handler(newValue, oldValue) {
+                this.changeHeadList()
             }
         }
     }

@@ -9,26 +9,16 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: 'ClearCharacterButton',
     methods: {
+        ...mapMutations(['RESET_CHARACTER']),
         resetCharacter: function () {
-            this.$emit("resetCharacter", {
-                "gender": 1,
-                "job": ["0"],
-                "head": 1,
-                "headPalette": 1,
-                "headdir": 0,
-                "headgear": [0, 0, 0],
-                "garment": 0,
-                "bodyPalette": 0,
-                "action": 0,
-                "canvas": "200x200+100+150",
-                "updated": true
-            })
+            this.RESET_CHARACTER(null)
         }
     }
-
 }
 </script>
 

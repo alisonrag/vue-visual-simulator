@@ -6,11 +6,15 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
+
     name: 'OutfitCheckbox',
     methods: {
+        ...mapMutations(['SAVE_OUTFIT']),
         outfitCheck: function(event) {
-             this.$emit("changeOutfit", event.target.checked)
+             this.SAVE_OUTFIT(event.target.checked)
         }
     }
 }

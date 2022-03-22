@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: 'GenderList',
     data() {
@@ -26,8 +28,8 @@ export default {
             female_btn_state: 0,
         }
     },
-    props: ['char'],
     methods: {
+        ...mapMutations(['SAVE_GENDER']),
         clickSexBtn: function (id) {
             if (id) {
                 if (!this.male_btn_state) {
@@ -50,7 +52,7 @@ export default {
                     this.male_btn_src = require('../assets/gender/bt_male_off.png')
                 }
             }
-            this.$emit("changeSex", id)
+            this.SAVE_GENDER(id)
         },
         overSexBtn: function (id) {
             if (id) {
@@ -80,9 +82,9 @@ export default {
             }
         }
     }, watch: {
-        'char.gender': {
+        '$store.state.character.gender': {
             handler(newValue, oldValue) {
-              this.clickSexBtn(newValue)
+                this.clickSexBtn(newValue)
             }
         }
     }

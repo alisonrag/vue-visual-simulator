@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
     name: "Character",
     data() {
@@ -10,16 +11,15 @@ export default {
             img_src: ""
         }
     },
-    props: ['char'],
     methods: {
         requestCharacter: async function () {
-            const character = JSON.stringify(this.char)
+            const char = JSON.stringify(this.character)
             const url = process.env.VUE_APP_API_URL + "&accesstoken=" + process.env.VUE_APP_API_KEY
             const self = this;
             const req = await fetch(url, {
                 method: "POST",
                 headers: { 'Content-Type': 'application/vnd.api+json' },
-                body: character,
+                body: char,
             }).then(function (response) {
                 return response.blob();
             }).then(function (myBlob) {
@@ -28,12 +28,16 @@ export default {
             }).catch(function (error) {
                 console.log('There has been a problem with character fetch operation: ' + error.message);
             });
-            this.char.updated = true
-            localStorage.setItem('character', JSON.stringify(this.char));
+            localStorage.setItem('character', char);
         }
     },
+    computed: {
+        ...mapState({
+            character: state => state.character,
+        }),
+    },
     watch: {
-        char: {
+        '$store.state.character': {
             deep: true,
             handler: 'requestCharacter'
         }

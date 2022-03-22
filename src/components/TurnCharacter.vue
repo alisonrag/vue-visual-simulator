@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: "TurnCharacter",
     data() {
@@ -15,15 +17,16 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['SAVE_CHARACTER_POSITION']),
         turnLeft: function (event) {
             this.turn_left_src = require('../assets/interface/bt_leftturn_press.png')
             setTimeout(() => { this.turn_left_src = require('../assets/interface/bt_leftturn_normal.png') }, 250)
-            this.$emit("turnCharacter", "left")
+            this.SAVE_CHARACTER_POSITION("left")
         },
         turnRight: function (event) {
             this.turn_right_src = require('../assets/interface/bt_rightturn_press.png')
             setTimeout(() => { this.turn_right_src = require('../assets/interface/bt_rightturn_normal.png') }, 250)
-            this.$emit("turnCharacter", "right")
+            this.SAVE_CHARACTER_POSITION("right")
         }
     }
 }

@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: 'BodyPallet',
     data() {
@@ -40,13 +42,14 @@ export default {
             ], active: false
         }
     }, methods: {
+        ...mapMutations(['SAVE_BODY_PALETTE']),
         clickBodyPallete: function (event) {
             if (this.active)
                 this.active.target.classList.remove('active')
 
             this.active = event
             this.active.target.classList.add('active')
-            this.$emit("changeBodyPallete", parseInt(event.target.getAttribute('id')))
+            this.SAVE_BODY_PALETTE(parseInt(event.target.getAttribute('id')))
         }
     }
 }

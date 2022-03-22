@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     name: 'HairColorList',
     data() {
@@ -63,6 +65,7 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['SAVE_HAIR_COLOR']),
         clickHairColor: function (event) {
             if (this.active)
                 this.active.target.src = require('../assets/color/color' + this.active.target.id + '_off.png')
@@ -72,7 +75,7 @@ export default {
             setTimeout(function () {
                 event.target.src = require('../assets/color/color' + event.target.id + '_on.png')
             }, 200)
-            this.$emit("changeHairColor", parseInt(event.target.id))
+            this.SAVE_HAIR_COLOR(parseInt(event.target.id))
         },
         overHairColor: function (event) {
             if (this.active && this.active.target.id != event.target.id)
@@ -83,7 +86,6 @@ export default {
                 event.target.src = require('../assets/color/color' + event.target.id + '_off.png')
         }
     }
-
 }
 </script>
 

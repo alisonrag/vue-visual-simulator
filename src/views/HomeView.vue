@@ -19,7 +19,7 @@
                   <div class="card card-job-shadow">
                     <div class="card p-1">
                       <div class="card-job-inner p-2">
-                        <JobList v-on:changeJob="updateJob" />
+                        <JobList />
                       </div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@
                               role="tabpanel"
                               aria-labelledby="v-pills-home-tab"
                             >
-                              <ItemListHeadTop v-on:changeHeadTop="updateHeadTop" />
+                              <ItemListHeadTop />
                             </div>
                             <div
                               class="tab-pane tab-pane-items fade"
@@ -103,7 +103,7 @@
                               role="tabpanel"
                               aria-labelledby="v-pills-profile-tab"
                             >
-                              <ItemListHeadMid v-on:changeHeadMid="updateHeadMid" />
+                              <ItemListHeadMid />
                             </div>
                             <div
                               class="tab-pane tab-pane-items fade"
@@ -111,7 +111,7 @@
                               role="tabpanel"
                               aria-labelledby="v-pills-messages-tab"
                             >
-                              <ItemListHeadBottom v-on:changeHeadBottom="updateHeadBottom" />
+                              <ItemListHeadBottom />
                             </div>
                             <div
                               class="tab-pane tab-pane-items fade"
@@ -119,7 +119,7 @@
                               role="tabpanel"
                               aria-labelledby="v-pills-settings-tab"
                             >
-                              <ItemListGarmet v-on:changeGarmet="updateGarmet" />
+                              <ItemListGarmet />
                             </div>
                           </div>
                         </div>
@@ -135,7 +135,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="d-flex justify-content-center">
-                            <GenderList v-on:changeSex="updateSex" :char="char" />
+                            <GenderList />
                           </div>
                         </div>
                       </div>
@@ -144,17 +144,17 @@
                           <div
                             class="character-box d-flex flex-column justify-content-center align-items-center"
                           >
-                            <Character :char="char" />
+                            <Character />
                           </div>
                           <div class="mb-3 d-flex flex-column align-items-center">
-                            <TurnCharacter v-on:turnCharacter="updateCharacterPosition" />
+                            <TurnCharacter />
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
                           <div class="d-flex justify-content-center">
-                            <BodyPallete v-on:changeBodyPallete="updateBodyPallete" />
+                            <BodyPallete />
                           </div>
                         </div>
                       </div>
@@ -163,14 +163,14 @@
                       <div class="row">
                         <div class="col-md-12">
                           <h6>Hair Style</h6>
-                          <HeadList v-on:changeHead="updateHead" :char="char" />
+                          <HeadList />
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
                           <h6>Hair Color</h6>
                           <div class="card px-2 py-1">
-                            <HairColorList v-on:changeHairColor="updateHairColor" />
+                            <HairColorList />
                           </div>
                         </div>
                       </div>
@@ -179,16 +179,16 @@
                 </div>
                 <div class="row py-2 px-2">
                   <h6>Actions</h6>
-                  <ActionList v-on:changeAction="updateAction" />
+                  <ActionList />
                 </div>
                 <div class="row py-2 px-2">
                   <div class="col-md-6">
                     <h6>Costume</h6>
-                    <OutfitCheckbox v-on:changeOutfit="updateOutfit" />
+                    <OutfitCheckbox />
                   </div>
                   <div class="col-md-6">
                     <h6>Options</h6>
-                    <ClearCharacterButton v-on:resetCharacter="resetChar" />
+                    <ClearCharacterButton />
                   </div>
                 </div>
               </div>
@@ -201,6 +201,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex"
 import GenderList from "@/components/GenderList.vue"
 import HairColorList from "@/components/HairColorList.vue"
 import HeadList from "@/components/HeadList.vue"
@@ -220,25 +221,10 @@ import { Tooltip } from "bootstrap"
 export default {
   data() {
     return {
-      gender: 0,
       item_top_src: 'https://static.divine-pride.net/images/items/item/19547.png',
       item_mid_src: 'https://static.divine-pride.net/images/items/item/19735.png',
       item_bot_src: 'https://static.divine-pride.net/images/items/item/19783.png',
       item_garmet_src: 'https://static.divine-pride.net/images/items/item/20571.png',
-      char: {
-        "gender": 1,
-        "job": ["0"],
-        "head": 1,
-        "headPalette": 1,
-        "headdir": 0,
-        "headgear": [0, 0, 0],
-        "garment": 0,
-        "bodyPalette": 0,
-        "action": 0,
-        "canvas": "200x200+100+150",
-        "outfit": 0,
-        "updated": true
-      }
     }
   },
   components: {
@@ -259,67 +245,11 @@ export default {
   },
   mounted() {
     document.title = 'Ragnarok Online Visual Simulator'
-    this.activeTooltip()
     this.loadLocalStorage()
+    this.activeTooltip()
   },
   methods: {
-    updateSex: function (gender) {
-      this.char.gender = gender
-    },
-    updateHairColor: function (id) {
-      this.char.headPalette = id - 1
-    },
-    updateHead: function (id) {
-      this.char.head = id
-    },
-    updateBodyPallete: function (id) {
-      this.char.bodyPalette = id
-    },
-    updateJob: function (id) {
-      this.char.job[0] = id.toString()
-    },
-    updateHeadTop: function (item) {
-      this.char.headgear[0] = item.viewID
-      this.item_top_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
-    },
-    updateHeadMid: function (item) {
-      this.char.headgear[1] = item.viewID
-      this.item_mid_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
-    },
-    updateHeadBottom: function (item) {
-      this.char.headgear[2] = item.viewID
-      this.item_bot_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
-    },
-    updateGarmet: function (item) {
-      this.char.garment = item.viewID
-      this.item_garmet_src = 'https://static.divine-pride.net/images/items/item/' + item.itemID + '.png'
-    },
-    updateCharacterPosition: function (side) {
-      if (side == "left") {
-        let action = (this.char.action + 1) % 8;
-        if (action == 0) { this.char.action -= 7; } else { this.char.action++; }
-      } else {
-        let action = (this.char.action) % 8;
-        if (action == 0) { this.char.action += 7; } else { this.char.action--; }
-      }
-    },
-    updateAction: function (id) {
-      let action = (this.char.action + 1) % 8;
-      this.char.action = id + action - 1
-      if (this.char.action < 0)
-        this.char.action = 0
-    },
-    updateOutfit: function (checked) {
-      console.log(checked)
-      if (checked) {
-        this.char.outfit = 1
-      } else {
-        this.char.outfit = 0
-      }
-    },
-    resetChar: function (character) {
-      this.char = character
-    },
+    ...mapMutations(['SAVE_CHARACTER', 'RESET_CHARACTER']),
     activeTooltip: function () {
       let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -330,21 +260,38 @@ export default {
       let character = localStorage.getItem('character')
 
       if (character != null) {
-        character = JSON.parse(character)
-        this.char.gender = character.gender
-        this.char.job = character.job
-        this.char.head = character.head
-        this.char.headPalette = character.headPalette
-        this.char.headdir = character.headdir
-        this.char.headgear = character.headgear
-        this.char.garment = character.garment
-        this.char.bodyPalette = character.bodyPalette
-        this.char.outfit = character.outfit
-        this.char.updated = false
+        this.SAVE_CHARACTER(JSON.parse(character))
+      } else {
+        this.RESET_CHARACTER();
       }
-
     }
-  }
+  },
+  watch: {
+    '$store.state.headgear_top_id': {
+      deep: true,
+      handler(newValue, oldValue) {
+        this.item_top_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
+      }
+    },
+    '$store.state.headgear_mid_id': {
+      deep: true,
+      handler(newValue, oldValue) {
+        this.item_mid_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
+      }
+    },
+    '$store.state.headgear_bottom_id': {
+      deep: true,
+      handler(newValue, oldValue) {
+        this.item_bot_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
+      }
+    },
+    '$store.state.garment_id': {
+      deep: true,
+      handler(newValue, oldValue) {
+        this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
+      }
+    }
+  },
 }
 </script>
 <style scoped>
