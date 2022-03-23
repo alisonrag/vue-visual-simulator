@@ -30,7 +30,7 @@
                       <div class="card-job-inner">
                         <div class="d-flex align-items-start">
                           <div
-                            class="nav flex-column nav-pills me-3"
+                            class="nav flex-column nav-pills"
                             id="v-pills-tab"
                             role="tablist"
                             aria-orientation="vertical"
