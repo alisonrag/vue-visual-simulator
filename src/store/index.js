@@ -2,19 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    character: {
-      gender: 1,
-      job: ["0"],
-      head: 1,
-      headPalette: 1,
-      headdir: 0,
-      headgear: [0, 0, 0],
-      garment: 0,
-      bodyPalette: 0,
-      action: 0,
-      canvas: "200x200+100+150",
-      outfit: 0,
-    },
+    character: { },
     default_character: {
       gender: 1,
       job: ["0"],
