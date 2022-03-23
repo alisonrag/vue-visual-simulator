@@ -6,6 +6,7 @@
                 v-for="(pallete, index) in body_pallete_list"
                 :key="index"
                 class="li-body-pallete btn btn-outline-primary"
+                :class="{ 'active': pallete.id == $store.state.character.bodyPalette }"
                 :id="pallete.id"
                 @click="clickBodyPallete($event)"
             >
@@ -39,16 +40,11 @@ export default {
                     id: 3,
                     name: 'green'
                 },
-            ], active: false
+            ],
         }
     }, methods: {
         ...mapMutations(['SAVE_BODY_PALETTE']),
         clickBodyPallete: function (event) {
-            if (this.active)
-                this.active.target.classList.remove('active')
-
-            this.active = event
-            this.active.target.classList.add('active')
             this.SAVE_BODY_PALETTE(parseInt(event.target.getAttribute('id')))
         }
     }

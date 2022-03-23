@@ -4,6 +4,7 @@
             <li v-for="(job, index) in job_list" class="li-job" :key="index">
                 <img
                     :src="require('../assets/job/icon_jobs_' + job.id + '.png')"
+                    :class="{ 'job-selected': job.id == $store.state.character.job }"
                     :alt="job.name"
                     :id="job.id"
                     @click="clickJob($event)"
@@ -365,16 +366,10 @@ export default {
                     "name": "JT_SPIRIT_HANDLER"
                 },
             ],
-            active: false
         }
     }, methods: {
         ...mapMutations(['SAVE_JOB']),
         clickJob: function (event) {
-            if (this.active)
-                this.active.target.classList.remove('job-selected')
-
-            this.active = event
-            this.active.target.classList.add('job-selected')
             this.SAVE_JOB(parseInt(event.target.id))
         }
     }
@@ -392,7 +387,8 @@ export default {
     height: 27px;
 }
 .job-selected {
-    border: 1px solid #fc4f4f;
+    border: 2px dashed #0d6efd;
     border-radius: 5px;
+    filter: contrast(105%) brightness(110%);
 }
 </style>

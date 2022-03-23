@@ -4,11 +4,10 @@
             <li v-for="(head, index) in heads.human_male" :key="index">
                 <img
                     class="li-head-normal"
+                    :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
                     :src="require('../assets/head/img_hairstyle' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
-                    @mouseover="overHead($event)"
-                    @mouseleave="leaveHead($event)"
                 />
             </li>
         </ul>
@@ -16,11 +15,10 @@
             <li v-for="(head, index) in heads.human_female" :key="index">
                 <img
                     class="li-head-normal"
+                    :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
                     :src="require('../assets/head/img_hairstyle_girl' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
-                    @mouseover="overHead($event)"
-                    @mouseleave="leaveHead($event)"
                 />
             </li>
         </ul>
@@ -28,11 +26,10 @@
             <li v-for="(head, index) in heads.doram_male" :key="index">
                 <img
                     class="li-head-normal"
+                    :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
                     :src="require('../assets/head/img_hairstyle_doramboy' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
-                    @mouseover="overHead($event)"
-                    @mouseleave="leaveHead($event)"
                 />
             </li>
         </ul>
@@ -40,11 +37,10 @@
             <li v-for="(head, index) in heads.doram_female" :key="index">
                 <img
                     class="li-head-normal"
+                    :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
                     :src="require('../assets/head/img_hairstyle_doramgirl' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
-                    @mouseover="overHead($event)"
-                    @mouseleave="leaveHead($event)"
                 />
             </li>
         </ul>
@@ -79,23 +75,7 @@ export default {
     methods: {
         ...mapMutations(['SAVE_HEAD']),
         clickHead: function (event) {
-            if (this.active)
-                this.active.target.className = 'li-head-normal'
-
-            this.active = event
-            event.target.className = 'li-head-press'
-            setTimeout(function () {
-                event.target.className = 'li-head-select'
-            }, 200)
             this.SAVE_HEAD(parseInt(event.target.id))
-        },
-        overHead: function (event) {
-            if (this.active && this.active.target.id != event.target.id)
-                event.target.className = 'li-head-over'
-        },
-        leaveHead: function (event) {
-            if (this.active && this.active.target.id != event.target.id)
-                event.target.className = 'li-head-normal'
         },
         changeHeadList: function () {
             this.human_male = this.human_female = this.doram_male = this.doram_female = false

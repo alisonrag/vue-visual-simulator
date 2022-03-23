@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input class="form-check-input" type="checkbox" value="1" id="outfit" @change="outfitCheck($event)"/>
+        <input class="form-check-input" type="checkbox" value="1" id="outfit" @change="outfitCheck($event)" :checked="$store.state.character.outfit"/>
         <label class="form-check-label px-1" for="outfit">Outfit</label>
     </div>
 </template>

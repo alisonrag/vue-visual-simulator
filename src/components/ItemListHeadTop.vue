@@ -4,7 +4,7 @@
       <img
         :src="'https://static.divine-pride.net/images/items/item/' + item.id + '.png'"
         class="img-item"
-        :class="item.viewID ? '' : 'item-disabled'"
+        :class="{ 'item-selected': parseInt(item.viewID) == $store.state.character.headgear[0] }"
         :viewID="item.viewID"
         :id="item.id"
         data-bs-toggle="tooltip"
@@ -31,11 +31,6 @@ export default {
   }, methods: {
     ...mapMutations(['SAVE_HEADGEAR_TOP', 'SAVE_HEADGEAR_TOP_ID']),
     clickItem: function (event) {
-      if (this.active)
-        this.active.target.classList.remove('item-selected')
-
-      this.active = event
-      this.active.target.classList.add('item-selected')
       this.SAVE_HEADGEAR_TOP(parseInt(event.target.getAttribute('viewID')))
       this.SAVE_HEADGEAR_TOP_ID(parseInt(event.target.getAttribute('id')))
     }
@@ -64,8 +59,9 @@ export default {
 }
 
 .item-selected {
-  border: 1px solid #4bb1f5;
+  border: 2px dashed #0d6efd;
   border-radius: 5px;
+  filter: contrast(105%) brightness(110%);
 }
 
 .item-disabled {
