@@ -4,7 +4,7 @@
       <img
         :src="'https://static.divine-pride.net/images/items/item/' + item.id + '.png'"
         class="img-item"
-        :class="{ 'item-selected': parseInt(item.viewID) == $store.state.character.garment }"
+        :class="{ 'item-selected': parseInt(item.viewID) > 0 && parseInt(item.viewID) == $store.state.character.garment }"
         :viewID="item.viewID"
         :id="item.id"
         data-bs-toggle="tooltip"
