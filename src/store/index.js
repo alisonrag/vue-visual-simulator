@@ -15,19 +15,6 @@ export default createStore({
       canvas: "200x200+100+150",
       outfit: 0,
     },
-    default_character: {
-      gender: 1,
-      job: ["0"],
-      head: 1,
-      headPalette: 1,
-      headdir: 0,
-      headgear: [0, 0, 0],
-      garment: 0,
-      bodyPalette: 0,
-      action: 0,
-      canvas: "200x200+100+150",
-      outfit: 0,
-    },
     headgear_top_id: 0,
     headgear_mid_id: 0,
     headgear_bottom_id: 0,
@@ -105,7 +92,15 @@ export default createStore({
       }
     },
     RESET_CHARACTER(state, payload) {
-      state.character = state.default_character;
+      state.character.gender = 1
+      state.character.job = ["0"]
+      state.character.head = 1
+      state.character.headPalette = 1
+      state.character.headgear = [0, 0, 0]
+      state.character.garment = 0
+      state.character.bodyPalette = 0
+      state.character.action = 0
+      state.character.outfit = 0
     },
     SAVE_CHARACTER(state, character) {
       state.character = character;
