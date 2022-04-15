@@ -38,19 +38,19 @@ export default createStore({
       state.character.job[0] = id.toString();
     },
     SAVE_HEADGEAR_TOP(state, viewID) {
-      state.character.headgear[0] = viewID;
+      state.character.headgear[1] = viewID;
     },
     SAVE_HEADGEAR_TOP_ID(state, itemID) {
       state.headgear_top_id = itemID;
     },
     SAVE_HEADGEAR_MID(state, viewID) {
-      state.character.headgear[1] = viewID;
+      state.character.headgear[2] = viewID;
     },
     SAVE_HEADGEAR_MID_ID(state, itemID) {
       state.headgear_mid_id = itemID;
     },
     SAVE_HEADGEAR_BOTTOM(state, viewID) {
-      state.character.headgear[2] = viewID;
+      state.character.headgear[0] = viewID;
     },
     SAVE_HEADGEAR_BOTTOM_ID(state, itemID) {
       state.headgear_bottom_id = itemID;
