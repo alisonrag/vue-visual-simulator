@@ -28,98 +28,63 @@
                   <div class="card card-job-shadow">
                     <div class="card p-1">
                       <div class="card-job-inner">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <form class="form">
+                              <div class="input-group py-2 px-1">
+                                <div class="input-group-text">
+                                  <i class="fas fa-search"></i>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search Item..."
+                                  v-model="searchItemQuery" />
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                         <div class="d-flex align-items-start">
-                          <div
-                            class="nav flex-column nav-pills"
-                            id="v-pills-tab"
-                            role="tablist"
-                            aria-orientation="vertical"
-                          >
-                            <button
-                              class="nav-link active"
-                              id="v-pills-home-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#v-pills-home"
-                              type="button"
-                              role="tab"
-                              aria-controls="v-pills-home"
-                              aria-selected="true"
-                            >
+                          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                              data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                              aria-selected="true">
                               <img :src="item_top_src" alt="Item Top Tab" />
                               <br />Top
                             </button>
-                            <button
-                              class="nav-link"
-                              id="v-pills-profile-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#v-pills-profile"
-                              type="button"
-                              role="tab"
-                              aria-controls="v-pills-profile"
-                              aria-selected="false"
-                            >
+                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                              data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                              aria-selected="false">
                               <img :src="item_mid_src" alt="Item Mid Tab" />
                               <br />Mid
                             </button>
-                            <button
-                              class="nav-link"
-                              id="v-pills-messages-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#v-pills-messages"
-                              type="button"
-                              role="tab"
-                              aria-controls="v-pills-messages"
-                              aria-selected="false"
-                            >
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                              data-bs-target="#v-pills-messages" type="button" role="tab"
+                              aria-controls="v-pills-messages" aria-selected="false">
                               <img :src="item_bot_src" alt="Item Bot Tab" />
                               <br />Bot
                             </button>
-                            <button
-                              class="nav-link"
-                              id="v-pills-settings-tab"
-                              data-bs-toggle="pill"
-                              data-bs-target="#v-pills-settings"
-                              type="button"
-                              role="tab"
-                              aria-controls="v-pills-settings"
-                              aria-selected="false"
-                            >
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                              data-bs-target="#v-pills-settings" type="button" role="tab"
+                              aria-controls="v-pills-settings" aria-selected="false">
                               <img :src="item_garmet_src" alt="Item Garmet Tab" />
                               <br />Garmet
                             </button>
                           </div>
                           <div class="tab-content" id="v-pills-tabContent">
-                            <div
-                              class="tab-pane tab-pane-items fade show active"
-                              id="v-pills-home"
-                              role="tabpanel"
-                              aria-labelledby="v-pills-home-tab"
-                            >
-                              <ItemListHeadTop />
+                            <div class="tab-pane tab-pane-items fade show active" id="v-pills-home" role="tabpanel"
+                              aria-labelledby="v-pills-home-tab">
+                              <ItemListHeadTop :item_filter="searchItemQuery" />
                             </div>
-                            <div
-                              class="tab-pane tab-pane-items fade"
-                              id="v-pills-profile"
-                              role="tabpanel"
-                              aria-labelledby="v-pills-profile-tab"
-                            >
-                              <ItemListHeadMid />
+                            <div class="tab-pane tab-pane-items fade" id="v-pills-profile" role="tabpanel"
+                              aria-labelledby="v-pills-profile-tab">
+                              <ItemListHeadMid :item_filter="searchItemQuery" />
                             </div>
-                            <div
-                              class="tab-pane tab-pane-items fade"
-                              id="v-pills-messages"
-                              role="tabpanel"
-                              aria-labelledby="v-pills-messages-tab"
-                            >
-                              <ItemListHeadBottom />
+                            <div class="tab-pane tab-pane-items fade" id="v-pills-messages" role="tabpanel"
+                              aria-labelledby="v-pills-messages-tab">
+                              <ItemListHeadBottom :item_filter="searchItemQuery" />
                             </div>
-                            <div
-                              class="tab-pane tab-pane-items fade"
-                              id="v-pills-settings"
-                              role="tabpanel"
-                              aria-labelledby="v-pills-settings-tab"
-                            >
-                              <ItemListGarmet />
+                            <div class="tab-pane tab-pane-items fade" id="v-pills-settings" role="tabpanel"
+                              aria-labelledby="v-pills-settings-tab">
+                              <ItemListGarmet :item_filter="searchItemQuery" />
                             </div>
                           </div>
                         </div>
@@ -141,9 +106,7 @@
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <div
-                            class="character-box d-flex flex-column justify-content-center align-items-center"
-                          >
+                          <div class="character-box d-flex flex-column justify-content-center align-items-center">
                             <Character />
                           </div>
                           <div class="mb-3 d-flex flex-column align-items-center">
@@ -225,6 +188,7 @@ export default {
       item_mid_src: 'https://static.divine-pride.net/images/items/item/19735.png',
       item_bot_src: 'https://static.divine-pride.net/images/items/item/19783.png',
       item_garmet_src: 'https://static.divine-pride.net/images/items/item/20571.png',
+      searchItemQuery: ''
     }
   },
   components: {
@@ -290,6 +254,11 @@ export default {
       handler(newValue, oldValue) {
         this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
       }
+    },
+    'searchItemQuery': {
+      handler(newValue, oldValue) {
+          this.activeTooltip()
+      }
     }
   },
 }
@@ -300,12 +269,10 @@ export default {
 }
 
 .bg-gradient-ragnarok {
-  background-image: linear-gradient(
-    135deg,
-    rgba(231, 231, 255, 1) 0%,
-    rgba(255, 231, 231, 1) 35%,
-    rgba(225, 255, 254, 1) 100%
-  );
+  background-image: linear-gradient(135deg,
+      rgba(231, 231, 255, 1) 0%,
+      rgba(255, 231, 231, 1) 35%,
+      rgba(225, 255, 254, 1) 100%);
   padding: 5px;
 }
 
@@ -313,6 +280,7 @@ export default {
   border: solid 1px #dddddd;
   border-radius: 5px;
 }
+
 .ragnarok-card {
   padding: 10px;
 }
@@ -321,6 +289,7 @@ export default {
   -webkit-box-shadow: 0px 0px 2px 5px #cddefb;
   box-shadow: 0px 0px 2px 5px #cddefb;
 }
+
 .card-job-inner {
   border: 1px dashed #4bb1f5;
   border-radius: 6px;

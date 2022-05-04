@@ -1,6 +1,6 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in items" class="li-item" :key="index">
+    <li v-for="(item, index) in filteredList" class="li-item" :key="index">
       <img :src="'https://static.divine-pride.net/images/items/item/' + item.id + '.png'" class="img-item"
         :class="{ 'item-selected': parseInt(item.viewID) > 0 && parseInt(item.viewID) == $store.state.character.headgear[2] }"
         :viewID="item.viewID" :id="item.id" data-bs-toggle="tooltip" data-bs-placement="top" :title="item.name"
@@ -14,6 +14,14 @@ import { mapMutations } from 'vuex'
 
 export default {
   name: "ItemListHeadBottom",
+  props: ['item_filter'],
+  computed: {
+    filteredList() {
+      return this.items.filter(item => {
+        return item.name.toLowerCase().includes(this.item_filter.toLowerCase())
+      })
+    }
+  },
   data() {
     return {
       items: [
