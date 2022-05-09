@@ -254,6 +254,11 @@ export default {
       handler(newValue, oldValue) {
         this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`
       }
+    },
+    'searchItemQuery': {
+      handler(newValue, oldValue) {
+          this.activeTooltip()
+      }
     }
   },
 }
