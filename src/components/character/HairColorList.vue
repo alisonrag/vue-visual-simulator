@@ -3,7 +3,7 @@
         <ul class="ul-hair-color">
             <li v-for="(color, index) in colors" :key="index" class="li-hair-color">
                 <img
-                    :src="require('../assets/color/color' + color.id + '_off.png')"
+                    :src="require('../../assets/color/color' + color.id + '_off.png')"
                     :alt="color.name"
                     :id="color.id"
                      class="img-hair-color"
@@ -68,22 +68,22 @@ export default {
         ...mapMutations(['SAVE_HAIR_COLOR']),
         clickHairColor: function (event) {
             if (this.active)
-                this.active.target.src = require('../assets/color/color' + this.active.target.id + '_off.png')
+                this.active.target.src = require('../../assets/color/color' + this.active.target.id + '_off.png')
 
             this.active = event
-            event.target.src = require('../assets/color/color' + event.target.id + '_press.png')
+            event.target.src = require('../../assets/color/color' + event.target.id + '_press.png')
             setTimeout(function () {
-                event.target.src = require('../assets/color/color' + event.target.id + '_on.png')
+                event.target.src = require('../../assets/color/color' + event.target.id + '_on.png')
             }, 200)
             this.SAVE_HAIR_COLOR(parseInt(event.target.id))
         },
         overHairColor: function (event) {
             if (this.active && this.active.target.id != event.target.id)
-                event.target.src = require('../assets/color/color' + event.target.id + '_over.png')
+                event.target.src = require('../../assets/color/color' + event.target.id + '_over.png')
         },
         leaveHairColor: function (event) {
             if (this.active && this.active.target.id != event.target.id)
-                event.target.src = require('../assets/color/color' + event.target.id + '_off.png')
+                event.target.src = require('../../assets/color/color' + event.target.id + '_off.png')
         }
     }
 }

@@ -22,9 +22,9 @@ export default {
     name: 'GenderList',
     data() {
         return {
-            male_btn_src: require('../assets/gender/bt_male_on.png'),
+            male_btn_src: require('../../assets/gender/bt_male_on.png'),
             male_btn_state: 1,
-            female_btn_src: require('../assets/gender/bt_female_off.png'),
+            female_btn_src: require('../../assets/gender/bt_female_off.png'),
             female_btn_state: 0,
         }
     },
@@ -34,22 +34,22 @@ export default {
             if (id) {
                 if (!this.male_btn_state) {
                     this.male_btn_state = 1
-                    this.male_btn_src = require('../assets/gender/bt_male_press.png')
+                    this.male_btn_src = require('../../assets/gender/bt_male_press.png')
                     setTimeout(function () {
-                        this.male_btn_src = require('../assets/gender/bt_male_on.png')
+                        this.male_btn_src = require('../../assets/gender/bt_male_on.png')
                     }, 250)
                     this.female_btn_state = 0
-                    this.female_btn_src = require('../assets/gender/bt_female_off.png')
+                    this.female_btn_src = require('../../assets/gender/bt_female_off.png')
                 }
             } else {
                 if (!this.female_btn_state) {
                     this.female_btn_state = 1
-                    this.female_btn_src = require('../assets/gender/bt_female_press.png')
+                    this.female_btn_src = require('../../assets/gender/bt_female_press.png')
                     setTimeout(function () {
-                        this.female_btn_src = require('../assets/gender/bt_female_on.png')
+                        this.female_btn_src = require('../../assets/gender/bt_female_on.png')
                     }, 250)
                     this.male_btn_state = 0
-                    this.male_btn_src = require('../assets/gender/bt_male_off.png')
+                    this.male_btn_src = require('../../assets/gender/bt_male_off.png')
                 }
             }
             this.SAVE_GENDER(id)
@@ -57,26 +57,26 @@ export default {
         overSexBtn: function (id) {
             if (id) {
                 if (!this.male_btn_state) {
-                    this.male_btn_src = require('../assets/gender/bt_male_over.png')
+                    this.male_btn_src = require('../../assets/gender/bt_male_over.png')
                 }
             } else {
                 if (!this.female_btn_state) {
-                    this.female_btn_src = require('../assets/gender/bt_female_over.png')
+                    this.female_btn_src = require('../../assets/gender/bt_female_over.png')
                 }
             }
         },
         outSexBtn: function (id) {
             if (id) {
                 if (this.male_btn_state) {
-                    this.male_btn_src = require('../assets/gender/bt_male_on.png')
+                    this.male_btn_src = require('../../assets/gender/bt_male_on.png')
                 } else {
-                    this.male_btn_src = require('../assets/gender/bt_male_off.png')
+                    this.male_btn_src = require('../../assets/gender/bt_male_off.png')
                 }
             } else {
                 if (this.female_btn_state) {
-                    this.female_btn_src = require('../assets/gender/bt_female_on.png')
+                    this.female_btn_src = require('../../assets/gender/bt_female_on.png')
                 } else {
-                    this.female_btn_src = require('../assets/gender/bt_female_off.png')
+                    this.female_btn_src = require('../../assets/gender/bt_female_off.png')
                 }
 
             }
