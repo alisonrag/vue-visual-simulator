@@ -11,7 +11,8 @@
         :class="{
           'item-selected':
             parseInt(item.viewID) > 0 &&
-            parseInt(item.viewID) == $store.state.character.headgear[0],
+            parseInt(item.viewID) == $store.state.character.headgear[1],
+          'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"
         :id="item.id"
@@ -732,6 +733,7 @@ export default {
 }
 
 .item-disabled {
-  opacity: 0.3;
+  opacity: 0.5;
+  background: url("~@/assets/interface/forbidden_item.png");
 }
 </style>
