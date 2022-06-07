@@ -16,9 +16,6 @@
                 <a class="footer-link" :href="projectGit" target="_blank"><i class="fa-brands fa-github"></i></a>
             </li>
             <li class="ms-3">
-                <a class="footer-link" :href="authorGit" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-            </li>
-            <li class="ms-3">
                 <a class="footer-link" href="#"></a>
             </li>
         </ul>
