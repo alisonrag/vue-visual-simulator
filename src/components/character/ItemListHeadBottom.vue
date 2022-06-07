@@ -315,6 +315,7 @@ export default {
         { id: 400057, name: "Peruca da Lótus Vermelha", viewID: 1989 },
         { id: 400056, name: "Longa Peruca Esverdeada", viewID: 1990 },
         { id: 31921, name: "Peruca Natural", viewID: 1992 },
+        { id: 31922, name: "Cabelo Ondulado Lilás", viewID: 1993 },
         { id: 31932, name: "Gravata-Paletó", viewID: 2002 },
         { id: 31938, name: "Peruca de Trança Dupla", viewID: 2007 },
         { id: 31954, name: "Coleira do Vassalo", viewID: 2018 },

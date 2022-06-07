@@ -209,6 +209,7 @@ export default {
         { id: 19813, name: "Casquinha Equilibrista", viewID: 488 },
         { id: 19598, name: "Elmo do Rei do Norte", viewID: 490 },
         { id: 19819, name: "Capuz do Mestre Necromante", viewID: 491 },
+        { id: 31663, name: "Chapéu de Fada", viewID: 492 },
         { id: 31053, name: "O Tigre Sábio", viewID: 495 },
         { id: 19652, name: "Cartola Visual de Mágico", viewID: 497 },
         { id: 19607, name: "Filhote de Fênix", viewID: 500 },
@@ -689,6 +690,7 @@ export default {
         { id: 400212, name: "Aplique de Coque Lilás", viewID: 2197 },
         { id: 400214, name: "Chapéu Aclamado", viewID: 2198 },
         { id: 400225, name: "Capa Coelho Felpudo", viewID: 2205 },
+        { id: 400253, name: "Chapéu Doceria", viewID: 2223 },
       ],
       active: false,
     };
