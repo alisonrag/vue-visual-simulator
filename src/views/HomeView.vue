@@ -8,7 +8,7 @@
               <div class="col-md-12">
                 <div class="row g-0">
                   <div class="col-md-12 content">
-                    <i class="fa fa-user-circle" aria-hidden="true"></i> Visual Simulator
+                    <i class="fa fa-user-circle" aria-hidden="true"></i> {{ $t('visualSimulator') }}
                   </div>
                 </div>
               </div>
@@ -35,7 +35,7 @@
                                 <div class="input-group-text">
                                   <i class="fas fa-search"></i>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Search Item..."
+                                <input type="text" class="form-control" :placeholder="$t('searchItem')"
                                   v-model="searchItemQuery" />
                               </div>
                             </form>
@@ -48,25 +48,25 @@
                               data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                               aria-selected="true">
                               <img :src="item_top_src" alt="Item Top Tab" />
-                              <br />Top
+                              <br />{{ $t('top') }}
                             </button>
                             <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                               data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                               aria-selected="false">
                               <img :src="item_mid_src" alt="Item Mid Tab" />
-                              <br />Mid
+                              <br />{{ $t('mid') }}
                             </button>
                             <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
                               data-bs-target="#v-pills-messages" type="button" role="tab"
                               aria-controls="v-pills-messages" aria-selected="false">
                               <img :src="item_bot_src" alt="Item Bot Tab" />
-                              <br />Bot
+                              <br />{{ $t('bot') }}
                             </button>
                             <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                               data-bs-target="#v-pills-settings" type="button" role="tab"
                               aria-controls="v-pills-settings" aria-selected="false">
                               <img :src="item_garmet_src" alt="Item Garmet Tab" />
-                              <br />Garmet
+                              <br />{{ $t('garment') }}
                             </button>
                           </div>
                           <div class="tab-content" id="v-pills-tabContent">
@@ -125,13 +125,13 @@
                     <div class="col-md-6">
                       <div class="row">
                         <div class="col-md-12">
-                          <h6>Hair Style</h6>
+                          <h6>{{ $t('hairStyle') }}</h6>
                           <HeadList />
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <h6>Hair Color</h6>
+                          <h6>{{ $t('hairColor') }}</h6>
                           <div class="card px-2 py-1">
                             <HairColorList />
                           </div>
@@ -141,16 +141,16 @@
                   </div>
                 </div>
                 <div class="row py-2 px-2">
-                  <h6>Actions</h6>
+                  <h6>{{ $t('actions') }}</h6>
                   <ActionList />
                 </div>
                 <div class="row py-2 px-2">
                   <div class="col-md-6">
-                    <h6>Costume</h6>
+                    <h6>{{ $t('costume') }}</h6>
                     <OutfitCheckbox />
                   </div>
                   <div class="col-md-6">
-                    <h6>Options</h6>
+                    <h6>{{ $t('options') }}</h6>
                     <ClearCharacterButton />
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="container-body-pallete">
-        <h6>Clothes Color</h6>
+        <h6>{{$t("clothesColor")}}</h6>
         <ul class="ul-body-pallete-list">
             <li
                 v-for="(pallete, index) in body_pallete_list"

@@ -3,7 +3,7 @@
     <div class="container container-about my-5">
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">About Project</h1>
+          <h1 class="text-center header-section">{{$t("aboutProject")}}</h1>
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6"><hr></div>
@@ -11,12 +11,12 @@
           </div>
           <p
             class="py-5"
-          >VisualSimulator is a plataform that allow you and your friends simulate a ragnarok character outifit, this project is based on 'Brazil Ragnarok Online' visual system. You can find hundred of item to try until you find the most beautiful outifit. VisualSimulator is weekly updated according to bRO</p>
+          >{{$t("aboutText")}}</p>
         </div>
       </div>
       <div class="row p-5">
         <div class="col-md-12 text-center">
-          <h1 class="header-section">Technologies</h1>
+          <h1 class="header-section">{{$t("technologies")}}</h1>
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6"><hr></div>
@@ -90,20 +90,18 @@
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">Warning</h1>
+          <h1 class="text-center header-section">{{$t("warning")}}</h1>
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6"><hr></div>
             <div class="col-md-3"></div>
           </div>
-          <p>VisualSimulator is not endorsed by or affiliated with Gravity / Warp Portal.</p>
-          <p>Ragnarok Online® is ©2002-2022 Gravity Co., Ltd. & Lee Myoungjin.</p>
-          <p>Game graphics (e.g. item/sprite graphics) © 2002-2022 Gravity Corp. & Lee Myoungjin.</p>
+         {{$t("warningText")}}
         </div>
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">Team</h1>
+          <h1 class="text-center header-section">{{$t("team")}}</h1>
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6"><hr></div>
@@ -120,7 +118,7 @@
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">Social Media</h1>
+          <h1 class="text-center header-section">{{$t("socialMedia")}}</h1>
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6"><hr></div>
