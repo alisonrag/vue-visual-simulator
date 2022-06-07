@@ -3,23 +3,21 @@
     <div class="container container-about my-5">
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">{{$t("aboutProject")}}</h1>
+          <h1 class="text-center header-section">{{ $t("aboutProject") }}</h1>
           <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6"><hr></div>
+            <div class="col-md-6"><hr /></div>
             <div class="col-md-3"></div>
           </div>
-          <p
-            class="py-5"
-          >{{$t("aboutText")}}</p>
+          <p class="py-5">{{ $t("aboutText") }}</p>
         </div>
       </div>
       <div class="row p-5">
         <div class="col-md-12 text-center">
-          <h1 class="header-section">{{$t("technologies")}}</h1>
+          <h1 class="header-section">{{ $t("technologies") }}</h1>
           <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6"><hr></div>
+            <div class="col-md-6"><hr /></div>
             <div class="col-md-3"></div>
           </div>
           <div class="row py-5">
@@ -40,7 +38,9 @@
               <h2>Javascript</h2>
               <p>
                 Build with latest version of
-                <a target="_blank" href="https://www.javascript.com/">JavaScript</a>
+                <a target="_blank" href="https://www.javascript.com/"
+                  >JavaScript</a
+                >
               </p>
             </div>
             <div class="col-md-4">
@@ -50,7 +50,11 @@
               <h2>CSS3</h2>
               <p>
                 Build with latest version of
-                <a target="_blank" href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
+                <a
+                  target="_blank"
+                  href="https://www.w3.org/Style/CSS/Overview.en.html"
+                  >CSS</a
+                >
               </p>
             </div>
           </div>
@@ -62,7 +66,9 @@
               <h2>Font Awesome</h2>
               <p>
                 Build with latest version of
-                <a target="_blank" href="https://fontawesome.com/">FontAwesome</a>
+                <a target="_blank" href="https://fontawesome.com/"
+                  >FontAwesome</a
+                >
               </p>
             </div>
             <div class="col-md-4">
@@ -82,7 +88,9 @@
               <h2>Bootstrap 5</h2>
               <p>
                 Build with
-                <a target="_blank" href="https://getbootstrap.com/">Bootstrap</a>
+                <a target="_blank" href="https://getbootstrap.com/"
+                  >Bootstrap</a
+                >
               </p>
             </div>
           </div>
@@ -90,51 +98,54 @@
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">{{$t("warning")}}</h1>
+          <h1 class="text-center header-section">{{ $t("warning") }}</h1>
           <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6"><hr></div>
+            <div class="col-md-6"><hr /></div>
             <div class="col-md-3"></div>
           </div>
-         {{$t("warningText")}}
+          {{ $t("warningText") }}
         </div>
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">{{$t("team")}}</h1>
+          <h1 class="text-center header-section">{{ $t("team") }}</h1>
           <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6"><hr></div>
+            <div class="col-md-6"><hr /></div>
             <div class="col-md-3"></div>
           </div>
-          <div class="card col-md-2">
-            <div class="card-header"></div>
+          <div class="card col-md-12">
             <div class="card-body">
-              <h3>Alison</h3>
-              <h4>developer</h4>
+              <a
+                href="https://github.com/alisonrag/vue-visual-simulator/graphs/contributors"
+              >
+                <img
+                  src="https://contrib.rocks/image?repo=alisonrag/vue-visual-simulator"
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div class="row p-5">
         <div class="col-md-12">
-          <h1 class="text-center header-section">{{$t("socialMedia")}}</h1>
+          <h1 class="text-center header-section">{{ $t("socialMedia") }}</h1>
           <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6"><hr></div>
+            <div class="col-md-6"><hr /></div>
             <div class="col-md-3"></div>
           </div>
           <div class="row p-5 text-center">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <h2>
-                <a href="https://github.com/alisonrag/vue-visual-simulator" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a
+                  href="https://github.com/alisonrag/vue-visual-simulator"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
               </h2>
-            </div>
-            <div class="col-md-6">
-              <h2>
-                <a href="https://github.com/alisonrag" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-              </h2>
-            </div>
+            </div>            
           </div>
         </div>
       </div>
@@ -145,9 +156,9 @@
 <script>
 export default {
   mounted() {
-    document.title = 'Ragnarok Online Visual Simulator - About'
-  }
-}
+    document.title = "Ragnarok Online Visual Simulator - About";
+  },
+};
 </script>
 
 <style scoped>
@@ -187,5 +198,3 @@ export default {
   padding: 2px 5px;
 }
 </style>
-
-
