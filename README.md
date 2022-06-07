@@ -13,7 +13,8 @@ Access: http://visualrag.herokuapp.com/
 - HTML
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/10372732/159739095-650fd581-380c-4a24-8d31-15070c6ddec7.png)
+![image](https://user-images.githubusercontent.com/10372732/172491698-7e3f92d6-a89c-4f69-b541-54487ab1a802.png)
+
 
 
 ## Project setup
