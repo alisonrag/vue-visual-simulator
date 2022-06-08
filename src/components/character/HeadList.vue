@@ -5,7 +5,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/head/img_hairstyle' + head + '.png')"
+                    :src="require('../../assets/img/head/img_hairstyle' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -16,7 +16,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/head/img_hairstyle_girl' + head + '.png')"
+                    :src="require('../../assets/img/head/img_hairstyle_girl' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -27,7 +27,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/head/img_hairstyle_doramboy' + head + '.png')"
+                    :src="require('../../assets/img/head/img_hairstyle_doramboy' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -38,7 +38,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/head/img_hairstyle_doramgirl' + head + '.png')"
+                    :src="require('../../assets/img/head/img_hairstyle_doramgirl' + head + '.png')"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -126,15 +126,15 @@ export default {
     margin: 5px;
 }
 .li-head-normal {
-    background: url("~@/assets/head/bt_hairstyle_normal.png");
+    background: url("~@/assets/img/head/bt_hairstyle_normal.png");
 }
 .li-head-over {
-    background: url("~@/assets/head/bt_hairstyle_over.png");
+    background: url("~@/assets/img/head/bt_hairstyle_over.png");
 }
 .li-head-press {
-    background: url("~@/assets/head/bt_hairstyle_press.png");
+    background: url("~@/assets/img/head/bt_hairstyle_press.png");
 }
 .li-head-select {
-    background: url("~@/assets/head/bt_hairstyle_select.png");
+    background: url("~@/assets/img/head/bt_hairstyle_select.png");
 }
 </style>

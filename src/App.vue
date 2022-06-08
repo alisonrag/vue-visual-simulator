@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .container-content {
-  background: url("~@/assets/interface/background.jpg");
+  background: url("~@/assets/img/interface/background.jpg");
   background-size: cover;
 }
 </style>>

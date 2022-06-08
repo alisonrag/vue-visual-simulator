@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-inner">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
-        <img :src="logoImage" :alt="logoImageAlt" id="logo" />
+        <img :src="require(logoImage)" :alt="logoImageAlt" id="logo" />
         {{ projectName }}
       </router-link>
       <button

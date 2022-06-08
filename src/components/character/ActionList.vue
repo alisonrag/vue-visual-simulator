@@ -54,7 +54,7 @@ export default {
 }
 
 .simicon {
-    background-image: url("~@/assets/interface/icons.png");
+    background-image: url("~@/assets/img/interface/icons.png");
     background-color: #f6feff;
     background-position: center;
     background-repeat: no-repeat;

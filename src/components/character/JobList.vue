@@ -3,7 +3,7 @@
         <ul class="ul-jobs">
             <li v-for="(job, index) in job_list" class="li-job" :key="index">
                 <img
-                    :src="require('../../assets/job/icon_jobs_' + job.id + '.png')"
+                    :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
                     :class="{ 'job-selected': job.id == $store.state.character.job }"
                     :alt="job.name"
                     :id="job.id"

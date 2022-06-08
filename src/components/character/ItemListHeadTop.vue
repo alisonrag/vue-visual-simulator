@@ -715,7 +715,7 @@ export default {
   float: left;
   width: 32px;
   height: 32px;
-  background: url("~@/assets/interface/item-bg.png");
+  background: url("~@/assets/img/interface/item-bg.png");
 }
 
 .img-item {
@@ -734,6 +734,6 @@ export default {
 
 .item-disabled {
   opacity: 0.5;
-  background: url("~@/assets/interface/forbidden_item.png");
+  background: url("~@/assets/img/interface/forbidden_item.png");
 }
 </style>
