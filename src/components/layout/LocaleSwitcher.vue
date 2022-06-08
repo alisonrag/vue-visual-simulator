@@ -5,7 +5,7 @@
       :value="locale"
       :key="locale"
       :selected="locale == current_language"
-      class="language_select"
+      class="language_option"
     >
       {{ locale }}
     </option>
@@ -45,7 +45,20 @@ export default {
 </script>
 
 <style scoped>
-.language_select {
+.language_select,
+.language_option {
   text-transform: uppercase;
+}
+
+.language_select {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: none;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.language_option {
+  color: black;
 }
 </style>
