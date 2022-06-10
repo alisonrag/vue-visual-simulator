@@ -1,6 +1,6 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in filteredList" class="li-item" :key="item.id">
+    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())" class="li-item" :key="item.id">
       <img
         :src="
           'https://static.divine-pride.net/images/items/item/' +
@@ -31,13 +31,6 @@ import { mapMutations } from "vuex";
 export default {
   name: "ItemListHeadTop",
   props: ["item_filter"],
-  computed: {
-    filteredList() {
-      return this.items.filter((item) => {
-        return item.name.toLowerCase().includes(this.item_filter.toLowerCase());
-      });
-    },
-  },
   data() {
     return {
       items: [
