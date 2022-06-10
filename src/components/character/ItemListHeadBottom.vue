@@ -1,6 +1,11 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())" class="li-item" :key="item.id">
+    <li
+      v-for="(item, index) in items"
+      v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
+      class="li-item"
+      :key="item.id"
+    >
       <img
         :src="
           'https://static.divine-pride.net/images/items/item/' +
@@ -35,14 +40,6 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
-        { id: 5914, name: "Aura Esplêndida", viewID: 0 },
-        { id: 19604, name: "Máscara Invisível", viewID: 0 },
-        { id: 20240, name: "Flocos de Neve", viewID: 0 },
-        { id: 20285, name: "Aura de Amatsu", viewID: 0 },
-        { id: 31199, name: "Cavanhaque Bifurcado", viewID: 0 },
-        { id: 31264, name: "Asinhas Elegantes (Baixo)", viewID: 0 },
-        { id: 31289, name: "Asinhas Estilosas (Baixo)", viewID: 0 },
-        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
         { id: 19634, name: "Máscara de Segurança", viewID: 8 },
         { id: 19783, name: "Bigode Grosso", viewID: 25 },
         { id: 19636, name: "Nariz de Pierrot", viewID: 49 },
@@ -350,6 +347,14 @@ export default {
         { id: 420084, name: "Peruca Sereia Suave", viewID: 2166 },
         { id: 420088, name: "Anjinho do Amor", viewID: 2170 },
         { id: 420104, name: "Cabelos Longos Azulados", viewID: 2206 },
+        { id: 5914, name: "Aura Esplêndida", viewID: 0 },
+        { id: 19604, name: "Máscara Invisível", viewID: 0 },
+        { id: 20240, name: "Flocos de Neve", viewID: 0 },
+        { id: 20285, name: "Aura de Amatsu", viewID: 0 },
+        { id: 31199, name: "Cavanhaque Bifurcado", viewID: 0 },
+        { id: 31264, name: "Asinhas Elegantes (Baixo)", viewID: 0 },
+        { id: 31289, name: "Asinhas Estilosas (Baixo)", viewID: 0 },
+        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
       ],
       active: false,
     };

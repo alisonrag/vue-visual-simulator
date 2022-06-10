@@ -1,6 +1,11 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())" class="li-item" :key="item.id">
+    <li
+      v-for="(item, index) in items"
+      v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
+      class="li-item"
+      :key="item.id"
+    >
       <img
         :src="
           'https://static.divine-pride.net/images/items/item/' +
@@ -35,17 +40,6 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
-        { id: 19602, name: "Chapéu Invisível", viewID: 0 },
-        { id: 20062, name: "Brilho do Sol Nascente", viewID: 0 },
-        { id: 20251, name: "Capuz da Pastora", viewID: 0 },
-        { id: 20346, name: "Chapéu de Batedor", viewID: 0 },
-        { id: 31193, name: "Chapéu de Ahat", viewID: 0 },
-        { id: 31201, name: "Coroa da Grandeza", viewID: 0 },
-        { id: 31435, name: "Gorro de Tricô Hipster", viewID: 0 },
-        { id: 31602, name: "Brasão de Midgard", viewID: 0 },
-        { id: 400073, name: "Pétalas de Rosa", viewID: 0 },
-        { id: 19944, name: "Fadinha Angelical", viewID: 0 },
-        { id: 440008, name: "Grande Mestre", viewID: 0 },
         { id: 19578, name: "Óculos de Aviação", viewID: 1 },
         { id: 20203, name: "Bandana para Testa", viewID: 6 },
         { id: 19625, name: "Orelhas Lunares", viewID: 15 },
@@ -686,6 +680,17 @@ export default {
         { id: 400214, name: "Chapéu Aclamado", viewID: 2198 },
         { id: 400225, name: "Capa Coelho Felpudo", viewID: 2205 },
         { id: 400253, name: "Chapéu Doceria", viewID: 2223 },
+        { id: 19602, name: "Chapéu Invisível", viewID: 0 },
+        { id: 20062, name: "Brilho do Sol Nascente", viewID: 0 },
+        { id: 20251, name: "Capuz da Pastora", viewID: 0 },
+        { id: 20346, name: "Chapéu de Batedor", viewID: 0 },
+        { id: 31193, name: "Chapéu de Ahat", viewID: 0 },
+        { id: 31201, name: "Coroa da Grandeza", viewID: 0 },
+        { id: 31435, name: "Gorro de Tricô Hipster", viewID: 0 },
+        { id: 31602, name: "Brasão de Midgard", viewID: 0 },
+        { id: 400073, name: "Pétalas de Rosa", viewID: 0 },
+        { id: 19944, name: "Fadinha Angelical", viewID: 0 },
+        { id: 440008, name: "Grande Mestre", viewID: 0 },
       ],
       active: false,
     };

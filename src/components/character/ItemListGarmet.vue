@@ -1,6 +1,11 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())" class="li-item" :key="item.id">
+    <li
+      v-for="(item, index) in items"
+      v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
+      class="li-item"
+      :key="item.id"
+    >
       <img
         :src="
           'https://static.divine-pride.net/images/items/item/' +
@@ -35,38 +40,6 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
-        { id: 20506, name: "Manto Invisível", viewID: 0 },
-        { id: 20515, name: "Círculo de Conjuração", viewID: 0 },
-        { id: 20519, name: "Aura de Folhas de Outono", viewID: 0 },
-        { id: 20522, name: "Miaura", viewID: 0 },
-        { id: 20535, name: "Holograma Futurista", viewID: 0 },
-        { id: 20537, name: "Folhas Dançantes", viewID: 0 },
-        { id: 20538, name: "Círculo Arco-íris", viewID: 0 },
-        { id: 20547, name: "Mil e Uma Assombrações", viewID: 0 },
-        { id: 20548, name: "Aura de Poring", viewID: 0 },
-        { id: 20556, name: "Aura Negra do Iniciante", viewID: 0 },
-        { id: 20567, name: "Aura Gótica", viewID: 0 },
-        { id: 20990, name: "Capa de Engrenagens", viewID: 0 },
-        { id: 480097, name: "Aura Nevada", viewID: 0 },
-        { id: 20549, name: "Aura Cerúlea do Iniciante", viewID: 0 },
-        { id: 20564, name: "Aura Maligna", viewID: 0 },
-        { id: 20559, name: "Aura Escarlate", viewID: 0 },
-        { id: 480131, name: "Chama Circular", viewID: 0 },
-        { id: 20565, name: "Aura Trovejante", viewID: 0 },
-        { id: 20568, name: "Aura Dourada", viewID: 0 },
-        { id: 20560, name: "Aura Lazuli", viewID: 0 },
-        { id: 20561, name: "Aura Púrpura", viewID: 0 },
-        { id: 20562, name: "Aura Azul", viewID: 0 },
-        { id: 20566, name: "Aura Argêntea", viewID: 0 },
-        { id: 20569, name: "Aura Esmeralda", viewID: 0 },
-        { id: 20550, name: "Aura Púrpura do Iniciante", viewID: 0 },
-        { id: 20551, name: "Aura Azul do Iniciante", viewID: 0 },
-        { id: 20555, name: "Aura Prateada do Iniciante", viewID: 0 },
-        { id: 20558, name: "Aura Esmeralda do Iniciante", viewID: 0 },
-        { id: 20553, name: "Aura Rosa do Iniciante", viewID: 0 },
-        { id: 20554, name: "Aura Invernal do Iniciante", viewID: 0 },
-        { id: 20557, name: "Aura Dourada do Iniciante", viewID: 0 },
-        { id: 20601, name: "Aura Carmesim do Iniciante", viewID: 0 },
         { id: 20765, name: "Asas Imaculadas de Arcanjo", viewID: 1 },
         { id: 20512, name: "Mochila de Caça", viewID: 2 },
         { id: 20521, name: "Miau-chila de Bichano Preto", viewID: 2 },
@@ -158,6 +131,38 @@ export default {
         { id: 480137, name: "Mochila de Filir", viewID: 118 },
         { id: 480152, name: "Talheres do Comilão", viewID: 121 },
         { id: 480158, name: "Mochila Lunática", viewID: 123 },
+        { id: 20506, name: "Manto Invisível", viewID: 0 },
+        { id: 20515, name: "Círculo de Conjuração", viewID: 0 },
+        { id: 20519, name: "Aura de Folhas de Outono", viewID: 0 },
+        { id: 20522, name: "Miaura", viewID: 0 },
+        { id: 20535, name: "Holograma Futurista", viewID: 0 },
+        { id: 20537, name: "Folhas Dançantes", viewID: 0 },
+        { id: 20538, name: "Círculo Arco-íris", viewID: 0 },
+        { id: 20547, name: "Mil e Uma Assombrações", viewID: 0 },
+        { id: 20548, name: "Aura de Poring", viewID: 0 },
+        { id: 20556, name: "Aura Negra do Iniciante", viewID: 0 },
+        { id: 20567, name: "Aura Gótica", viewID: 0 },
+        { id: 20990, name: "Capa de Engrenagens", viewID: 0 },
+        { id: 480097, name: "Aura Nevada", viewID: 0 },
+        { id: 20549, name: "Aura Cerúlea do Iniciante", viewID: 0 },
+        { id: 20564, name: "Aura Maligna", viewID: 0 },
+        { id: 20559, name: "Aura Escarlate", viewID: 0 },
+        { id: 480131, name: "Chama Circular", viewID: 0 },
+        { id: 20565, name: "Aura Trovejante", viewID: 0 },
+        { id: 20568, name: "Aura Dourada", viewID: 0 },
+        { id: 20560, name: "Aura Lazuli", viewID: 0 },
+        { id: 20561, name: "Aura Púrpura", viewID: 0 },
+        { id: 20562, name: "Aura Azul", viewID: 0 },
+        { id: 20566, name: "Aura Argêntea", viewID: 0 },
+        { id: 20569, name: "Aura Esmeralda", viewID: 0 },
+        { id: 20550, name: "Aura Púrpura do Iniciante", viewID: 0 },
+        { id: 20551, name: "Aura Azul do Iniciante", viewID: 0 },
+        { id: 20555, name: "Aura Prateada do Iniciante", viewID: 0 },
+        { id: 20558, name: "Aura Esmeralda do Iniciante", viewID: 0 },
+        { id: 20553, name: "Aura Rosa do Iniciante", viewID: 0 },
+        { id: 20554, name: "Aura Invernal do Iniciante", viewID: 0 },
+        { id: 20557, name: "Aura Dourada do Iniciante", viewID: 0 },
+        { id: 20601, name: "Aura Carmesim do Iniciante", viewID: 0 },
       ],
       active: false,
     };

@@ -1,6 +1,11 @@
 <template>
   <ul class="ul-item-list">
-    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())" class="li-item" :key="item.id">
+    <li
+      v-for="(item, index) in items"
+      v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
+      class="li-item"
+      :key="item.id"
+    >
       <img
         :src="
           'https://static.divine-pride.net/images/items/item/' +
@@ -35,15 +40,6 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
-        { id: 19603, name: "Óculos Invisíveis", viewID: 0 },
-        { id: 20209, name: "Bolhas de Sabão", viewID: 0 },
-        { id: 20439, name: "Aura Solar", viewID: 0 },
-        { id: 31089, name: "Fúria dos Shuras", viewID: 0 },
-        { id: 31391, name: "Cristal Exuberante", viewID: 0 },
-        { id: 31942, name: "Rosas Românticas", viewID: 0 },
-        { id: 410051, name: "Mini Geada", viewID: 0 },
-        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
-        { id: 410127, name: "Holofote", viewID: 0 },
         { id: 19830, name: "Óculos Hi-Ban", viewID: 12 },
         { id: 31487, name: "Tapa-Olho Pirata", viewID: 13 },
         { id: 31155, name: "Óculos de Nerd", viewID: 27 },
@@ -240,6 +236,15 @@ export default {
         { id: 410108, name: "Filhote Shiba Inu", viewID: 2169 },
         { id: 410103, name: "Capacete de Ataduras Vermelhas", viewID: 2171 },
         { id: 410121, name: "Meda Elmo", viewID: 2199 },
+        { id: 19603, name: "Óculos Invisíveis", viewID: 0 },
+        { id: 20209, name: "Bolhas de Sabão", viewID: 0 },
+        { id: 20439, name: "Aura Solar", viewID: 0 },
+        { id: 31089, name: "Fúria dos Shuras", viewID: 0 },
+        { id: 31391, name: "Cristal Exuberante", viewID: 0 },
+        { id: 31942, name: "Rosas Românticas", viewID: 0 },
+        { id: 410051, name: "Mini Geada", viewID: 0 },
+        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
+        { id: 410127, name: "Holofote", viewID: 0 },
       ],
       active: false,
     };
