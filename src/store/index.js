@@ -78,6 +78,20 @@ export default createStore({
         }
       }
     },
+    SAVE_CHARACTER_HEAD(state, side) {
+      let positions = [1, 0, 2];
+      let current_head_position = state.character.headdir;
+      let index = positions.findIndex(
+        (index) => index == current_head_position
+      );
+      if (side == "right") {
+        if (index > 0) index--;
+        state.character.headdir = positions[index];
+      } else {
+        if (index < 2) index++;
+        state.character.headdir = positions[index];
+      }
+    },
     SAVE_ACTION(state, id) {
       let action = (state.character.action + 1) % 8;
       state.character.action = id + action - 1;
@@ -92,15 +106,16 @@ export default createStore({
       }
     },
     RESET_CHARACTER(state, payload) {
-      state.character.gender = 1
-      state.character.job = ["0"]
-      state.character.head = 1
-      state.character.headPalette = 1
-      state.character.headgear = [0, 0, 0]
-      state.character.garment = 0
-      state.character.bodyPalette = 0
-      state.character.action = 0
-      state.character.outfit = 0
+      state.character.gender = 1;
+      state.character.job = ["0"];
+      state.character.head = 1;
+      state.character.headPalette = 1;
+      state.character.headgear = [0, 0, 0];
+      state.character.garment = 0;
+      state.character.bodyPalette = 0;
+      state.character.action = 0;
+      state.character.outfit = 0;
+      state.character.headdir = 0;
     },
     SAVE_CHARACTER(state, character) {
       state.character = character;
