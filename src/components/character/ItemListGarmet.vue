@@ -15,8 +15,7 @@
         class="img-item"
         :class="{
           'item-selected':
-            parseInt(item.viewID) > 0 &&
-            parseInt(item.viewID) == $store.state.character.garment,
+            parseInt(item.id) == $store.state.garment_id,
           'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"

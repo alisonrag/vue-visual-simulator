@@ -15,8 +15,7 @@
         class="img-item"
         :class="{
           'item-selected':
-            parseInt(item.viewID) > 0 &&
-            parseInt(item.viewID) == $store.state.character.headgear[2],
+            parseInt(item.id) == $store.state.headgear_mid_id,
           'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"
