@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       items: [
+        { id: 0, name: "X", viewID: 0 },
         { id: 20506, name: "Manto Invisível", viewID: 0 },
         { id: 20515, name: "Círculo de Conjuração", viewID: 0 },
         { id: 20519, name: "Aura de Folhas de Outono", viewID: 0 },

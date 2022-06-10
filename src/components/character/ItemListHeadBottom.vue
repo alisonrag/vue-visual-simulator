@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       items: [
+        { id: 0, name: "X", viewID: 0 },
         { id: 5914, name: "Aura Esplêndida", viewID: 0 },
         { id: 19604, name: "Máscara Invisível", viewID: 0 },
         { id: 20240, name: "Flocos de Neve", viewID: 0 },

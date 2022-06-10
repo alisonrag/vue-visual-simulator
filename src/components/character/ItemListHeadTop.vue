@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       items: [
+        { id: 0, name: "X", viewID: 0 },
         { id: 19602, name: "Chapéu Invisível", viewID: 0 },
         { id: 20062, name: "Brilho do Sol Nascente", viewID: 0 },
         { id: 20251, name: "Capuz da Pastora", viewID: 0 },

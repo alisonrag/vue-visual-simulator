@@ -150,7 +150,7 @@
                     <OutfitCheckbox />
                   </div>
                   <div class="col-md-6">
-                    <h6>{{ $t('options') }}</h6>
+                    <h6>{{ $t('reset') }}</h6>
                     <ClearCharacterButton />
                   </div>
                 </div>
