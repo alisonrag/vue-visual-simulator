@@ -3,8 +3,6 @@ This page was developed in order to allow you to simulate your character costume
 
 It's very easy to use, just select the equipments that you want to test.
 
-Credits for images go to Divine-Pride, where they are being pulled.
-
 Access: http://visualrag.herokuapp.com/
 
 # Technologies
