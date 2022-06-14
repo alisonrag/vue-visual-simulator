@@ -14,8 +14,7 @@
         "
         class="img-item"
         :class="{
-          'item-selected':
-            parseInt(item.id) == $store.state.headgear_mid_id,
+          'item-selected': parseInt(item.id) == $store.state.headgear_mid_id,
           'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"
@@ -240,9 +239,9 @@ export default {
         { id: 20439, name: "Aura Solar", viewID: 0 },
         { id: 31089, name: "Fúria dos Shuras", viewID: 0 },
         { id: 31391, name: "Cristal Exuberante", viewID: 0 },
+        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
         { id: 31942, name: "Rosas Românticas", viewID: 0 },
         { id: 410051, name: "Mini Geada", viewID: 0 },
-        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
         { id: 410127, name: "Holofote", viewID: 0 },
       ],
       active: false,

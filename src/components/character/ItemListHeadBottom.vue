@@ -14,8 +14,7 @@
         "
         class="img-item"
         :class="{
-          'item-selected':
-            parseInt(item.id) == $store.state.headgear_bottom_id,
+          'item-selected': parseInt(item.id) == $store.state.headgear_bottom_id,
           'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"
@@ -313,6 +312,14 @@ export default {
         { id: 420010, name: "Aura da Escuridão", viewID: 2020 },
         { id: 420025, name: "Olho Gigante", viewID: 2023 },
         { id: 420014, name: "Peruca de Animação", viewID: 2027 },
+        { id: 420036, name: "Cabelo Ondulado Cerúleo", viewID: 2031 },
+        { id: 420037, name: "Cabelo Ondulado Quartzo", viewID: 2032 },
+        { id: 420038, name: "Cabelo Ondulado Loiro", viewID: 2033 },
+        { id: 420039, name: "Cabelo Ondulado Coral", viewID: 2034 },
+        { id: 420040, name: "Cabelo Ondulado Castanho ", viewID: 2035 },
+        { id: 420041, name: "Cabelo Ondulado Platinado", viewID: 2036 },
+        { id: 420042, name: "Cabelo Ondulado Caramelo", viewID: 2037 },
+        { id: 420043, name: "Cabelo Ondulado Ametista", viewID: 2038 },
         { id: 420029, name: "Glória Imperial", viewID: 2056 },
         { id: 420047, name: "Capa de Cavaleiro", viewID: 2059 },
         { id: 31957, name: "Aura Venenosa", viewID: 2061 },
