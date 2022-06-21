@@ -134,6 +134,7 @@ export default {
         { id: 20404, name: "Benção Angelingal", viewID: 1425 },
         { id: 20430, name: "Crânios Etéreos de Morroc", viewID: 1440 },
         { id: 31540, name: "Lentes Gemini", viewID: 1456 },
+        { id: 31375, name: "Olhos Macabros", viewID: 1490 },
         { id: 31047, name: "Bochechas da Paixão", viewID: 1494 },
         { id: 31120, name: "Orelhas de Vampiro", viewID: 1548 },
         { id: 31122, name: "Bandagem Vermelho Sangue", viewID: 1550 },
