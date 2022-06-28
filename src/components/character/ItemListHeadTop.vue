@@ -373,6 +373,7 @@ export default {
         { id: 19762, name: "Pombinhos Apaixonados", viewID: 994 },
         { id: 19777, name: "Estrelinha Lumma", viewID: 1005 },
         { id: 20395, name: "Chapéu da Bruxa Sombria", viewID: 1006 },
+        { id: 20338, name: "Chapéu Polvo Arco-Íris", viewID: 1007 },
         { id: 31939, name: "Coroa de Rosas", viewID: 1026 },
         { id: 31248, name: "Adereço Vermelho Pontiagudo", viewID: 1030 },
         { id: 31508, name: "Adereço Azul Pontiagudo", viewID: 1032 },
