@@ -16,9 +16,13 @@ export default createStore({
       outfit: 0,
     },
     headgear_top_id: 0,
+    headgear_top_name: null,
     headgear_mid_id: 0,
+    headgear_mid_name: null,
     headgear_bottom_id: 0,
+    headgear_bottom_name: null,
     garment_id: 0,
+    garment_name: null,
   },
   getters: {},
   mutations: {
@@ -43,11 +47,17 @@ export default createStore({
     SAVE_HEADGEAR_TOP_ID(state, itemID) {
       state.headgear_top_id = itemID;
     },
+    SAVE_HEADGEAR_TOP_NAME(state, name) {
+      state.headgear_top_name = name;
+    },
     SAVE_HEADGEAR_MID(state, viewID) {
       state.character.headgear[2] = viewID;
     },
     SAVE_HEADGEAR_MID_ID(state, itemID) {
       state.headgear_mid_id = itemID;
+    },
+    SAVE_HEADGEAR_MID_NAME(state, name) {
+      state.headgear_mid_name = name;
     },
     SAVE_HEADGEAR_BOTTOM(state, viewID) {
       state.character.headgear[0] = viewID;
@@ -55,11 +65,17 @@ export default createStore({
     SAVE_HEADGEAR_BOTTOM_ID(state, itemID) {
       state.headgear_bottom_id = itemID;
     },
+    SAVE_HEADGEAR_BOTTOM_NAME(state, name) {
+      state.headgear_bottom_name = name;
+    },
     SAVE_GARMENT(state, viewID) {
       state.character.garment = viewID;
     },
     SAVE_GARMENT_ID(state, itemID) {
       state.garment_id = itemID;
+    },
+    SAVE_HEADGEAR_GARMENT_NAME(state, name) {
+      state.garment_name = name;
     },
     SAVE_CHARACTER_POSITION(state, side) {
       if (side == "left") {

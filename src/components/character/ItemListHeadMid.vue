@@ -22,6 +22,7 @@
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         :title="item.name"
+        :name="item.name"
         @click="clickItem($event)"
       />
     </li>
@@ -249,10 +250,11 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["SAVE_HEADGEAR_MID", "SAVE_HEADGEAR_MID_ID"]),
+    ...mapMutations(["SAVE_HEADGEAR_MID", "SAVE_HEADGEAR_MID_ID", "SAVE_HEADGEAR_MID_NAME"]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_MID(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_HEADGEAR_MID_ID(parseInt(event.target.getAttribute("id")));
+      this.SAVE_HEADGEAR_MID_NAME(event.target.getAttribute("name"));
     },
   },
 };

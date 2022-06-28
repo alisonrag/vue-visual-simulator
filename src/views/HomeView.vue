@@ -66,7 +66,13 @@
                               aria-selected="true"
                             >
                               <img :src="item_top_src" alt="Item Top Tab" />
-                              <br />{{ $t("top") }}
+                              <br />
+                              <label
+                                v-if="$store.state.headgear_top_name !== null"
+                              >
+                                {{ $store.state.headgear_top_name }}
+                              </label>
+                              <label v-else>{{ $t("top") }}</label>
                             </button>
                             <button
                               class="nav-link"
@@ -79,7 +85,13 @@
                               aria-selected="false"
                             >
                               <img :src="item_mid_src" alt="Item Mid Tab" />
-                              <br />{{ $t("mid") }}
+                              <br />
+                              <label
+                                v-if="$store.state.headgear_mid_name !== null"
+                              >
+                                {{ $store.state.headgear_mid_name }}
+                              </label>
+                              <label v-else>{{ $t("mid") }}</label>
                             </button>
                             <button
                               class="nav-link"
@@ -92,7 +104,13 @@
                               aria-selected="false"
                             >
                               <img :src="item_bot_src" alt="Item Bot Tab" />
-                              <br />{{ $t("bot") }}
+                              <br />
+                              <label
+                                v-if="$store.state.headgear_bottom_name !== null"
+                              >
+                                {{ $store.state.headgear_bottom_name }}
+                              </label>
+                              <label v-else>{{ $t("bot") }}</label>
                             </button>
                             <button
                               class="nav-link"
@@ -108,7 +126,13 @@
                                 :src="item_garmet_src"
                                 alt="Item Garmet Tab"
                               />
-                              <br />{{ $t("garment") }}
+                              <br />
+                              <label
+                                v-if="$store.state.garment_name !== null"
+                              >
+                                {{ $store.state.garment_name }}
+                              </label>
+                              <label v-else>{{ $t("garment") }}</label>
                             </button>
                           </div>
                           <div class="tab-content" id="v-pills-tabContent">
@@ -282,15 +306,30 @@ export default {
 
     document.addEventListener("keydown", (event) => {
       const keyName = event.key;
-      if ( ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(keyName) ) {
+      if (
+        ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(keyName)
+      ) {
         event.preventDefault();
-        let tabPaneItemsWidth = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").clientWidth;
-        let numberOfItems = document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active li.li-item").length;
+        let tabPaneItemsWidth = document.querySelector(
+          "div.tab-pane-items[id^=v-pills-].show.active"
+        ).clientWidth;
+        let numberOfItems = document.querySelectorAll(
+          "div.tab-pane-items[id^=v-pills-].show.active li.li-item"
+        ).length;
         let itemsPerRow = parseInt((tabPaneItemsWidth - 32) / 32);
-        let listOfAllItems = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list");
-        let selectedItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list img.item-selected").parentElement;
-        let selectedItemIndex = Array.prototype.indexOf.call(listOfAllItems.children, selectedItem);
-        let itemList = document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item");
+        let listOfAllItems = document.querySelector(
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list"
+        );
+        let selectedItem = document.querySelector(
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list img.item-selected"
+        ).parentElement;
+        let selectedItemIndex = Array.prototype.indexOf.call(
+          listOfAllItems.children,
+          selectedItem
+        );
+        let itemList = document.querySelectorAll(
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item"
+        );
 
         switch (keyName) {
           case "ArrowUp":
