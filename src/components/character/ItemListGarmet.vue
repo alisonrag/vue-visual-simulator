@@ -167,11 +167,11 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["SAVE_GARMENT", "SAVE_GARMENT_ID", "SAVE_HEADGEAR_GARMENT_NAME"]),
+    ...mapMutations(["SAVE_GARMENT", "SAVE_GARMENT_ID", "SAVE_GARMENT_NAME"]),
     clickItem: function (event) {
       this.SAVE_GARMENT(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_GARMENT_ID(parseInt(event.target.getAttribute("id")));
-      this.SAVE_HEADGEAR_GARMENT_NAME(event.target.getAttribute("name"));
+      this.SAVE_GARMENT_NAME(event.target.getAttribute("name"));
     },
   },
 };

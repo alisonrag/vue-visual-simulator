@@ -56,7 +56,7 @@
                             aria-orientation="vertical"
                           >
                             <button
-                              class="nav-link active"
+                              class="nav-link btn-tab-item active"
                               id="v-pills-top-tab"
                               data-bs-toggle="pill"
                               data-bs-target="#v-pills-top"
@@ -75,7 +75,7 @@
                               <label v-else>{{ $t("top") }}</label>
                             </button>
                             <button
-                              class="nav-link"
+                              class="nav-link btn-tab-item"
                               id="v-pills-mid-tab"
                               data-bs-toggle="pill"
                               data-bs-target="#v-pills-mid"
@@ -94,7 +94,7 @@
                               <label v-else>{{ $t("mid") }}</label>
                             </button>
                             <button
-                              class="nav-link"
+                              class="nav-link btn-tab-item"
                               id="v-pills-bot-tab"
                               data-bs-toggle="pill"
                               data-bs-target="#v-pills-bot"
@@ -113,7 +113,7 @@
                               <label v-else>{{ $t("bot") }}</label>
                             </button>
                             <button
-                              class="nav-link"
+                              class="nav-link btn-tab-item"
                               id="v-pills-garment-tab"
                               data-bs-toggle="pill"
                               data-bs-target="#v-pills-garment"
@@ -447,5 +447,9 @@ export default {
 
 .container-character {
   min-height: 90vh;
+}
+
+.btn-tab-item {
+  min-width: 125px;
 }
 </style>

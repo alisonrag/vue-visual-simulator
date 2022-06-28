@@ -74,7 +74,7 @@ export default createStore({
     SAVE_GARMENT_ID(state, itemID) {
       state.garment_id = itemID;
     },
-    SAVE_HEADGEAR_GARMENT_NAME(state, name) {
+    SAVE_GARMENT_NAME(state, name) {
       state.garment_name = name;
     },
     SAVE_CHARACTER_POSITION(state, side) {
