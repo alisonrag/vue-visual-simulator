@@ -106,6 +106,7 @@ export default {
         { id: 19871, name: "Ritmo do Momento", viewID: 1074 },
         { id: 19882, name: "Vaso de Planta Anti-Z", viewID: 1086 },
         { id: 19912, name: "Olhos Felinos", viewID: 1100 },
+        { id: 410053, name: "Óculos de Sol Estiloso", viewID: 1169 },
         { id: 31527, name: "Asas Presilhas", viewID: 1186 },
         { id: 20010, name: "Orelhas Solares", viewID: 1198 },
         { id: 20047, name: "Guizos de Cerejeira", viewID: 1223 },
@@ -241,16 +242,20 @@ export default {
         { id: 20439, name: "Aura Solar", viewID: 0 },
         { id: 31089, name: "Fúria dos Shuras", viewID: 0 },
         { id: 31391, name: "Cristal Exuberante", viewID: 0 },
-        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
         { id: 31942, name: "Rosas Românticas", viewID: 0 },
         { id: 410051, name: "Mini Geada", viewID: 0 },
+        { id: 31515, name: "Gatinho Curioso", viewID: 0 },
         { id: 410127, name: "Holofote", viewID: 0 },
       ],
       active: false,
     };
   },
   methods: {
-    ...mapMutations(["SAVE_HEADGEAR_MID", "SAVE_HEADGEAR_MID_ID", "SAVE_HEADGEAR_MID_NAME"]),
+    ...mapMutations([
+      "SAVE_HEADGEAR_MID",
+      "SAVE_HEADGEAR_MID_ID",
+      "SAVE_HEADGEAR_MID_NAME",
+    ]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_MID(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_HEADGEAR_MID_ID(parseInt(event.target.getAttribute("id")));

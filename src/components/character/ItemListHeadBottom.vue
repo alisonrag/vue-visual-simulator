@@ -367,7 +367,11 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["SAVE_HEADGEAR_BOTTOM", "SAVE_HEADGEAR_BOTTOM_ID", "SAVE_HEADGEAR_BOTTOM_NAME"]),
+    ...mapMutations([
+      "SAVE_HEADGEAR_BOTTOM",
+      "SAVE_HEADGEAR_BOTTOM_ID",
+      "SAVE_HEADGEAR_BOTTOM_NAME",
+    ]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_BOTTOM(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_HEADGEAR_BOTTOM_ID(parseInt(event.target.getAttribute("id")));

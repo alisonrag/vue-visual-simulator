@@ -684,7 +684,6 @@ export default {
         { id: 400225, name: "Capa Coelho Felpudo", viewID: 2205 },
         { id: 400253, name: "Chapéu Doceria", viewID: 2223 },
         { id: 19602, name: "Chapéu Invisível", viewID: 0 },
-        { id: 19944, name: "Fadinha Angelical", viewID: 0 },
         { id: 20062, name: "Brilho do Sol Nascente", viewID: 0 },
         { id: 20251, name: "Capuz da Pastora", viewID: 0 },
         { id: 20346, name: "Chapéu de Batedor", viewID: 0 },
@@ -693,13 +692,18 @@ export default {
         { id: 31435, name: "Gorro de Tricô Hipster", viewID: 0 },
         { id: 31602, name: "Brasão de Midgard", viewID: 0 },
         { id: 400073, name: "Pétalas de Rosa", viewID: 0 },
+        { id: 19944, name: "Fadinha Angelical", viewID: 0 },
         { id: 440008, name: "Grande Mestre", viewID: 0 },
       ],
       active: false,
     };
   },
   methods: {
-    ...mapMutations(["SAVE_HEADGEAR_TOP", "SAVE_HEADGEAR_TOP_ID", "SAVE_HEADGEAR_TOP_NAME"]),
+    ...mapMutations([
+      "SAVE_HEADGEAR_TOP",
+      "SAVE_HEADGEAR_TOP_ID",
+      "SAVE_HEADGEAR_TOP_NAME",
+    ]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_TOP(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_HEADGEAR_TOP_ID(parseInt(event.target.getAttribute("id")));
