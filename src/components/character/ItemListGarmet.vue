@@ -130,6 +130,7 @@ export default {
         { id: 480137, name: "Mochila de Filir", viewID: 118 },
         { id: 480152, name: "Talheres do Comilão", viewID: 121 },
         { id: 480158, name: "Mochila Lunática", viewID: 123 },
+        { id: 480168, name: "Asas Musicais", viewID: 126 },
         { id: 480176, name: "Cajado de Rosas Azuis", viewID: 127 },
         { id: 20506, name: "Manto Invisível", viewID: 0 },
         { id: 20515, name: "Círculo de Conjuração", viewID: 0 },
