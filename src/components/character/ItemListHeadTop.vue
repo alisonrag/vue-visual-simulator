@@ -698,7 +698,6 @@ export default {
         { id: 400073, name: "Pétalas de Rosa", viewID: 0 },
         { id: 19944, name: "Fadinha Angelical", viewID: 0 },
         { id: 440008, name: "Grande Mestre", viewID: 0 },
-        { id: 20583, name: "Estrela Guia", viewID: 0 },
       ],
       active: false,
     };

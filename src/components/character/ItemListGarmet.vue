@@ -164,6 +164,7 @@ export default {
         { id: 20554, name: "Aura Invernal do Iniciante", viewID: 0 },
         { id: 20557, name: "Aura Dourada do Iniciante", viewID: 0 },
         { id: 20601, name: "Aura Carmesim do Iniciante", viewID: 0 },
+        { id: 20583, name: "Estrela Guia", viewID: 0 },
       ],
       active: false,
     };
