@@ -132,6 +132,7 @@ export default {
         { id: 31029, name: "Fuça de Porco", viewID: 1482 },
         { id: 31386, name: "Orbes Místicos", viewID: 1488 },
         { id: 31045, name: "Laço Azul Delicado", viewID: 1492 },
+        { id: 31578, name: "Máscara do Alquimista (Variação)", viewID: 1497 },
         { id: 31055, name: "Sopra-Poring de Sabão", viewID: 1499 },
         { id: 31057, name: "Cachecol Preto do Eremes", viewID: 1501 },
         { id: 31063, name: "Coque Oceano", viewID: 1503 },
