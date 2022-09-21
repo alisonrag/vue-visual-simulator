@@ -51,6 +51,7 @@ export default {
         { id: 19541, name: "Flor Amável Branca", viewID: 259 },
         { id: 420070, name: "Capuz Macabro", viewID: 326 },
         { id: 19584, name: "Faca de Pirata", viewID: 327 },
+        { id: 20337, name: "Moicano Estiloso", viewID: 331 },
         { id: 19605, name: "Lenço do Fora da Lei", viewID: 369 },
         { id: 19606, name: "Pergaminho Místico", viewID: 370 },
         { id: 19683, name: "Pirulito Azedinho", viewID: 414 },
