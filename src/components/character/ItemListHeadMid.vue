@@ -245,6 +245,7 @@ export default {
         { id: 410117, name: "Mecha Castanho Claro", viewID: 2188 },
         { id: 410118, name: "Mecha Lilás", viewID: 2189 },
         { id: 410121, name: "Meda Elmo", viewID: 2199 },
+        { id: 410133, name: "Cookie & Biju", viewID: 2246 },
         { id: 19603, name: "Óculos Invisíveis", viewID: 0 },
         { id: 20209, name: "Bolhas de Sabão", viewID: 0 },
         { id: 20439, name: "Aura Solar", viewID: 0 },
