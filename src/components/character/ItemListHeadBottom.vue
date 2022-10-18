@@ -376,6 +376,7 @@ export default {
         { id: 420118, name: "Penteado Estiloso Ruivo", viewID: 2233 },
         { id: 420119, name: "Penteado Estiloso Branco", viewID: 2234 },
         { id: 420120, name: "Penteado Estiloso Loiro", viewID: 2235 },
+        { id: 420163, name: "Cachecol de Corvo", viewID: 2272 },
         { id: 5914, name: "Aura Esplêndida", viewID: 0 },
         { id: 19604, name: "Máscara Invisível", viewID: 0 },
         { id: 20240, name: "Flocos de Neve", viewID: 0 },
