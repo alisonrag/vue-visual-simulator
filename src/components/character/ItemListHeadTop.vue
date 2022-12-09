@@ -395,6 +395,7 @@ export default {
         { id: 19816, name: "Chapéu de Peco", viewID: 1049 },
         { id: 19823, name: "Capuz de Gatinho Fofinho", viewID: 1052 },
         { id: 19824, name: "Chapéu de Druida Maligno", viewID: 1053 },
+        { id: 19825, name: "Bandana Curativa", viewID: 1054 },
         { id: 15905, name: "Capacete Ecoante", viewID: 1055 },
         { id: 400080, name: "Coroa do Renascimento", viewID: 1056 },
         { id: 400131, name: "Diadema do Fogo Azul", viewID: 1057 },

@@ -123,6 +123,7 @@ export default {
         { id: 480126, name: "Tubarão Fofinho", viewID: 109 },
         { id: 480119, name: "Chave de Nifflheim", viewID: 110 },
         { id: 480121, name: "Asas Orientais", viewID: 111 },
+        { id: 480122, name: "Asas Carnavalescas", viewID: 112 },
         { id: 480123, name: "Asas Floridas", viewID: 113 },
         { id: 480118, name: "Espada do General", viewID: 114 },
         { id: 480127, name: "Chapéu Pendurado de Palha", viewID: 115 },
@@ -175,6 +176,8 @@ export default {
         { id: 20609, name: "Aura Anil", viewID: 0 },
         { id: 20610, name: "Aura Cinza do Iniciante", viewID: 0 },
         { id: 20611, name: "Aura Cinza", viewID: 0 },
+        { id: 20552, name: "Aura Verde do Iniciante", viewID: 0 },
+        { id: 20563, name: "Aura Esverdeada", viewID: 0 },
       ],
       active: false,
     };
