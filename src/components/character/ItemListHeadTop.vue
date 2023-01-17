@@ -678,6 +678,7 @@ export default {
         { id: 15842, name: "Cartola do Sumiço", viewID: 1998 },
         { id: 31937, name: "Adorno de Unicórnio", viewID: 2006 },
         { id: 31943, name: "Touquinha de Sapo", viewID: 2010 },
+        { id: 400093, name: "Chapéu de 18 Anos", viewID: 2015 },
         { id: 31952, name: "Chapéu das Mil Dimensões", viewID: 2016 },
         { id: 15843, name: "Resto de Caça", viewID: 2024 },
         { id: 420015, name: "Chifre Florido", viewID: 2026 },

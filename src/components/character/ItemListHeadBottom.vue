@@ -39,6 +39,7 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
+        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
         { id: 19634, name: "Máscara de Segurança", viewID: 8 },
         { id: 19783, name: "Bigode Grosso", viewID: 25 },
         { id: 19636, name: "Nariz de Pierrot", viewID: 49 },
@@ -374,6 +375,14 @@ export default {
         { id: 420118, name: "Penteado Estiloso Ruivo", viewID: 2233 },
         { id: 420119, name: "Penteado Estiloso Branco", viewID: 2234 },
         { id: 420120, name: "Penteado Estiloso Loiro", viewID: 2235 },
+        { id: 420121, name: "Peruca Longa Selvagem Preta", viewID: 2236 },
+        { id: 420122, name: "Peruca Longa Selvagem Verde", viewID: 2237 },
+        { id: 420123, name: "Peruca Longa Selvagem Castanha", viewID: 2238 },
+        { id: 420124, name: "Peruca Longa Selvagem Rosa", viewID: 2239 },
+        { id: 420125, name: "Peruca Longa Selvagem Roxa", viewID: 2240 },
+        { id: 420126, name: "Peruca Longa Selvagem Ruiva", viewID: 2241 },
+        { id: 420127, name: "Peruca Longa Selvagem Branca", viewID: 2242 },
+        { id: 420128, name: "Peruca Longa Selvagem Loira", viewID: 2243 },
         { id: 420133, name: "Peruca Colorida Estelar", viewID: 2247 },
         { id: 420156, name: "Peruca Florida", viewID: 2261 },
         { id: 420162, name: "Peruca Preta Estelar", viewID: 2270 },
@@ -390,7 +399,6 @@ export default {
         { id: 31199, name: "Cavanhaque Bifurcado", viewID: 0 },
         { id: 31264, name: "Asinhas Elegantes (Baixo)", viewID: 0 },
         { id: 31289, name: "Asinhas Estilosas (Baixo)", viewID: 0 },
-        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
       ],
       active: false,
     };
