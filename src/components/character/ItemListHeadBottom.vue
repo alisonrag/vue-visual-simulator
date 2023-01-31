@@ -39,7 +39,6 @@ export default {
     return {
       items: [
         { id: 0, name: "X", viewID: 0 },
-        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
         { id: 19634, name: "Máscara de Segurança", viewID: 8 },
         { id: 19783, name: "Bigode Grosso", viewID: 25 },
         { id: 19636, name: "Nariz de Pierrot", viewID: 49 },
@@ -399,6 +398,7 @@ export default {
         { id: 31199, name: "Cavanhaque Bifurcado", viewID: 0 },
         { id: 31264, name: "Asinhas Elegantes (Baixo)", viewID: 0 },
         { id: 31289, name: "Asinhas Estilosas (Baixo)", viewID: 0 },
+        { id: 31316, name: "Revoada de Borboletas", viewID: 0 },
       ],
       active: false,
     };

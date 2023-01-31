@@ -61,6 +61,7 @@ export default {
         { id: 20516, name: "Asas de Miguel", viewID: 24 },
         { id: 20517, name: "Miau-chila de Bichano", viewID: 25 },
         { id: 20518, name: "Deviruchila", viewID: 27 },
+        { id: 20526, name: "Asas Delicadas de Arcanjo", viewID: 34 },
         { id: 20527, name: "Asas da Borboleta do Vale", viewID: 35 },
         { id: 20528, name: "Asas Douradas da Borboleta", viewID: 36 },
         { id: 20530, name: "Asas de Gabriel", viewID: 37 },
