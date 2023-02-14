@@ -387,6 +387,7 @@ export default {
         { id: 420162, name: "Peruca Preta Estelar", viewID: 2270 },
         { id: 420163, name: "Cachecol de Corvo", viewID: 2272 },
         { id: 420151, name: "Aura da Luz e Escuridão", viewID: 2273 },
+        { id: 420150, name: "Peruca Duas Cores", viewID: 2274 },
         { id: 400327, name: "Peruca Estilosa Rosa", viewID: 2278 },
         { id: 420165, name: "Tenda Preciosa", viewID: 2279 },
         { id: 5914, name: "Aura Esplêndida", viewID: 0 },

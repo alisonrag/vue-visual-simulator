@@ -141,6 +141,7 @@ export default {
         { id: 20618, name: "Mochila de Coelho Angorá", viewID: 133 },
         { id: 480204, name: "Laçarote de Sininho", viewID: 135 },
         { id: 480207, name: "Mochila Multiuso", viewID: 137 },
+        { id: 480236, name: "Grimório Mágico Antigo", viewID: 149 },
         { id: 20506, name: "Manto Invisível", viewID: 0 },
         { id: 20515, name: "Círculo de Conjuração", viewID: 0 },
         { id: 20519, name: "Aura de Folhas de Outono", viewID: 0 },
