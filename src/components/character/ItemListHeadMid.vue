@@ -193,6 +193,7 @@ export default {
         { id: 31787, name: "Porquinho de Ombro", viewID: 1915 },
         { id: 31798, name: "Panda Companheiro", viewID: 1922 },
         { id: 31823, name: "Disfarce Irreconhecível", viewID: 1933 },
+        { id: 31847, name: "Pupilas Azuladas", viewID: 1945 },
         { id: 31851, name: "Escudo Quântico", viewID: 1949 },
         { id: 31923, name: "Bebê Polar", viewID: 1994 },
         { id: 31924, name: "Pupilas Cerúleas", viewID: 1995 },
