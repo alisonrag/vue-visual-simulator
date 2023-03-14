@@ -285,6 +285,7 @@ export default {
         { id: 31827, name: "Capuz Durumagi", viewID: 1936 },
         { id: 31831, name: "Manto do Disfarce", viewID: 1937 },
         { id: 31833, name: "Peruca Curta de Gatinha Má", viewID: 1939 },
+        { id: 31834, name: "Penteado Coque Duplo", viewID: 1940 },
         { id: 31846, name: "Penteado Duplo Laço", viewID: 1944 },
         { id: 31852, name: "Manto de Lacinho", viewID: 1950 },
         { id: 31855, name: "Penteado Arrumadinho", viewID: 1953 },
