@@ -248,6 +248,7 @@ export default {
         { id: 410121, name: "Meda Elmo", viewID: 2199 },
         { id: 410122, name: "Piscadela Rosa", viewID: 2201 },
         { id: 410133, name: "Cookie & Biju", viewID: 2246 },
+        { id: 410160, name: "Globo Celestial", viewID: 2265 },
         { id: 410182, name: "Chapéu de Lanterna do Viajante", viewID: 2280 },
         { id: 410198, name: "Devirugangue", viewID: 2299 },
         { id: 410199, name: "Vela da Meia-Noite", viewID: 2301 },
