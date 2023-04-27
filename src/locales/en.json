@@ -23,5 +23,8 @@
     "warning": "Warning",
     "warningText": "VisualSimulator is not endorsed by or affiliated with Gravity / Warp Portal. Ragnarok Online® is ©2002-2022 Gravity Co., Ltd. & Lee Myoungjin. Game graphics (e.g. item/sprite graphics) © 2002-2022 Gravity Corp. & Lee Myoungjin.",
     "team": "Contributors",
-    "socialMedia": "Social Media"
+    "socialMedia": "Social Media",
+    "mount": "Mount",
+    "regularMount": "Job Mount",
+    "cashMount": "Cash Mount"
 }

@@ -23,5 +23,8 @@
     "warning": "Aviso",
     "warningText": "O VisualSimulator não é endossado ou afiliado a Gravity / Warp Portal. Ragnarok Online® ©2002-2022 é uma marca de Gravity Co., Ltd. & Lee Myoungjin. Gráficos do jogo (por exemplo, gráficos de itens/sprites) © 2002-2022 Gravity Corp. & Lee Myoungjin.",
     "team": "Contribuidores",
-    "socialMedia": "Midias Sociais"
+    "socialMedia": "Midias Sociais",
+    "mount": "Montaria",
+    "regularMount": "Montaria de Classe",
+    "cashMount": "Montaria de Cash"
 }

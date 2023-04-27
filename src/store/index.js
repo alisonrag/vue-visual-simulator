@@ -13,7 +13,7 @@ export default createStore({
       bodyPalette: 0,
       action: 0,
       canvas: "200x200+100+150",
-      outfit: 0,
+      outfit: 0
     },
     headgear_top_id: 0,
     headgear_top_name: null,
@@ -23,6 +23,8 @@ export default createStore({
     headgear_bottom_name: null,
     garment_id: 0,
     garment_name: null,
+    cash_mount_checked: 0,
+    regular_mount_checked: 0,
   },
   getters: {},
   mutations: {
@@ -114,11 +116,24 @@ export default createStore({
       if (state.character.action < 0) state.character.action = 0;
     },
     SAVE_OUTFIT(state, checked) {
-      console.log(checked);
       if (checked) {
         state.character.outfit = 1;
       } else {
         state.character.outfit = 0;
+      }
+    },
+    SAVE_CASH_MOUNT(state, checked) {
+      if (checked) {
+        state.cash_mount_checked = 1;
+      } else {
+        state.cash_mount_checked = 0;
+      }
+    },
+    SAVE_REGULAR_MOUNT(state, checked) {
+      if (checked) {
+        state.regular_mount_checked = 1;
+      } else {
+        state.regular_mount_checked = 0;
       }
     },
     RESET_CHARACTER(state, payload) {

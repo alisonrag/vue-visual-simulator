@@ -236,6 +236,9 @@
                   <div class="col-md-6">
                     <h6>{{ $t("costume") }}</h6>
                     <OutfitCheckbox />
+                    <h6>{{ $t("mount") }}</h6>
+                    <RegularMountCheckbox />
+                    <CashMountCheckbox />
                   </div>
                   <div class="col-md-6">
                     <h6>{{ $t("reset") }}</h6>
@@ -267,6 +270,8 @@ import TurnCharacter from "@/components/character/TurnCharacter.vue";
 import ActionList from "@/components/character/ActionList.vue";
 import ClearCharacterButton from "@/components/character/ClearCharacterButton.vue";
 import OutfitCheckbox from "@/components/character/OutfitCheckbox.vue";
+import RegularMountCheckbox from "@/components/character/RegularMountCheckbox.vue";
+import CashMountCheckbox from "@/components/character/CashMountCheckbox.vue";
 import { Tooltip } from "bootstrap";
 
 export default {
@@ -298,6 +303,8 @@ export default {
     ActionList,
     ClearCharacterButton,
     OutfitCheckbox,
+    RegularMountCheckbox,
+    CashMountCheckbox
   },
   mounted() {
     document.title = "Ragnarok Online Visual Simulator";
