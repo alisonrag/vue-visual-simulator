@@ -125,7 +125,7 @@
           </td>
         </tr>
         <tr class="table-info">
-        <td colspan="13"></td>
+          <td colspan="13"></td>
         </tr>
         <tr>
           <td
@@ -595,12 +595,185 @@ export default {
           name: "Oktoberfest",
         },
       ],
+      regular_mount_list: {
+        7: 13,
+        14: 21,
+        4008: 4014,
+        4015: 4022,
+        4060: 4081,
+        4073: 4083,
+        4062: 4085,
+        4064: 4087,
+        4066: 4082,
+        4257: 4278,
+        4253: 4279,
+        4252: 4280,
+        4258: 4281,
+      },
+      cash_mount_list: {
+        0: 4124,
+        1: 4116,
+        2: 4130,
+        3: 4122,
+        4: 4126,
+        5: 4119,
+        6: 4141,
+        7: 4199,
+        8: 4156,
+        9: 4134,
+        10: 4138,
+        11: 4154,
+        12: 4145,
+        14: 4203,
+        15: 4125,
+        16: 4131,
+        17: 4142,
+        18: 4137,
+        19: 4149,
+        20: 4147,
+        23: 4128,
+        25: 4114,
+        4001: 4183,
+        4002: 4184,
+        4003: 4185,
+        4004: 4186,
+        4005: 4187,
+        4006: 4188,
+        4007: 4189,
+        4008: 4200,
+        4009: 4157,
+        4010: 4136,
+        4011: 4118,
+        4012: 4150,
+        4013: 4146,
+        4015: 4204,
+        4016: 4139,
+        4017: 4135,
+        4018: 4144,
+        4019: 4121,
+        4020: 4153,
+        4021: 4152,
+        4023: 4158,
+        4024: 4159,
+        4025: 4160,
+        4026: 4161,
+        4027: 4162,
+        4028: 4163,
+        4029: 4181,
+        4030: 4207,
+        4031: 4194,
+        4032: 4195,
+        4033: 4196,
+        4034: 4164,
+        4035: 4165,
+        4037: 4210,
+        4038: 4166,
+        4039: 4167,
+        4040: 4168,
+        4041: 4169,
+        4042: 4170,
+        4043: 4171,
+        4045: 4172,
+        4046: 4155,
+        4047: 4123,
+        4049: 4117,
+        4054: 4202,
+        4055: 4133,
+        4056: 4198,
+        4057: 4129,
+        4058: 4197,
+        4059: 4140,
+        4060: 4202,
+        4061: 4133,
+        4062: 4198,
+        4063: 4129,
+        4064: 4197,
+        4065: 4140,
+        4066: 4201,
+        4067: 4132,
+        4068: 4148,
+        4069: 4151,
+        4070: 4127,
+        4071: 4120,
+        4072: 4143,
+        4073: 4201,
+        4074: 4132,
+        4075: 4148,
+        4076: 4151,
+        4077: 4127,
+        4078: 4120,
+        4079: 4143,
+        4096: 4209,
+        4097: 4173,
+        4098: 4206,
+        4099: 4174,
+        4100: 4205,
+        4101: 4175,
+        4102: 4208,
+        4103: 4176,
+        4104: 4177,
+        4105: 4178,
+        4106: 4179,
+        4107: 4180,
+        4108: 4182,
+        4190: 4192,
+        4191: 4193,
+        4211: 4213,
+        4212: 4214,
+        4215: 4216,
+      },
     };
   },
   methods: {
     ...mapMutations(["SAVE_JOB"]),
     clickJob: function (event) {
-      this.SAVE_JOB(parseInt(event.target.id));
+      let job_id = parseInt(event.target.id);
+      if (this.$store.state.cash_mount_checked) {
+        if (job_id in this.cash_mount_list) {
+          job_id = this.cash_mount_list[job_id];
+        }
+      } else if (this.$store.state.regular_mount_checked) {
+        if (job_id in this.regular_mount_list) {
+          job_id = this.regular_mount_list[job_id];
+        }
+      }
+      this.SAVE_JOB(job_id);
+    },
+  },
+  watch: {
+    "$store.state.cash_mount_checked": {
+      deep: true,
+      handler(newValue, oldValue) {
+        let current_job = this.$store.state.character.job[0];
+        if (newValue == 1) {
+          if (current_job in this.cash_mount_list) {
+            this.SAVE_JOB(this.cash_mount_list[current_job]);
+          }
+        } else {
+          Object.keys(this.cash_mount_list).forEach((key) => {
+            if (this.cash_mount_list[key] == current_job) {
+              this.SAVE_JOB(parseInt(key));
+            }
+          });
+        }
+      },
+    },
+    "$store.state.regular_mount_checked": {
+      deep: true,
+      handler(newValue, oldValue) {
+        let current_job = this.$store.state.character.job[0];
+        if (newValue == 1) {
+          if (current_job in this.regular_mount_list) {
+            this.SAVE_JOB(this.regular_mount_list[current_job]);
+          }
+        } else {
+          Object.keys(this.regular_mount_list).forEach((key) => {
+            if (this.regular_mount_list[key] == current_job) {
+              this.SAVE_JOB(parseInt(key));
+            }
+          });
+        }
+      },
     },
   },
 };
