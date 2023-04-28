@@ -3,7 +3,7 @@ This page was developed in order to allow you to simulate your character costume
 
 It's very easy to use, just select the equipments that you want to test.
 
-Access: http://visualrag.herokuapp.com/
+Access: http://visualrag.com/
 
 # Technologies
 - Vue.js
