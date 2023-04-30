@@ -175,7 +175,7 @@
                               <ItemListGarmet :item_filter="searchItemQuery" />
                             </div>
                             <div class="helper">
-                              Utilize as setas <img src="../assets/img/interface/setas-2.png"> para navegar pelos visuais
+                              {{ $t("arrowHelperBefore") }} <img :src="require(`../assets/img/interface/arrows.png`)"> {{ $t("arrowHelperAfter") }} 
                             </div>
                           </div>
                         </div>
