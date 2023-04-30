@@ -10,6 +10,8 @@
     "top": "Top",
     "mid": "Mid",
     "bot": "Bot",
+    "arrowHelperBefore": "Use the arrows",
+    "arrowHelperAfter": "to navigate through visuals",
     "garment": "Garment",
     "actions": "Actions",
     "costume": "Costume",

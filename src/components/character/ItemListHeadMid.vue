@@ -286,6 +286,8 @@ export default {
 <style scoped>
 .ul-item-list {
   list-style: none;
+  padding-top: 2px;
+  padding-left: 1rem;
 }
 
 .li-item {
@@ -304,7 +306,7 @@ export default {
 }
 
 .item-selected {
-  border: 2px dashed #0d6efd;
+  outline: 2px dashed #0d6efd;
   border-radius: 5px;
   filter: contrast(105%) brightness(110%);
 }

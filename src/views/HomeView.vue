@@ -73,6 +73,7 @@
                                 {{ $store.state.headgear_top_name }}
                               </label>
                               <label v-else>{{ $t("top") }}</label>
+                              <span>{{ $t("top") }}</span>
                             </button>
                             <button
                               class="nav-link btn-tab-item"
@@ -92,6 +93,7 @@
                                 {{ $store.state.headgear_mid_name }}
                               </label>
                               <label v-else>{{ $t("mid") }}</label>
+                              <span>{{ $t("mid") }}</span>
                             </button>
                             <button
                               class="nav-link btn-tab-item"
@@ -111,6 +113,7 @@
                                 {{ $store.state.headgear_bottom_name }}
                               </label>
                               <label v-else>{{ $t("bot") }}</label>
+                              <span>{{ $t("bot") }}</span>
                             </button>
                             <button
                               class="nav-link btn-tab-item"
@@ -133,6 +136,7 @@
                                 {{ $store.state.garment_name }}
                               </label>
                               <label v-else>{{ $t("garment") }}</label>
+                              <span>{{ $t("garment") }}</span>
                             </button>
                           </div>
                           <div class="tab-content" id="v-pills-tabContent">
@@ -169,6 +173,9 @@
                               aria-labelledby="v-pills-garment-tab"
                             >
                               <ItemListGarmet :item_filter="searchItemQuery" />
+                            </div>
+                            <div class="helper">
+                              {{ $t("arrowHelperBefore") }} <img :src="require(`../assets/img/interface/arrows.png`)"> {{ $t("arrowHelperAfter") }} 
                             </div>
                           </div>
                         </div>
@@ -319,44 +326,65 @@ export default {
         event.preventDefault();
         let tabPaneItemsWidth = document.querySelector(
           "div.tab-pane-items[id^=v-pills-].show.active"
-        ).clientWidth;
+        ).offsetWidth;
         let numberOfItems = document.querySelectorAll(
-          "div.tab-pane-items[id^=v-pills-].show.active li.li-item"
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
         ).length;
         let itemsPerRow = parseInt((tabPaneItemsWidth - 32) / 32);
-        let listOfAllItems = document.querySelector(
-          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list"
+        let listOfAllItems = document.querySelectorAll(
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']"
         );
         let selectedItem = document.querySelector(
-          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list img.item-selected"
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected"
         ).parentElement;
         let selectedItemIndex = Array.prototype.indexOf.call(
-          listOfAllItems.children,
+          listOfAllItems,
           selectedItem
         );
         let itemList = document.querySelectorAll(
-          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item"
+          "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
         );
 
-        switch (keyName) {
-          case "ArrowUp":
-            if (selectedItemIndex >= itemsPerRow)
-              itemList[selectedItemIndex - itemsPerRow].children[0].click();
-            break;
-          case "ArrowDown":
-            if (selectedItemIndex < numberOfItems - itemsPerRow)
-              itemList[selectedItemIndex + itemsPerRow].children[0].click();
-            break;
-          case "ArrowLeft":
-            if (selectedItemIndex >= 1)
-              itemList[selectedItemIndex - 1].children[0].click();
-            break;
-          case "ArrowRight":
-            if (selectedItemIndex < numberOfItems - 1)
-              itemList[selectedItemIndex + 1].children[0].click();
-            break;
-          default:
+        if(document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])").length > 0) {
+          if(document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item[style*='display: none'] img.item-selected") != null) {
+            itemList[0].children[0].click();
+          } else if(document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])").length > 0) {
+            switch (keyName) {
+              case "ArrowUp":
+                if (selectedItemIndex >= itemsPerRow)
+                  itemList[selectedItemIndex - itemsPerRow].children[0].click();
+                break;
+              case "ArrowDown":
+                if (selectedItemIndex < numberOfItems - itemsPerRow)
+                  itemList[selectedItemIndex + itemsPerRow].children[0].click();
+                break;
+              case "ArrowLeft":
+                if (selectedItemIndex >= 1)
+                  itemList[selectedItemIndex - 1].children[0].click();
+                break;
+              case "ArrowRight":
+                if (selectedItemIndex < numberOfItems - 1)
+                  itemList[selectedItemIndex + 1].children[0].click();
+                break;
+              default:
+            }
+          }
+
+          setTimeout(function() {
+            let divTop = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
+            let divHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
+            let firstVisibleItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
+            let newSelectedItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetTop;
+            let itemHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetHeight;
+
+            if((newSelectedItem - firstVisibleItem) < divTop) {
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem;
+            } else if(((newSelectedItem + itemHeight) - firstVisibleItem) > (divTop + divHeight)) {
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem + itemHeight - divHeight + 4;
+            }
+          }, 10);
         }
+
       }
     });
   },
@@ -443,7 +471,7 @@ export default {
 }
 
 .tab-pane-items {
-  max-height: 250px;
+  max-height: 320px;
   overflow-y: scroll;
 }
 
@@ -457,6 +485,58 @@ export default {
 }
 
 .btn-tab-item {
-  min-width: 125px;
+  position: relative;
+  width: 130px;
+  min-height: 75px;
+  border: 1px solid #d8d8d8 !important;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 5px;
+}
+
+.btn-tab-item img {
+  width: 25px;
+}
+
+.btn-tab-item label {
+  font-size: 12px;
+  line-height: 1.1em;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.btn-tab-item span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 20px;
+  background: #E8E8E8;
+  color: #5B5B5B;
+  border-radius: 5px 0 0 5px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.btn-tab-item.active span {
+  color: #fff;
+  background: var(--bs-nav-pills-link-active-bg)
+}
+
+.helper {
+  border-top: 1px solid #eee;
+  margin: 10px 30px 10px 1rem;
+  font-size: 12px;
+  padding-top: 5px;color: #7e7e7e;
 }
 </style>
