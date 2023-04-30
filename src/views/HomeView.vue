@@ -329,7 +329,6 @@ export default {
       if (
         ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(keyName)
       ) {
-        console.log("Testeeeee")
         event.preventDefault();
         let tabPaneItemsWidth = document.querySelector(
           "div.tab-pane-items[id^=v-pills-].show.active"
@@ -379,7 +378,6 @@ export default {
 
           // Verificando se elemento selecionado está fora da visão
           setTimeout(function() { // tempo de espera pra dar tempo da função de clique acionar primeiro
-            console.log("iniciou ajuste de scroll")
             let topoDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
             let alturaDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
             let primeiroItemVisivel = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
