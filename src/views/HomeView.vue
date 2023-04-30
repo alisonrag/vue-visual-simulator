@@ -352,11 +352,11 @@ export default {
             switch (keyName) {
               case "ArrowUp":
                 if (selectedItemIndex >= itemsPerRow)
-                  itemList[selectedItemIndex - itemsPerRow].children[0].click();
+                  itemList[selectedItemIndex - itemsPerRow - 1].children[0].click();
                 break;
               case "ArrowDown":
                 if (selectedItemIndex < numberOfItems - itemsPerRow)
-                  itemList[selectedItemIndex + itemsPerRow].children[0].click();
+                  itemList[selectedItemIndex + itemsPerRow + 1].children[0].click();
                 break;
               case "ArrowLeft":
                 if (selectedItemIndex >= 1)
