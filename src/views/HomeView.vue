@@ -66,7 +66,6 @@
                               aria-selected="true"
                             >
                               <img :src="item_top_src" alt="Item Top Tab" />
-                              <br />
                               <label
                                 v-if="$store.state.headgear_top_name !== null"
                               >
@@ -86,7 +85,6 @@
                               aria-selected="false"
                             >
                               <img :src="item_mid_src" alt="Item Mid Tab" />
-                              <br />
                               <label
                                 v-if="$store.state.headgear_mid_name !== null"
                               >
@@ -106,7 +104,6 @@
                               aria-selected="false"
                             >
                               <img :src="item_bot_src" alt="Item Bot Tab" />
-                              <br />
                               <label
                                 v-if="$store.state.headgear_bottom_name !== null"
                               >
@@ -129,7 +126,6 @@
                                 :src="item_garmet_src"
                                 alt="Item Garmet Tab"
                               />
-                              <br />
                               <label
                                 v-if="$store.state.garment_name !== null"
                               >
