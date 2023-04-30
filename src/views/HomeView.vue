@@ -326,7 +326,7 @@ export default {
         event.preventDefault();
         let tabPaneItemsWidth = document.querySelector(
           "div.tab-pane-items[id^=v-pills-].show.active"
-        ).clientWidth;
+        ).offsetWidth;
         let numberOfItems = document.querySelectorAll(
           "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
         ).length;
@@ -352,11 +352,11 @@ export default {
             switch (keyName) {
               case "ArrowUp":
                 if (selectedItemIndex >= itemsPerRow)
-                  itemList[selectedItemIndex - itemsPerRow - 1].children[0].click();
+                  itemList[selectedItemIndex - itemsPerRow].children[0].click();
                 break;
               case "ArrowDown":
                 if (selectedItemIndex < numberOfItems - itemsPerRow)
-                  itemList[selectedItemIndex + itemsPerRow + 1].children[0].click();
+                  itemList[selectedItemIndex + itemsPerRow].children[0].click();
                 break;
               case "ArrowLeft":
                 if (selectedItemIndex >= 1)
@@ -523,9 +523,11 @@ export default {
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
+
 .btn-tab-item.active span {
   color: #fff;
   background: var(--bs-nav-pills-link-active-bg)
