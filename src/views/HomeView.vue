@@ -318,12 +318,6 @@ export default {
     this.loadLocalStorage();
     this.activeTooltip();
 
-    document.querySelectorAll("button.nav-link.btn-tab-item").forEach((item, i) => {
-      item.addEventListener("click", (event) => {
-        item.blur();
-      });
-    });
-
     document.addEventListener("keydown", (event) => {
       const keyName = event.key;
       if (
@@ -376,18 +370,17 @@ export default {
             }
           }
 
-          // Verificando se elemento selecionado está fora da visão
-          setTimeout(function() { // tempo de espera pra dar tempo da função de clique acionar primeiro
-            let topoDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
-            let alturaDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
-            let primeiroItemVisivel = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
-            let novoItemSelecionado = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetTop;
-            let alturaItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetHeight;
+          setTimeout(function() {
+            let divTop = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
+            let divHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
+            let firstVisibleItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
+            let newSelectedItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetTop;
+            let itemHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetHeight;
 
-            if((novoItemSelecionado - primeiroItemVisivel) < topoDiv) {
-              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = novoItemSelecionado - primeiroItemVisivel;
-            } else if(((novoItemSelecionado + alturaItem) - primeiroItemVisivel) > (topoDiv + alturaDiv)) {
-              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = novoItemSelecionado - primeiroItemVisivel + alturaItem - alturaDiv + 4;
+            if((newSelectedItem - firstVisibleItem) < divTop) {
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem;
+            } else if(((newSelectedItem + itemHeight) - firstVisibleItem) > (divTop + divHeight)) {
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem + itemHeight - divHeight + 4;
             }
           }, 10);
         }
