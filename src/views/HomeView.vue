@@ -329,6 +329,7 @@ export default {
       if (
         ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(keyName)
       ) {
+        console.log("Testeeeee")
         event.preventDefault();
         let tabPaneItemsWidth = document.querySelector(
           "div.tab-pane-items[id^=v-pills-].show.active"
@@ -379,18 +380,16 @@ export default {
           // Verificando se elemento selecionado está fora da visão
           setTimeout(function() { // tempo de espera pra dar tempo da função de clique acionar primeiro
             console.log("iniciou ajuste de scroll")
-            let topoDiv = document.getElementById("v-pills-top").scrollTop;
-            let alturaDiv = document.getElementById("v-pills-top").offsetHeight;
+            let topoDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
+            let alturaDiv = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
             let primeiroItemVisivel = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
             let novoItemSelecionado = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetTop;
             let alturaItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetHeight;
 
             if((novoItemSelecionado - primeiroItemVisivel) < topoDiv) {
-              console.log("ta pra cima");
-              document.getElementById("v-pills-top").scrollTop = novoItemSelecionado - primeiroItemVisivel;
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = novoItemSelecionado - primeiroItemVisivel;
             } else if(((novoItemSelecionado + alturaItem) - primeiroItemVisivel) > (topoDiv + alturaDiv)) {
-              console.log("ta pra baixo");
-              document.getElementById("v-pills-top").scrollTop = novoItemSelecionado - primeiroItemVisivel + alturaItem - alturaDiv + 4;
+              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = novoItemSelecionado - primeiroItemVisivel + alturaItem - alturaDiv + 4;
             }
           }, 10);
         }
