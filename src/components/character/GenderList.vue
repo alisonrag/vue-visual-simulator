@@ -87,6 +87,9 @@ export default {
                 this.clickSexBtn(newValue)
             }
         }
+    },
+    mounted() {
+        this.clickSexBtn(this.$store.state.character.gender)
     }
 }
 </script>

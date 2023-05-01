@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
   state: {
@@ -13,7 +14,7 @@ export default createStore({
       bodyPalette: 0,
       action: 0,
       canvas: "200x200+100+150",
-      outfit: 0
+      outfit: 0,
     },
     headgear_top_id: 0,
     headgear_top_name: null,
@@ -154,4 +155,5 @@ export default createStore({
   },
   actions: {},
   modules: {},
+  plugins: [createPersistedState()],
 });

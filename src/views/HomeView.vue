@@ -105,7 +105,9 @@
                             >
                               <img :src="item_bot_src" alt="Item Bot Tab" />
                               <label
-                                v-if="$store.state.headgear_bottom_name !== null"
+                                v-if="
+                                  $store.state.headgear_bottom_name !== null
+                                "
                               >
                                 {{ $store.state.headgear_bottom_name }}
                               </label>
@@ -126,9 +128,7 @@
                                 :src="item_garmet_src"
                                 alt="Item Garmet Tab"
                               />
-                              <label
-                                v-if="$store.state.garment_name !== null"
-                              >
+                              <label v-if="$store.state.garment_name !== null">
                                 {{ $store.state.garment_name }}
                               </label>
                               <label v-else>{{ $t("garment") }}</label>
@@ -171,7 +171,13 @@
                               <ItemListGarmet :item_filter="searchItemQuery" />
                             </div>
                             <div class="helper">
-                              {{ $t("arrowHelperBefore") }} <img :src="require(`../assets/img/interface/arrows.png`)"> {{ $t("arrowHelperAfter") }} 
+                              {{ $t("arrowHelperBefore") }}
+                              <img
+                                :src="
+                                  require(`../assets/img/interface/arrows.png`)
+                                "
+                              />
+                              {{ $t("arrowHelperAfter") }}
                             </div>
                           </div>
                         </div>
@@ -307,12 +313,13 @@ export default {
     ClearCharacterButton,
     OutfitCheckbox,
     RegularMountCheckbox,
-    CashMountCheckbox
+    CashMountCheckbox,
   },
   mounted() {
     document.title = "Ragnarok Online Visual Simulator";
     this.loadLocalStorage();
     this.activeTooltip();
+    this.updatePanelUrls();
 
     document.addEventListener("keydown", (event) => {
       const keyName = event.key;
@@ -341,10 +348,22 @@ export default {
           "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
         );
 
-        if(document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])").length > 0) {
-          if(document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item[style*='display: none'] img.item-selected") != null) {
+        if (
+          document.querySelectorAll(
+            "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
+          ).length > 0
+        ) {
+          if (
+            document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item[style*='display: none'] img.item-selected"
+            ) != null
+          ) {
             itemList[0].children[0].click();
-          } else if(document.querySelectorAll("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])").length > 0) {
+          } else if (
+            document.querySelectorAll(
+              "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none'])"
+            ).length > 0
+          ) {
             switch (keyName) {
               case "ArrowUp":
                 if (selectedItemIndex >= itemsPerRow)
@@ -366,21 +385,38 @@ export default {
             }
           }
 
-          setTimeout(function() {
-            let divTop = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop;
-            let divHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").offsetHeight;
-            let firstVisibleItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img").offsetTop;
-            let newSelectedItem = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetTop;
-            let itemHeight = document.querySelector("div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected").offsetHeight;
+          setTimeout(function () {
+            let divTop = document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active"
+            ).scrollTop;
+            let divHeight = document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active"
+            ).offsetHeight;
+            let firstVisibleItem = document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item:not([style*='display: none']) img"
+            ).offsetTop;
+            let newSelectedItem = document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected"
+            ).offsetTop;
+            let itemHeight = document.querySelector(
+              "div.tab-pane-items[id^=v-pills-].show.active ul.ul-item-list li.li-item img.item-selected"
+            ).offsetHeight;
 
-            if((newSelectedItem - firstVisibleItem) < divTop) {
-              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem;
-            } else if(((newSelectedItem + itemHeight) - firstVisibleItem) > (divTop + divHeight)) {
-              document.querySelector("div.tab-pane-items[id^=v-pills-].show.active").scrollTop = newSelectedItem - firstVisibleItem + itemHeight - divHeight + 4;
+            if (newSelectedItem - firstVisibleItem < divTop) {
+              document.querySelector(
+                "div.tab-pane-items[id^=v-pills-].show.active"
+              ).scrollTop = newSelectedItem - firstVisibleItem;
+            } else if (
+              newSelectedItem + itemHeight - firstVisibleItem >
+              divTop + divHeight
+            ) {
+              document.querySelector(
+                "div.tab-pane-items[id^=v-pills-].show.active"
+              ).scrollTop =
+                newSelectedItem - firstVisibleItem + itemHeight - divHeight + 4;
             }
           }, 10);
         }
-
       }
     });
   },
@@ -401,6 +437,20 @@ export default {
         this.SAVE_CHARACTER(JSON.parse(character));
       } else {
         this.RESET_CHARACTER();
+      }
+    },
+    updatePanelUrls: function () {
+      if(this.$store.state.headgear_top_id !== 0) {
+        this.item_top_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_top_id}.png`;
+      }
+      if(this.$store.state.headgear_mid_id !== 0) {
+        this.item_mid_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_mid_id}.png`;
+      }
+      if(this.$store.state.headgear_bottom_id !== 0) {
+        this.item_bot_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_bottom_id}.png`;
+      }
+      if(this.$store.state.garment_id !== 0) {
+        this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.garment_id}.png`;
       }
     },
   },
@@ -513,26 +563,28 @@ export default {
   top: 0px;
   height: 100%;
   width: 20px;
-  background: #E8E8E8;
-  color: #5B5B5B;
+  background: #e8e8e8;
+  color: #5b5b5b;
   border-radius: 5px 0 0 5px;
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
 .btn-tab-item.active span {
   color: #fff;
-  background: var(--bs-nav-pills-link-active-bg)
+  background: var(--bs-nav-pills-link-active-bg);
 }
 
 .helper {
   border-top: 1px solid #eee;
   margin: 10px 30px 10px 1rem;
   font-size: 12px;
-  padding-top: 5px;color: #7e7e7e;
+  padding-top: 5px;
+  color: #7e7e7e;
 }
 </style>
