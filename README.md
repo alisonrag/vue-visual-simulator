@@ -11,9 +11,7 @@ Access: http://visualrag.com/
 - HTML
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/10372732/172491698-7e3f92d6-a89c-4f69-b541-54487ab1a802.png)
-
-
+![image](https://user-images.githubusercontent.com/10372732/235383426-62ed325e-9eb0-444f-bc31-7df82565ae84.png)
 
 ## Project setup
 ```
