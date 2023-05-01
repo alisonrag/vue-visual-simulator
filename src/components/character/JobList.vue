@@ -124,9 +124,6 @@
             />
           </td>
         </tr>
-        <tr class="table-info">
-          <td colspan="13"></td>
-        </tr>
         <tr>
           <td
             v-for="job in expanded_first_job"
@@ -215,7 +212,6 @@
               class="job-image"
             />
           </td>
-          <td colspan="13"></td>
         </tr>
       </tbody>
     </table>
