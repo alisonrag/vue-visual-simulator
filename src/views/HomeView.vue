@@ -22,7 +22,11 @@
                   <div class="card card-job-shadow">
                     <div class="card p-1">
                       <div class="card-job-inner p-2">
-                        <JobList />
+                        <div class="row">
+                          <div class="col-md-12">
+                            <JobList />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -30,7 +34,7 @@
                 <div class="col-md-12">
                   <div class="card card-job-shadow">
                     <div class="card p-1">
-                      <div class="card-job-inner">
+                      <div class="card-job-inner p-2">
                         <div class="row">
                           <div class="col-md-12">
                             <form class="form">
@@ -440,16 +444,16 @@ export default {
       }
     },
     updatePanelUrls: function () {
-      if(this.$store.state.headgear_top_id !== 0) {
+      if (this.$store.state.headgear_top_id !== 0) {
         this.item_top_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_top_id}.png`;
       }
-      if(this.$store.state.headgear_mid_id !== 0) {
+      if (this.$store.state.headgear_mid_id !== 0) {
         this.item_mid_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_mid_id}.png`;
       }
-      if(this.$store.state.headgear_bottom_id !== 0) {
+      if (this.$store.state.headgear_bottom_id !== 0) {
         this.item_bot_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_bottom_id}.png`;
       }
-      if(this.$store.state.garment_id !== 0) {
+      if (this.$store.state.garment_id !== 0) {
         this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.garment_id}.png`;
       }
     },

@@ -1,221 +1,199 @@
 <template>
-  <div class="container-jobs">
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td
-            v-for="job in novice_job"
-            :key="job.id"
-            class="text-center"
-            colspan="13"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in first_job"
-            :key="job.id"
-            class="text-center"
-            :colspan="[job.colspan ? job.colspan : 2]"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in second_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in transcendence_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in third_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in fourth_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in expanded_first_job"
-            :key="job.id"
-            class="text-center"
-            :colspan="[job.colspan ? job.colspan : 1]"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-          <td colspan="13"></td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in expanded_second_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-          <td colspan="2"></td>
-          <td colspan="1"></td>
-          <td colspan="1"></td>
-          <td colspan="1"></td>
-          <td colspan="13"></td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in expanded_third_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-          <td colspan="1"></td>
-          <td colspan="13"></td>
-        </tr>
-        <tr>
-          <td
-            v-for="job in expanded_fourth_job"
-            :key="job.id"
-            class="text-center"
-            :class="{
-              'job-selected': parseInt(job.id) == $store.state.character.job,
-            }"
-          >
-            <img
-              :id="job.id"
-              :src="
-                require('../../assets/img/job/icon_jobs_' + job.id + '.png')
-              "
-              :alt="job.name"
-              @click="clickJob($event)"
-              class="job-image"
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="table table-responsive table-bordered">
+    <tbody>
+      <tr>
+        <td
+          v-for="job in novice_job"
+          :key="job.id"
+          class="text-center"
+          colspan="13"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in first_job"
+          :key="job.id"
+          class="text-center"
+          :colspan="[job.colspan ? job.colspan : 2]"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in second_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in transcendence_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in third_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in fourth_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in expanded_first_job"
+          :key="job.id"
+          class="text-center"
+          :colspan="[job.colspan ? job.colspan : 1]"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+        <td colspan="13"></td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in expanded_second_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="13"></td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in expanded_third_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+        <td colspan="1"></td>
+        <td colspan="13"></td>
+      </tr>
+      <tr>
+        <td
+          v-for="job in expanded_fourth_job"
+          :key="job.id"
+          class="text-center"
+          :class="{
+            'job-selected': parseInt(job.id) == $store.state.character.job,
+          }"
+        >
+          <img
+            :id="job.id"
+            :src="require('../../assets/img/job/icon_jobs_' + job.id + '.png')"
+            :alt="job.name"
+            @click="clickJob($event)"
+            class="job-image"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
@@ -781,15 +759,15 @@ export default {
 .job-selected {
   background-color: #0d6efd !important;
 }
-.jobs {
-  height: 30px;
-}
 
 .job-image {
   align-self: flex-start;
 }
 
-.job-group {
+@media (max-width: 820px) {
+  .job-image {
+    height: 18px;
+  }
 }
 
 .table {
