@@ -750,6 +750,11 @@
 		"viewID" : 1812
 	},
 	{
+		"id" : 31615,
+		"name" : "Olhos de Gueixa",
+		"viewID" : 1813
+	},
+	{
 		"id" : 31617,
 		"name" : "Pelúcia de Lady Tanee",
 		"viewID" : 1815
@@ -1120,6 +1125,11 @@
 		"viewID" : 2246
 	},
 	{
+		"id" : 410157,
+		"name" : "Lunáticos Amiguinhos",
+		"viewID" : 2262
+	},
+	{
 		"id" : 410156,
 		"name" : "Buquê Colorido",
 		"viewID" : 2263
@@ -1158,6 +1168,11 @@
 		"id" : 410202,
 		"name" : "Lambreta Elétrica do Poring",
 		"viewID" : 2303
+	},
+	{
+		"id" : 410218,
+		"name" : "Bola de Capotão",
+		"viewID" : 2324
 	},
 	{
 		"id" : 410219,

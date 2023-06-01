@@ -2145,6 +2145,11 @@
 		"viewID" : 1117
 	},
 	{
+		"id" : 31976,
+		"name" : "Boina de Foco",
+		"viewID" : 1122
+	},
+	{
 		"id" : 19958,
 		"name" : "Boina da Lutadora de Rua",
 		"viewID" : 1137
@@ -2408,6 +2413,11 @@
 		"id" : 20134,
 		"name" : "Elmo do Cavaleiro Branco",
 		"viewID" : 1269
+	},
+	{
+		"id" : 20139,
+		"name" : "Presilha Cavalinho",
+		"viewID" : 1271
 	},
 	{
 		"id" : 20153,
@@ -3533,6 +3543,11 @@
 		"id" : 400197,
 		"name" : "Cartola do Poring Doceiro",
 		"viewID" : 2163
+	},
+	{
+		"id" : 400188,
+		"name" : "Faixa Ragnarök",
+		"viewID" : 2179
 	},
 	{
 		"id" : 400205,
