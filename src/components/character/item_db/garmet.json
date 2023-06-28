@@ -755,6 +755,11 @@
 		"viewID" : 145
 	},
 	{
+		"id" : 480222,
+		"name" : "Guarda-Chuva Vermelho",
+		"viewID" : 146
+	},
+	{
 		"id" : 480223,
 		"name" : "Muranyasa",
 		"viewID" : 147
@@ -788,5 +793,10 @@
 		"id" : 480237,
 		"name" : "Katanas do Mestre Tengu",
 		"viewID" : 158
+	},
+	{
+		"id" : 19870,
+		"name" : "Cartola do Coelho Mágico",
+		"viewID" : 923
 	}
 ]

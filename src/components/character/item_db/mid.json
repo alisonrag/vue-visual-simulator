@@ -200,6 +200,11 @@
 		"viewID" : 498
 	},
 	{
+		"id" : 19563,
+		"name" : "Mascára Muta Luta",
+		"viewID" : 545
+	},
+	{
 		"id" : 19826,
 		"name" : "Asinhas do Inverno",
 		"viewID" : 584
@@ -710,6 +715,11 @@
 		"viewID" : 1741
 	},
 	{
+		"id" : 31497,
+		"name" : "Óculos Floridos",
+		"viewID" : 1744
+	},
+	{
 		"id" : 31512,
 		"name" : "Coelhinho Malhado",
 		"viewID" : 1754
@@ -1120,6 +1130,11 @@
 		"viewID" : 2201
 	},
 	{
+		"id" : 410131,
+		"name" : "Mascote Tigre Branco",
+		"viewID" : 2244
+	},
+	{
 		"id" : 410133,
 		"name" : "Cookie & Biju",
 		"viewID" : 2246
@@ -1168,6 +1183,11 @@
 		"id" : 410202,
 		"name" : "Lambreta Elétrica do Poring",
 		"viewID" : 2303
+	},
+	{
+		"id" : 410212,
+		"name" : "Rei Dragão Bebê",
+		"viewID" : 2316
 	},
 	{
 		"id" : 410218,

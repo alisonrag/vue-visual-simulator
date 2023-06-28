@@ -845,6 +845,11 @@
 		"viewID" : 420
 	},
 	{
+		"id" : 20481,
+		"name" : "Máscara de Ifrit",
+		"viewID" : 421
+	},
+	{
 		"id" : 31595,
 		"name" : "Chapéu de Estudante",
 		"viewID" : 423
@@ -853,6 +858,11 @@
 		"id" : 31174,
 		"name" : "Saco na Cabeça",
 		"viewID" : 429
+	},
+	{
+		"id" : 31628,
+		"name" : "Chapéu de Macacaquinho",
+		"viewID" : 430
 	},
 	{
 		"id" : 19723,
@@ -1033,6 +1043,11 @@
 		"id" : 20045,
 		"name" : "Peruca de Samambaia",
 		"viewID" : 508
+	},
+	{
+		"id" : 31897,
+		"name" : "Elmo Submarino",
+		"viewID" : 512
 	},
 	{
 		"id" : 400092,
@@ -1765,6 +1780,11 @@
 		"viewID" : 916
 	},
 	{
+		"id" : 20460,
+		"name" : "Tiara Espinhosa",
+		"viewID" : 921
+	},
+	{
 		"id" : 19870,
 		"name" : "Cartola do Coelho Mágico",
 		"viewID" : 923
@@ -1960,6 +1980,11 @@
 		"viewID" : 1017
 	},
 	{
+		"id" : 31430,
+		"name" : "Chapéu do Bandalf",
+		"viewID" : 1023
+	},
+	{
 		"id" : 31939,
 		"name" : "Coroa de Rosas",
 		"viewID" : 1026
@@ -2118,6 +2143,11 @@
 		"id" : 19914,
 		"name" : "Chapéu do Comissário",
 		"viewID" : 1101
+	},
+	{
+		"id" : 31535,
+		"name" : "Chapéu de Titica",
+		"viewID" : 1102
 	},
 	{
 		"id" : 19915,
@@ -2300,6 +2330,11 @@
 		"viewID" : 1208
 	},
 	{
+		"id" : 20025,
+		"name" : "Chapéu de Vaquinha",
+		"viewID" : 1211
+	},
+	{
 		"id" : 20027,
 		"name" : "Chapéu da Mimosa Rosa",
 		"viewID" : 1213
@@ -2378,6 +2413,11 @@
 		"id" : 20086,
 		"name" : "Dragão Ancião",
 		"viewID" : 1245
+	},
+	{
+		"id" : 31419,
+		"name" : "Tiara Flap Flap",
+		"viewID" : 1251
 	},
 	{
 		"id" : 20113,
@@ -2793,6 +2833,11 @@
 		"id" : 20468,
 		"name" : "Máscara da Gorila Chita",
 		"viewID" : 1462
+	},
+	{
+		"id" : 31786,
+		"name" : "Chapéu de Dragonete Vermelho",
+		"viewID" : 1463
 	},
 	{
 		"id" : 20463,
@@ -3490,6 +3535,11 @@
 		"viewID" : 2016
 	},
 	{
+		"id" : 400115,
+		"name" : "Boina Mágica de Angeling",
+		"viewID" : 2019
+	},
+	{
 		"id" : 15843,
 		"name" : "Resto de Caça",
 		"viewID" : 2024
@@ -3630,6 +3680,11 @@
 		"viewID" : 2302
 	},
 	{
+		"id" : 400354,
+		"name" : "Elmo de Vanargandr",
+		"viewID" : 2312
+	},
+	{
 		"id" : 400355,
 		"name" : "Gorro Bufante",
 		"viewID" : 2313
@@ -3643,5 +3698,10 @@
 		"id" : 400370,
 		"name" : "Chapéu de Bruxa com Orelhas",
 		"viewID" : 2323
+	},
+	{
+		"id" : 430005,
+		"name" : "Óculos do Tigre Branco",
+		"viewID" : 2325
 	}
 ]
