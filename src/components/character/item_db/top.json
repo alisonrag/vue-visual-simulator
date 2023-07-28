@@ -1025,6 +1025,16 @@
 		"viewID" : 500
 	},
 	{
+		"id" : 19866,
+		"name" : "Toquinha Estileira de Pijama Azul",
+		"viewID" : 501
+	},
+	{
+		"id" : 19867,
+		"name" : "Toquinha Estileira de Pijama Rosa",
+		"viewID" : 502
+	},
+	{
 		"id" : 19873,
 		"name" : "Chapéu Frelldora",
 		"viewID" : 502
@@ -1730,6 +1740,11 @@
 		"viewID" : 891
 	},
 	{
+		"id" : 20496,
+		"name" : "Chapéu Serumaninho",
+		"viewID" : 894
+	},
+	{
 		"id" : 20151,
 		"name" : "Chapéu Venenoso",
 		"viewID" : 899
@@ -2273,6 +2288,11 @@
 		"id" : 31038,
 		"name" : "Bandana Xadrez",
 		"viewID" : 1174
+	},
+	{
+		"id" : 20332,
+		"name" : "Laço de Fita",
+		"viewID" : 1175
 	},
 	{
 		"id" : 31728,
@@ -3323,6 +3343,11 @@
 		"id" : 31547,
 		"name" : "Capuz de Poporing",
 		"viewID" : 1778
+	},
+	{
+		"id" : 15382,
+		"name" : "Tiara Qixiqué",
+		"viewID" : 1780
 	},
 	{
 		"id" : 31557,

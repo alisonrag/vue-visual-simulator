@@ -140,6 +140,11 @@
 		"viewID" : 414
 	},
 	{
+		"id" : 19947,
+		"name" : "Lenço Arco-íris da Fortuna",
+		"viewID" : 460
+	},
+	{
 		"id" : 19726,
 		"name" : "Rosa da Sedução",
 		"viewID" : 534
@@ -493,6 +498,51 @@
 		"id" : 20407,
 		"name" : "Aura da Fúria",
 		"viewID" : 1418
+	},
+	{
+		"id" : 20416,
+		"name" : "Balão Rosa Sinistro",
+		"viewID" : 1426
+	},
+	{
+		"id" : 20417,
+		"name" : "Balão Laranja Sinistro",
+		"viewID" : 1427
+	},
+	{
+		"id" : 20418,
+		"name" : "Balão Natalino Sinistro",
+		"viewID" : 1428
+	},
+	{
+		"id" : 20419,
+		"name" : "Balão Verde Sinistro",
+		"viewID" : 1429
+	},
+	{
+		"id" : 20420,
+		"name" : "Balão Azul Sinistro",
+		"viewID" : 1430
+	},
+	{
+		"id" : 20421,
+		"name" : "Balão Metálico Sinistro",
+		"viewID" : 1431
+	},
+	{
+		"id" : 20425,
+		"name" : "Balão Angelical Sinistro",
+		"viewID" : 1435
+	},
+	{
+		"id" : 20426,
+		"name" : "Balão Fantasmágorico Sinistro",
+		"viewID" : 1436
+	},
+	{
+		"id" : 20427,
+		"name" : "Balão Aquático Sinistro",
+		"viewID" : 1437
 	},
 	{
 		"id" : 20440,
@@ -1868,6 +1918,11 @@
 		"id" : 420191,
 		"name" : "Penteado Coelho das Neves",
 		"viewID" : 2333
+	},
+	{
+		"id" : 420192,
+		"name" : "Raposa Albina",
+		"viewID" : 2335
 	},
 	{
 		"id" : 420193,

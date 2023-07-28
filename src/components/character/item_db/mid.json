@@ -365,6 +365,11 @@
 		"viewID" : 1008
 	},
 	{
+		"id" : 20321,
+		"name" : "Nadadeira de Peixe-Leão",
+		"viewID" : 1009
+	},
+	{
 		"id" : 31534,
 		"name" : "Tiara Colorida",
 		"viewID" : 1019
@@ -553,6 +558,11 @@
 		"id" : 31483,
 		"name" : "Adereço de Gatinho",
 		"viewID" : 1472
+	},
+	{
+		"id" : 31416,
+		"name" : "Presilha de Serafim",
+		"viewID" : 1487
 	},
 	{
 		"id" : 31375,
@@ -1060,6 +1070,11 @@
 		"viewID" : 2137
 	},
 	{
+		"id" : 410069,
+		"name" : "Pipoquinho",
+		"viewID" : 2142
+	},
+	{
 		"id" : 410095,
 		"name" : "Angorá de Ombro",
 		"viewID" : 2151
@@ -1138,6 +1153,11 @@
 		"id" : 410133,
 		"name" : "Cookie & Biju",
 		"viewID" : 2246
+	},
+	{
+		"id" : 410144,
+		"name" : "Carrinho Ômega",
+		"viewID" : 2251
 	},
 	{
 		"id" : 410157,
