@@ -155,6 +155,11 @@
 		"viewID" : 38
 	},
 	{
+		"id" : 19731,
+		"name" : "Asas Demoníacas",
+		"viewID" : 39
+	},
+	{
 		"id" : 19526,
 		"name" : "Elmo de Sucata",
 		"viewID" : 40
@@ -203,6 +208,11 @@
 		"id" : 19639,
 		"name" : "Chapéu Rural",
 		"viewID" : 67
+	},
+	{
+		"id" : 19941,
+		"name" : "Protetores de Ouvido",
+		"viewID" : 70
 	},
 	{
 		"id" : 19939,
@@ -340,6 +350,11 @@
 		"viewID" : 168
 	},
 	{
+		"id" : 20385,
+		"name" : "Elmo do Herói",
+		"viewID" : 178
+	},
+	{
 		"id" : 19738,
 		"name" : "Chapéu do Xerloque",
 		"viewID" : 189
@@ -363,6 +378,11 @@
 		"id" : 19617,
 		"name" : "Orelhas de Filhote",
 		"viewID" : 199
+	},
+	{
+		"id" : 20244,
+		"name" : "Disfarce de Jirtas",
+		"viewID" : 200
 	},
 	{
 		"id" : 20194,
@@ -433,6 +453,11 @@
 		"id" : 19546,
 		"name" : "Disfarce de Valquíria",
 		"viewID" : 225
+	},
+	{
+		"id" : 31036,
+		"name" : "Chapéu de Ministro",
+		"viewID" : 227
 	},
 	{
 		"id" : 21300,
@@ -875,6 +900,11 @@
 		"viewID" : 432
 	},
 	{
+		"id" : 20056,
+		"name" : "Grinalda de Noiva",
+		"viewID" : 437
+	},
+	{
 		"id" : 20094,
 		"name" : "Tiara de Laço Verde",
 		"viewID" : 439
@@ -1135,6 +1165,11 @@
 		"viewID" : 553
 	},
 	{
+		"id" : 31417,
+		"name" : "Onigiri Saboroso",
+		"viewID" : 556
+	},
+	{
 		"id" : 31415,
 		"name" : "Chapéu do Peregrino",
 		"viewID" : 558
@@ -1365,6 +1400,11 @@
 		"viewID" : 646
 	},
 	{
+		"id" : 20333,
+		"name" : "Lembrancinha de Jawaii",
+		"viewID" : 650
+	},
+	{
 		"id" : 400224,
 		"name" : "Boina Militar",
 		"viewID" : 652
@@ -1403,6 +1443,11 @@
 		"id" : 19519,
 		"name" : "Nuvem com Raios",
 		"viewID" : 688
+	},
+	{
+		"id" : 20373,
+		"name" : "Capacete de Melancia",
+		"viewID" : 690
 	},
 	{
 		"id" : 19544,
@@ -1518,6 +1563,11 @@
 		"id" : 20085,
 		"name" : "Cartola da Fortuna do Genka",
 		"viewID" : 735
+	},
+	{
+		"id" : 400136,
+		"name" : "Adorno dos Mil Ouros",
+		"viewID" : 739
 	},
 	{
 		"id" : 31710,
@@ -3088,6 +3138,11 @@
 		"id" : 31506,
 		"name" : "Touca de Malangdo",
 		"viewID" : 1587
+	},
+	{
+		"id" : 31191,
+		"name" : "Orelhas de Doram",
+		"viewID" : 1588
 	},
 	{
 		"id" : 31195,

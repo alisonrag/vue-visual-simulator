@@ -90,6 +90,11 @@
 		"viewID" : 73
 	},
 	{
+		"id" : 20059,
+		"name" : "Máscara de Soldagem",
+		"viewID" : 79
+	},
+	{
 		"id" : 19734,
 		"name" : "Amplificador Ocular",
 		"viewID" : 83
@@ -108,6 +113,16 @@
 		"id" : 19550,
 		"name" : "Bochechas Coradas",
 		"viewID" : 125
+	},
+	{
+		"id" : 19621,
+		"name" : "Orelhas Malignas",
+		"viewID" : 152
+	},
+	{
+		"id" : 19781,
+		"name" : "Orelhas Angelicais",
+		"viewID" : 158
 	},
 	{
 		"id" : 19679,
@@ -330,6 +345,11 @@
 		"viewID" : 925
 	},
 	{
+		"id" : 5911,
+		"name" : "Pluma Imperial",
+		"viewID" : 935
+	},
+	{
 		"id" : 20230,
 		"name" : "Máscara da Falência",
 		"viewID" : 936
@@ -423,6 +443,11 @@
 		"id" : 20010,
 		"name" : "Orelhas Solares",
 		"viewID" : 1198
+	},
+	{
+		"id" : 31133,
+		"name" : "Adesivos do Apostador",
+		"viewID" : 1202
 	},
 	{
 		"id" : 20047,
@@ -873,6 +898,11 @@
 		"id" : 31851,
 		"name" : "Escudo Quântico",
 		"viewID" : 1949
+	},
+	{
+		"id" : 31853,
+		"name" : "Máscara de Zumbi",
+		"viewID" : 1951
 	},
 	{
 		"id" : 31923,

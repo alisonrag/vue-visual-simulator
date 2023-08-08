@@ -785,6 +785,11 @@
 		"viewID" : 154
 	},
 	{
+		"id" : 480252,
+		"name" : "Mystical_Wing",
+		"viewID" : 156
+	},
+	{
 		"id" : 480247,
 		"name" : "Mochila Gigante de Angeling",
 		"viewID" : 155
@@ -805,8 +810,8 @@
 		"viewID" : 165
 	},
 	{
-		"id" : 19870,
-		"name" : "Cartola do Coelho Mágico",
-		"viewID" : 923
+		"id" : 480295,
+		"name" : "Sakura_Branch",
+		"viewID" : 167
 	}
 ]
