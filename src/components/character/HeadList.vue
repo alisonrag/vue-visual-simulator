@@ -5,7 +5,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/img/head/img_hairstyle' + head + '.png')"
+                    v-lazy="{ src: require('../../assets/img/head/img_hairstyle' + head + '.png'), delay: 500 }"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -16,7 +16,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/img/head/img_hairstyle_girl' + head + '.png')"
+                    v-lazy="{ src: require('../../assets/img/head/img_hairstyle_girl' + head + '.png'), delay: 500 }"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -27,7 +27,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/img/head/img_hairstyle_doramboy' + head + '.png')"
+                    v-lazy="{ src: require('../../assets/img/head/img_hairstyle_doramboy' + head + '.png'), delay: 500 }"
                     :id="head"
                     @click="clickHead($event)"
                 />
@@ -38,7 +38,7 @@
                 <img
                     class="li-head-normal"
                     :class="{ 'li-head-select': parseInt(head) == $store.state.character.head }"
-                    :src="require('../../assets/img/head/img_hairstyle_doramgirl' + head + '.png')"
+                    v-lazy="{ src: require('../../assets/img/head/img_hairstyle_doramgirl' + head + '.png'), delay: 500 }"
                     :id="head"
                     @click="clickHead($event)"
                 />

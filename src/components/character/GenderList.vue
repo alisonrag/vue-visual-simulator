@@ -1,13 +1,13 @@
 <template>
     <div class="container-gender">
         <img
-            :src="male_btn_src"
+            v-lazy="{ src: male_btn_src, delay: 500 }"
             @click="clickSexBtn(1)"
             @mouseover="overSexBtn(1)"
             @mouseleave="outSexBtn(1)"
         />
         <img
-            :src="female_btn_src"
+            v-lazy="{ src: female_btn_src, delay: 500}"
             @click="clickSexBtn(0)"
             @mouseover="overSexBtn(0)"
             @mouseleave="outSexBtn(0)"

@@ -7,10 +7,9 @@
       :key="item.id"
     >
       <img
-        :src="
-          'https://static.divine-pride.net/images/items/item/' +
+        v-lazy="{ src: 'https://static.divine-pride.net/images/items/item/' +
           item.id +
-          '.png'
+          '.png', delay: 500}
         "
         class="img-item"
         :class="{
