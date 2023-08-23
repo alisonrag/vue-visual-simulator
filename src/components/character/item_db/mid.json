@@ -1065,6 +1065,11 @@
 		"viewID" : 2086
 	},
 	{
+		"id" : 410059,
+		"name" : "Máscara de Carniçal",
+		"viewID" : 2092
+	},
+	{
 		"id" : 410060,
 		"name" : "Aura de Morceguinhos",
 		"viewID" : 2093
@@ -1103,6 +1108,11 @@
 		"id" : 410069,
 		"name" : "Pipoquinho",
 		"viewID" : 2142
+	},
+	{
+		"id" : 410128,
+		"name" : "Microfone de Mecânico",
+		"viewID" : 2148
 	},
 	{
 		"id" : 410095,
@@ -1178,6 +1188,11 @@
 		"id" : 410131,
 		"name" : "Mascote Tigre Branco",
 		"viewID" : 2244
+	},
+	{
+		"id" : 410132,
+		"name" : "Mascote Tigre Negro",
+		"viewID" : 2245
 	},
 	{
 		"id" : 410133,

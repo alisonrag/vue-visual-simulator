@@ -3640,6 +3640,16 @@
 		"viewID" : 2091
 	},
 	{
+		"id" : 430001,
+		"name" : "Elmo do Clã",
+		"viewID" : 2094
+	},
+	{
+		"id" : 400429,
+		"name" : "Elmo de Montanhista",
+		"viewID" : 2098
+	},
+	{
 		"id" : 400143,
 		"name" : "Asas de Asgard",
 		"viewID" : 2100
@@ -3743,6 +3753,11 @@
 		"id" : 400310,
 		"name" : "Tiara Alada",
 		"viewID" : 2283
+	},
+	{
+		"id" : 400398,
+		"name" : "Boina Alada Branca",
+		"viewID" : 2286
 	},
 	{
 		"id" : 400343,
