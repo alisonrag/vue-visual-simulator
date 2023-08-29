@@ -54,7 +54,7 @@ export default createStore({
       state.headgear_top_name = name;
     },
     SAVE_HEADGEAR_MID(state, viewID) {
-      state.character.headgear[2] = viewID;
+      state.character.headgear[0] = viewID;
     },
     SAVE_HEADGEAR_MID_ID(state, itemID) {
       state.headgear_mid_id = itemID;
@@ -63,7 +63,7 @@ export default createStore({
       state.headgear_mid_name = name;
     },
     SAVE_HEADGEAR_BOTTOM(state, viewID) {
-      state.character.headgear[0] = viewID;
+      state.character.headgear[2] = viewID;
     },
     SAVE_HEADGEAR_BOTTOM_ID(state, itemID) {
       state.headgear_bottom_id = itemID;
