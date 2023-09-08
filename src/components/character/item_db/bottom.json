@@ -1780,6 +1780,16 @@
 		"viewID" : 2170
 	},
 	{
+		"id" : 420091,
+		"name" : "Peruca Sedosa Loira",
+		"viewID" : 2180
+	},
+	{
+		"id" : 420092,
+		"name" : "Peruca Sedosa Prateada",
+		"viewID" : 2181
+	},
+	{
 		"id" : 420104,
 		"name" : "Cabelos Longos Azulados",
 		"viewID" : 2206
@@ -1913,6 +1923,11 @@
 		"id" : 420165,
 		"name" : "Tenda Preciosa",
 		"viewID" : 2279
+	},
+	{
+		"id" : 420170,
+		"name" : "Peruca Sedosa Morena",
+		"viewID" : 2295
 	},
 	{
 		"id" : 15954,

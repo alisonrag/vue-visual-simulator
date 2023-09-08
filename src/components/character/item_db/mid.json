@@ -65,6 +65,11 @@
 		"viewID" : 0
 	},
 	{
+		"id" : 410231,
+		"name" : "Chá das Maravilhas",
+		"viewID" : 0
+	},
+	{
 		"id" : 19830,
 		"name" : "Óculos Hi-Ban",
 		"viewID" : 12
@@ -1273,5 +1278,10 @@
 		"id" : 410201,
 		"name" : "Caveiras Místicas",
 		"viewID" : 2363
+	},
+	{
+		"id" : 410240,
+		"name" : "Coelho Chinês",
+		"viewID" : 2388
 	}
 ]

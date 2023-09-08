@@ -215,6 +215,11 @@
 		"viewID" : 0
 	},
 	{
+		"id" : 480203,
+		"name" : "Círculo Mágico",
+		"viewID" : 0
+	},
+	{
 		"id" : 480205,
 		"name" : "Aura Astrológica",
 		"viewID" : 0
@@ -800,6 +805,11 @@
 		"viewID" : 158
 	},
 	{
+		"id" : 480282,
+		"name" : "Soberana",
+		"viewID" : 163
+	},
+	{
 		"id" : 480288,
 		"name" : "Manto do Senhor das Trevas",
 		"viewID" : 164
@@ -813,5 +823,20 @@
 		"id" : 480295,
 		"name" : "Sakura_Branch",
 		"viewID" : 167
+	},
+	{
+		"id" : 480290,
+		"name" : "Escudo do Senhor dos Mortos",
+		"viewID" : 166
+	},
+	{
+		"id" : 480297,
+		"name" : "Orelhas de Lebre",
+		"viewID" : 169
+	},
+	{
+		"id" : 19870,
+		"name" : "Cartola do Coelho Mágico",
+		"viewID" : 923
 	}
 ]

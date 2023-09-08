@@ -665,6 +665,11 @@
 		"viewID" : 329
 	},
 	{
+		"id" : 400493,
+		"name" : "Boné de bRO deragem",
+		"viewID" : 330
+	},
+	{
 		"id" : 19812,
 		"name" : "Hibiscus Desabrochado",
 		"viewID" : 333
@@ -900,6 +905,11 @@
 		"viewID" : 432
 	},
 	{
+		"id" : 400492,
+		"name" : "Boné Brasileiro",
+		"viewID" : 433
+	},
+	{
 		"id" : 20056,
 		"name" : "Grinalda de Noiva",
 		"viewID" : 437
@@ -983,6 +993,11 @@
 		"id" : 20065,
 		"name" : "Cocar das Mil Penas",
 		"viewID" : 473
+	},
+	{
+		"id" : 400494,
+		"name" : "Bandana Brasileira",
+		"viewID" : 474
 	},
 	{
 		"id" : 20106,
@@ -1208,6 +1223,11 @@
 		"id" : 31800,
 		"name" : "Lacinhos da Esperança",
 		"viewID" : 575
+	},
+	{
+		"id" : 400430,
+		"name" : "Boina Verde e Amarela",
+		"viewID" : 576
 	},
 	{
 		"id" : 19721,
@@ -1613,6 +1633,11 @@
 		"id" : 20278,
 		"name" : "Cabeleira do Rei do Rock",
 		"viewID" : 775
+	},
+	{
+		"id" : 400491,
+		"name" : "Faixa Brasileira",
+		"viewID" : 778
 	},
 	{
 		"id" : 19538,
@@ -2280,6 +2305,11 @@
 		"viewID" : 1142
 	},
 	{
+		"id" : 400425,
+		"name" : "Flauta de Falcão",
+		"viewID" : 1143
+	},
+	{
 		"id" : 19976,
 		"name" : "Chapéu de Gato Natalino",
 		"viewID" : 1144
@@ -2790,6 +2820,11 @@
 		"viewID" : 1375
 	},
 	{
+		"id" : 31562,
+		"name" : "Jirtas Dorminhoca",
+		"viewID" : 1376
+	},
+	{
 		"id" : 5915,
 		"name" : "Véu de Anjo",
 		"viewID" : 1379
@@ -2888,6 +2923,11 @@
 		"id" : 20452,
 		"name" : "Coroa do Príncipe Moranguinho",
 		"viewID" : 1455
+	},
+	{
+		"id" : 31448,
+		"name" : "Lacinho Sting",
+		"viewID" : 1457
 	},
 	{
 		"id" : 20455,
@@ -3340,6 +3380,11 @@
 		"viewID" : 1727
 	},
 	{
+		"id" : 400108,
+		"name" : "Boina de Roleta",
+		"viewID" : 1735
+	},
+	{
 		"id" : 31489,
 		"name" : "Chapéu de Ramalhete",
 		"viewID" : 1739
@@ -3406,7 +3451,7 @@
 	},
 	{
 		"id" : 31557,
-		"name" : "Elmo do Campeão",
+		"name" : "Gálea de Prata",
 		"viewID" : 1781
 	},
 	{
