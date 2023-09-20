@@ -3843,5 +3843,15 @@
 		"id" : 430005,
 		"name" : "Óculos do Tigre Branco",
 		"viewID" : 2325
+	},
+	{
+		"id" : 400431,
+		"name" : "Chapéu Floral de Druida",
+		"viewID" : 2366
+	},
+	{
+		"id" : 400432,
+		"name" : "Gorro de Sansan Branco",
+		"viewID" : 2367
 	}
 ]

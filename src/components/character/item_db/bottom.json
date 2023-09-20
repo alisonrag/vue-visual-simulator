@@ -245,6 +245,11 @@
 		"viewID" : 952
 	},
 	{
+		"id" : 20201,
+		"name" : "Espírito da Banshee",
+		"viewID" : 959
+	},
+	{
 		"id" : 31393,
 		"name" : "Vajra Dourada",
 		"viewID" : 983
@@ -1940,6 +1945,26 @@
 		"viewID" : 2300
 	},
 	{
+		"id" : 480271,
+		"name" : "Peruca Angelical Loira",
+		"viewID" : 2328
+	},
+	{
+		"id" : 480272,
+		"name" : "Peruca Angelical Brilhante",
+		"viewID" : 2329
+	},
+	{
+		"id" : 480273,
+		"name" : "Peruca Angelical Prateada",
+		"viewID" : 2330
+	},
+	{
+		"id" : 480274,
+		"name" : "Peruca Angelical Cintilante",
+		"viewID" : 2331
+	},
+	{
 		"id" : 420191,
 		"name" : "Penteado Coelho das Neves",
 		"viewID" : 2333
@@ -1953,5 +1978,20 @@
 		"id" : 420193,
 		"name" : "Cachecol com Lacinho",
 		"viewID" : 2340
+	},
+	{
+		"id" : 420207,
+		"name" : "Peruca da Rosa Eterna",
+		"viewID" : 2365
+	},
+	{
+		"id" : 420208,
+		"name" : "Peruca Trançada de Chocolate",
+		"viewID" : 2369
+	},
+	{
+		"id" : 420209,
+		"name" : "Fita da Confeiteira Mágica",
+		"viewID" : 2370
 	}
 ]

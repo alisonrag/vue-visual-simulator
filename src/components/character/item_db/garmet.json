@@ -225,6 +225,11 @@
 		"viewID" : 0
 	},
 	{
+		"id" : 480296,
+		"name" : "Fragrância de Rosas",
+		"viewID" : 0
+	},
+	{
 		"id" : 20765,
 		"name" : "Asas Imaculadas de Arcanjo",
 		"viewID" : 1
@@ -283,6 +288,11 @@
 		"id" : 20504,
 		"name" : "Asas da Sarakura",
 		"viewID" : 14
+	},
+	{
+		"id" : 20505,
+		"name" : "Asas de Quero",
+		"viewID" : 15
 	},
 	{
 		"id" : 20507,
@@ -805,6 +815,11 @@
 		"viewID" : 158
 	},
 	{
+		"id" : 480279,
+		"name" : "Seringa Gigante",
+		"viewID" : 161
+	},
+	{
 		"id" : 480282,
 		"name" : "Soberana",
 		"viewID" : 163
@@ -820,14 +835,14 @@
 		"viewID" : 165
 	},
 	{
-		"id" : 480295,
-		"name" : "Sakura_Branch",
-		"viewID" : 167
-	},
-	{
 		"id" : 480290,
 		"name" : "Escudo do Senhor dos Mortos",
 		"viewID" : 166
+	},
+	{
+		"id" : 480295,
+		"name" : "Ramo Primaveril",
+		"viewID" : 167
 	},
 	{
 		"id" : 480297,
