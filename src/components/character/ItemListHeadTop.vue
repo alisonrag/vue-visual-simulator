@@ -46,11 +46,16 @@ export default {
       "SAVE_HEADGEAR_TOP",
       "SAVE_HEADGEAR_TOP_ID",
       "SAVE_HEADGEAR_TOP_NAME",
+      "SAVE_HEADGEAR_TOP_TYPE",
     ]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_TOP(parseInt(event.target.getAttribute("viewID")));
       this.SAVE_HEADGEAR_TOP_ID(parseInt(event.target.getAttribute("id")));
       this.SAVE_HEADGEAR_TOP_NAME(event.target.getAttribute("name"));
+      this.SAVE_HEADGEAR_TOP_TYPE(
+        JSON.parse(JSON.stringify(this.items))
+        .find(objeto => objeto.id == event.target.getAttribute("id")).locationType
+      );
     },
   },
 };

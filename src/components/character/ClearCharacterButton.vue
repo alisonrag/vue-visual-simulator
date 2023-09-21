@@ -11,22 +11,36 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-danger btn-sm m-2"
+      :class="{
+        'btn-outline-success': validHeadTop($store.state),
+        'btn-outline-danger': !validHeadTop($store.state),
+      }"
+      class="btn btn-sm m-2"
+
       @click="resetHeadgearTop()"
     >
-      {{ $t("top") }}
+      {{ $t("top") }}  
     </button>
     <button
       type="button"
-      class="btn btn-outline-danger btn-sm m-2"
+
       @click="resetHeadgearMid()"
+      :class="{
+        'btn-outline-success': validHeadMeio($store.state),
+        'btn-outline-danger': !validHeadMeio($store.state),
+      }"
+      class="btn btn-sm m-2"
     >
       {{ $t("mid") }}
     </button>
     <button
       type="button"
-      class="btn btn-outline-danger btn-sm m-2"
       @click="resetHeadgearBot()"
+      :class="{
+        'btn-outline-success': validHeadBaixo($store.state),
+        'btn-outline-danger': !validHeadBaixo($store.state),
+      }"
+      class="btn btn-sm m-2"
     >
       {{ $t("bot") }}
     </button>
@@ -51,6 +65,7 @@ export default {
       "SAVE_HEADGEAR_TOP",
       "SAVE_HEADGEAR_TOP_ID",
       "SAVE_HEADGEAR_TOP_NAME",
+      "SAVE_HEADGEAR_TOP_TYPE",
       "SAVE_HEADGEAR_MID",
       "SAVE_HEADGEAR_MID_ID",
       "SAVE_HEADGEAR_MID_NAME",
@@ -72,6 +87,7 @@ export default {
       this.SAVE_HEADGEAR_TOP(0);
       this.SAVE_HEADGEAR_TOP_ID(19547);
       this.SAVE_HEADGEAR_TOP_NAME(null);
+      this.SAVE_HEADGEAR_TOP_TYPE([]);
     },
     resetHeadgearMid: function () {
       this.SAVE_HEADGEAR_MID(0);
@@ -87,6 +103,24 @@ export default {
       this.SAVE_GARMENT(0);
       this.SAVE_GARMENT_ID(20571);
       this.SAVE_GARMENT_NAME(null);
+    },
+    validHeadTop: (item) => {
+      if (item.headgear_top_type.length === 0) {
+        return false;
+      }
+      return item.headgear_top_type.includes('TOPO')
+    },
+    validHeadMeio: (item) => {
+      if (item.headgear_top_type.length === 0) {
+        return false;
+      }
+      return item.headgear_top_type.includes('MEIO')
+    },
+    validHeadBaixo: (item) => {
+      if (item.headgear_top_type.length === 0) {
+        return false;
+      }
+      return item.headgear_top_type.includes('BAIXO')
     },
   },
 };

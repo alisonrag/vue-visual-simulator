@@ -17,6 +17,7 @@ export default createStore({
       outfit: 0,
     },
     headgear_top_id: 0,
+    headgear_top_type: [],
     headgear_top_name: null,
     headgear_mid_id: 0,
     headgear_mid_name: null,
@@ -52,6 +53,9 @@ export default createStore({
     },
     SAVE_HEADGEAR_TOP_NAME(state, name) {
       state.headgear_top_name = name;
+    },
+    SAVE_HEADGEAR_TOP_TYPE(state, locationType) {
+      state.headgear_top_type = locationType;
     },
     SAVE_HEADGEAR_MID(state, viewID) {
       state.character.headgear[2] = viewID;
