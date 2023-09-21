@@ -5,7 +5,7 @@
       <img v-lazy="{
         src: 'https://static.divine-pride.net/images/items/item/' +
           item.id +
-          '.png', delay: 500
+          '.png', delay: 250
       }
         " class="img-item" :class="{
     'item-selected': parseInt(item.id) == $store.state.headgear_top_id,

@@ -69,7 +69,7 @@
                               aria-controls="v-pills-top"
                               aria-selected="true"
                             >
-                              <img v-lazy="{ src: item_top_src, delay: 500 }" alt="Item Top Tab" />
+                              <img v-lazy="{ src: item_top_src, delay: 250 }" alt="Item Top Tab" />
                               <label
                                 v-if="$store.state.headgear_top_name !== null"
                               >
@@ -88,7 +88,7 @@
                               aria-controls="v-pills-mid"
                               aria-selected="false"
                             >
-                              <img v-lazy="{ src: item_mid_src, delay: 500 }" alt="Item Mid Tab" />
+                              <img v-lazy="{ src: item_mid_src, delay: 250 }" alt="Item Mid Tab" />
                               <label
                                 v-if="$store.state.headgear_mid_name !== null"
                               >
@@ -107,7 +107,7 @@
                               aria-controls="v-pills-bot"
                               aria-selected="false"
                             >
-                              <img v-lazy="{ src: item_bot_src, delay: 500 }" alt="Item Bot Tab" />
+                              <img v-lazy="{ src: item_bot_src, delay: 250 }" alt="Item Bot Tab" />
                               <label
                                 v-if="
                                   $store.state.headgear_bottom_name !== null
@@ -129,7 +129,7 @@
                               aria-selected="false"
                             >
                               <img
-                              v-lazy="{ src: item_garmet_src, delay: 500 }"
+                              v-lazy="{ src: item_garmet_src, delay: 250 }"
                                 alt="Item Garmet Tab"
                               />
                               <label v-if="$store.state.garment_name !== null">
@@ -178,7 +178,7 @@
                               {{ $t("arrowHelperBefore") }}
                               <img
                                 v-lazy="{ src: 
-                                  require(`../assets/img/interface/arrows.png`), delay: 500
+                                  require(`../assets/img/interface/arrows.png`), delay: 250
                                 }"
                               />
                               {{ $t("arrowHelperAfter") }}

@@ -121,7 +121,7 @@
                 href="https://github.com/alisonrag/vue-visual-simulator/graphs/contributors"
               >
                 <img
-                v-lazy="{ src: 'https://contrib.rocks/image?repo=alisonrag/vue-visual-simulator', delay: 500 }"
+                v-lazy="{ src: 'https://contrib.rocks/image?repo=alisonrag/vue-visual-simulator', delay: 250 }"
                 />
               </a>
             </div>
