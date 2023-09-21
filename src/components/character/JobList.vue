@@ -764,7 +764,7 @@ export default {
   align-self: flex-start;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 991px) {
   .job-image {
     height: 18px;
   }
