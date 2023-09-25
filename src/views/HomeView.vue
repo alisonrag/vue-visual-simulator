@@ -71,9 +71,9 @@
                             >
                               <img v-lazy="{ src: item_top_src, delay: 500 }" alt="Item Top Tab" />
                               <label
-                                v-if="$store.state.headgear_top_name !== null"
+                                v-if="$store.state.headgear_top_item.name !== null"
                               >
-                                {{ $store.state.headgear_top_name }}
+                                {{ $store.state.headgear_top_item.name }}
                               </label>
                               <label v-else>{{ $t("top") }}</label>
                               <span>{{ $t("top") }}</span>
@@ -90,9 +90,9 @@
                             >
                               <img v-lazy="{ src: item_mid_src, delay: 500 }" alt="Item Mid Tab" />
                               <label
-                                v-if="$store.state.headgear_mid_name !== null"
+                                v-if="$store.state.headgear_mid_item.name !== null"
                               >
-                                {{ $store.state.headgear_mid_name }}
+                                {{ $store.state.headgear_mid_item.name }}
                               </label>
                               <label v-else>{{ $t("mid") }}</label>
                               <span>{{ $t("mid") }}</span>
@@ -110,10 +110,10 @@
                               <img v-lazy="{ src: item_bot_src, delay: 500 }" alt="Item Bot Tab" />
                               <label
                                 v-if="
-                                  $store.state.headgear_bottom_name !== null
+                                  $store.state.headgear_bottom_item.name !== null
                                 "
                               >
-                                {{ $store.state.headgear_bottom_name }}
+                                {{ $store.state.headgear_bottom_item.name }}
                               </label>
                               <label v-else>{{ $t("bot") }}</label>
                               <span>{{ $t("bot") }}</span>
@@ -132,8 +132,8 @@
                               v-lazy="{ src: item_garmet_src, delay: 500 }"
                                 alt="Item Garmet Tab"
                               />
-                              <label v-if="$store.state.garment_name !== null">
-                                {{ $store.state.garment_name }}
+                              <label v-if="$store.state.garment_item.name !== null">
+                                {{ $store.state.garment_item.name }}
                               </label>
                               <label v-else>{{ $t("garment") }}</label>
                               <span>{{ $t("garment") }}</span>
@@ -444,40 +444,40 @@ export default {
       }
     },
     updatePanelUrls: function () {
-      if (this.$store.state.headgear_top_id !== 0) {
-        this.item_top_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_top_id}.png`;
+      if (this.$store.state.headgear_top_item.id !== 0) {
+        this.item_top_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_top_item.id}.png`;
       }
-      if (this.$store.state.headgear_mid_id !== 0) {
-        this.item_mid_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_mid_id}.png`;
+      if (this.$store.state.headgear_mid_item.id !== 0) {
+        this.item_mid_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_mid_item.id}.png`;
       }
-      if (this.$store.state.headgear_bottom_id !== 0) {
-        this.item_bot_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_bottom_id}.png`;
+      if (this.$store.state.headgear_bottom_item.id !== 0) {
+        this.item_bot_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.headgear_bottom_item.id}.png`;
       }
-      if (this.$store.state.garment_id !== 0) {
-        this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.garment_id}.png`;
+      if (this.$store.state.garment_item.id !== 0) {
+        this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${this.$store.state.garment_item.id}.png`;
       }
     },
   },
   watch: {
-    "$store.state.headgear_top_id": {
+    "$store.state.headgear_top_item.id": {
       deep: true,
       handler(newValue, oldValue) {
         this.item_top_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`;
       },
     },
-    "$store.state.headgear_mid_id": {
+    "$store.state.headgear_mid_item.id": {
       deep: true,
       handler(newValue, oldValue) {
         this.item_mid_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`;
       },
     },
-    "$store.state.headgear_bottom_id": {
+    "$store.state.headgear_bottom_item.id": {
       deep: true,
       handler(newValue, oldValue) {
         this.item_bot_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`;
       },
     },
-    "$store.state.garment_id": {
+    "$store.state.garment_item.id": {
       deep: true,
       handler(newValue, oldValue) {
         this.item_garmet_src = `https://static.divine-pride.net/images/items/item/${newValue}.png`;

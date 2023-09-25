@@ -1,5 +1,11 @@
 import { createStore } from "vuex";
 import createPersistedState from "vuex-persistedstate";
+import itemsJson from "../db/items.json";
+
+const ITEM_TOP = itemsJson.filter((item) => item.top === true);
+const ITEM_MID = itemsJson.filter((item) => item.mid === true);
+const ITEM_BOT = itemsJson.filter((item) => item.bot === true);
+const ITEM_GARMENT = itemsJson.filter((item) => item.garment === true);
 
 export default createStore({
   state: {
@@ -16,15 +22,22 @@ export default createStore({
       canvas: "200x200+100+150",
       outfit: 0,
     },
-    headgear_top_id: 0,
-    headgear_top_type: [],
-    headgear_top_name: null,
-    headgear_mid_id: 0,
-    headgear_mid_name: null,
-    headgear_bottom_id: 0,
-    headgear_bottom_name: null,
-    garment_id: 0,
-    garment_name: null,
+    itens: {
+      top: ITEM_TOP,
+      mid: ITEM_MID,
+      bot: ITEM_BOT,
+      garment: ITEM_GARMENT,
+    },
+    headgear_type: {
+      isTop: false,
+      isMid: false,
+      isBot: false,
+      isGarment: false,
+    },
+    headgear_top_item: {},
+    headgear_mid_item: {},
+    headgear_bottom_item: {},
+    garment_item: {},
     cash_mount_checked: 0,
     regular_mount_checked: 0,
   },
@@ -48,41 +61,27 @@ export default createStore({
     SAVE_HEADGEAR_TOP(state, viewID) {
       state.character.headgear[1] = viewID;
     },
-    SAVE_HEADGEAR_TOP_ID(state, itemID) {
-      state.headgear_top_id = itemID;
-    },
-    SAVE_HEADGEAR_TOP_NAME(state, name) {
-      state.headgear_top_name = name;
-    },
-    SAVE_HEADGEAR_TOP_TYPE(state, locationType) {
-      state.headgear_top_type = locationType;
+    SAVE_HEADGEAR_TOP_ITEM(state, item) {
+      state.headgear_top_item = item;
     },
     SAVE_HEADGEAR_MID(state, viewID) {
       state.character.headgear[2] = viewID;
     },
-    SAVE_HEADGEAR_MID_ID(state, itemID) {
-      state.headgear_mid_id = itemID;
-    },
-    SAVE_HEADGEAR_MID_NAME(state, name) {
-      state.headgear_mid_name = name;
+    SAVE_HEADGEAR_MID_ITEM(state, item) {
+
+      state.headgear_mid_item = item;
     },
     SAVE_HEADGEAR_BOTTOM(state, viewID) {
       state.character.headgear[0] = viewID;
     },
-    SAVE_HEADGEAR_BOTTOM_ID(state, itemID) {
-      state.headgear_bottom_id = itemID;
-    },
-    SAVE_HEADGEAR_BOTTOM_NAME(state, name) {
-      state.headgear_bottom_name = name;
+    SAVE_HEADGEAR_BOTTOM_ITEM(state, item) {
+      state.headgear_bottom_item = item;
     },
     SAVE_GARMENT(state, viewID) {
       state.character.garment = viewID;
     },
-    SAVE_GARMENT_ID(state, itemID) {
-      state.garment_id = itemID;
-    },
-    SAVE_GARMENT_NAME(state, name) {
-      state.garment_name = name;
+    SAVE_GARMENT_ITEM(state, item) {
+      state.garment_item = item;
     },
     SAVE_CHARACTER_POSITION(state, side) {
       if (side == "left") {
@@ -155,7 +154,7 @@ export default createStore({
     },
     SAVE_CHARACTER(state, character) {
       state.character = character;
-    },
+    }
   },
   actions: {},
   modules: {},

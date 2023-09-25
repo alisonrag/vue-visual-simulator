@@ -13,15 +13,14 @@
         "
         class="img-item"
         :class="{
-          'item-selected': parseInt(item.id) == $store.state.headgear_bottom_id,
+          'item-selected': parseInt(item.id) == $store.state.headgear_bottom_item.id,
           'item-disabled': parseInt(item.viewID) == 0,
         }"
         :viewID="item.viewID"
-        :id="item.id"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         :title="item.name"
-        :name="item.name"
+        :item="JSON.stringify(item)"
         @click="clickItem($event)"
       />
     </li>
@@ -30,27 +29,109 @@
 
 <script>
 import { mapMutations } from "vuex";
-import itemsJson from './item_db/bottom.json';
 
 export default {
   name: "ItemListHeadBottom",
   props: ["item_filter"],
   data() {
     return {
-      items: itemsJson,
+      items: this.$store.state.itens.bot,
       active: false,
     };
   },
   methods: {
     ...mapMutations([
       "SAVE_HEADGEAR_BOTTOM",
-      "SAVE_HEADGEAR_BOTTOM_ID",
-      "SAVE_HEADGEAR_BOTTOM_NAME",
+      "SAVE_HEADGEAR_BOTTOM_ITEM",
+      "SAVE_HEADGEAR_TOP",
+      "SAVE_HEADGEAR_TOP_ITEM",
+      "SAVE_HEADGEAR_MID",
+      "SAVE_HEADGEAR_MID_ITEM",
+      "SAVE_GARMENT",
+      "SAVE_GARMENT_ITEM",
+
     ]),
     clickItem: function (event) {
       this.SAVE_HEADGEAR_BOTTOM(parseInt(event.target.getAttribute("viewID")));
-      this.SAVE_HEADGEAR_BOTTOM_ID(parseInt(event.target.getAttribute("id")));
-      this.SAVE_HEADGEAR_BOTTOM_NAME(event.target.getAttribute("name"));
+      this.validBot();
+    },
+    validBot: function () {
+      const item_fortmat = JSON.parse(event.target.getAttribute("item"));
+      const state_fortmat =  JSON.parse(JSON.stringify(this.$store.state));
+
+      const item_types = [];
+
+      if (item_fortmat.top) {
+        item_types.push("TOP");
+      }
+      if (item_fortmat.mid) {
+        item_types.push("MID");
+      }
+      if (item_fortmat.bot) {
+        item_types.push("BOT");
+      }
+      if (item_fortmat.garment) {
+        item_types.push("GARMENT");
+      }
+
+      item_fortmat.location = item_types;
+
+      // MID
+      for (let i = 0; i < item_fortmat.location.length; i++) {
+        if (state_fortmat.headgear_mid_item.location === undefined) break;
+
+        if (
+          state_fortmat.headgear_mid_item.location.includes(
+            item_fortmat.location[i]
+          )
+        ) {
+          this.resetHeadgearMid();
+          break;
+        }
+      }
+      // TOP
+      for (let i = 0; i < item_fortmat.location.length; i++) {
+        if (state_fortmat.headgear_top_item.location === undefined)
+          break;
+        if (
+          state_fortmat.headgear_top_item.location.includes(
+            item_fortmat.location[i]
+          )
+        ) {
+          this.resetHeadgearTop();
+          break;
+        }
+      }
+      // GARMENT
+      for (let i = 0; i < item_fortmat.location.length; i++) {
+        if (state_fortmat.garment_item.location === undefined) break;
+        if (
+          state_fortmat.garment_item.location.includes(
+            item_fortmat.location[i]
+          )
+        ) {
+          this.resetGarment();
+          break;
+        }
+      }
+
+      this.SAVE_HEADGEAR_BOTTOM_ITEM(item_fortmat);
+    },
+    resetHeadgearTop: function () {
+      this.SAVE_HEADGEAR_TOP(0);
+      this.SAVE_HEADGEAR_TOP_ITEM({});
+    },
+    resetHeadgearMid: function () {
+      this.SAVE_HEADGEAR_MID(0);
+      this.SAVE_HEADGEAR_MID_ITEM({});
+    },
+    resetHeadgearBot: function () {
+      this.SAVE_HEADGEAR_BOTTOM(0);
+      this.SAVE_HEADGEAR_BOTTOM_ITEM({});
+    },
+    resetGarment: function () {
+      this.SAVE_GARMENT(0);
+      this.SAVE_GARMENT_ITEM({});
     },
   },
 };
