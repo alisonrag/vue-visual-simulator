@@ -13,7 +13,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -32,7 +32,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -50,7 +50,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -68,7 +68,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -86,7 +86,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -104,7 +104,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -123,7 +123,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -142,7 +142,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -165,7 +165,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -185,7 +185,7 @@
         >
           <img
             :id="job.id"
-            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 500 }"
+            v-lazy="{ src: require('../../assets/img/job/icon_jobs_' + job.id + '.png'), delay: 250 }"
             :alt="job.name"
             @click="clickJob($event)"
             class="job-image"
@@ -764,7 +764,7 @@ export default {
   align-self: flex-start;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 991px) {
   .job-image {
     height: 18px;
   }

@@ -1,15 +1,11 @@
 <template>
   <ul class="ul-item-list">
-    <li
-      v-for="(item, index) in items"
-      v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
-      class="li-item"
-      :key="item.id"
-    >
-      <img
-        v-lazy="{ src: 'https://static.divine-pride.net/images/items/item/' +
+    <li v-for="(item, index) in items" v-show="item.name.toLowerCase().includes(item_filter.toLowerCase())"
+      class="li-item" :key="item.id">
+      <img v-lazy="{
+        src: 'https://static.divine-pride.net/images/items/item/' +
           item.id +
-          '.png', delay: 500 }
+          '.png', delay: 250 }
         "
         class="img-item"
         :class="{
@@ -41,6 +37,9 @@ export default {
   },
   methods: {
     ...mapMutations([
+      "SAVE_HEADGEAR_TOP",
+      "SAVE_HEADGEAR_TOP_ID",
+      "SAVE_HEADGEAR_TOP_NAME",
       "SAVE_HEADGEAR_MID",
       "SAVE_HEADGEAR_MID_ITEM",
       "SAVE_HEADGEAR_TOP",

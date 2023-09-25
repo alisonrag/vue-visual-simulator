@@ -3,7 +3,7 @@
         <ul class="ul-hair-color">
             <li v-for="(color, index) in colors" :key="index" class="li-hair-color">
                 <img
-                    v-lazy="{ src: require('../../assets/img/color/color' + color.id + '_off.png'), delay: 500 }"
+                    v-lazy="{ src: require('../../assets/img/color/color' + color.id + '_off.png'), delay: 250 }"
                     :alt="color.name"
                     :id="color.id"
                      class="img-hair-color"

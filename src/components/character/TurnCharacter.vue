@@ -2,18 +2,18 @@
   <div>
     <img
       class="mx-1 min_turn"
-      v-lazy="{ src: turn_left_src, delay: 500 }"
+      v-lazy="{ src: turn_left_src, delay: 250 }"
       @click="turnHeadLeft($event)"
     />
     <img
       class="mx-1 min_turn"
-      v-lazy="{ src: turn_right_src, delay: 500 }"
+      v-lazy="{ src: turn_right_src, delay: 250 }"
       @click="turnHeadRight($event)"
     />
   </div>
   <div>
-    <img class="mx-1" v-lazy="{ src: turn_left_src, delay: 500 }" @click="turnLeft($event)" />
-    <img class="mx-1" v-lazy="{ src: turn_right_src, delay: 500 }" @click="turnRight($event)" />
+    <img class="mx-1" v-lazy="{ src: turn_left_src, delay: 250 }" @click="turnLeft($event)" />
+    <img class="mx-1" v-lazy="{ src: turn_right_src, delay: 250 }" @click="turnRight($event)" />
   </div>
 </template>
 
