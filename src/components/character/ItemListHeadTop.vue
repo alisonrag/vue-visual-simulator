@@ -52,81 +52,94 @@ export default {
     },
     validTop: function () {
       const item_fortmat = JSON.parse(event.target.getAttribute("item"));
+      // validar interseções
       const state_fortmat =  JSON.parse(JSON.stringify(this.$store.state));
 
-      const item_types = [];
 
+      const database = []
+      database.push(state_fortmat.headgear_top_item);
+      database.push(state_fortmat.headgear_mid_item);
+      database.push(state_fortmat.headgear_bottom_item);
+      database.push(state_fortmat.garment_item);
+      let novoItem = item_fortmat;
+
+      const itensParaRemover = database.filter(item => (
+        (item?.top && novoItem.top) 
+        || (item?.mid && novoItem.mid) 
+        || (item?.bot && novoItem.bot) 
+        || (item?.garment && novoItem.garment)
+      ));
+    
+      // remove caso estjá vazio 
+      const new_dados = database.filter((item) => Object.keys(item).length != 0)
+      // Remover os itens filtrados
+      itensParaRemover.forEach(item => {
+        const index = database.indexOf(item);
+
+        console.log(item, index)
+        if (index !== -1) {
+          database.splice(index, 1);
+        }
+      });
+
+      const remover = itensParaRemover.filter((item) => item.id != novoItem.id)
+
+      database.push(novoItem);
+      console.log("itensParaRemover: ",novoItem, remover)
+
+      // remover
+      for (let index = 0; index < remover.length; index++) {
+        const item = remover[index];
+        const remove_item = {viewID: 0}
+
+        if (item.mid) {
+          this.updateHeadgearMid(remove_item);
+        }
+        if (item.bot) {    
+          this.updateHeadgearBot(remove_item);
+        }
+        if (item.garment) {
+          this.updateGarment(remove_item);
+        }
+      }
+
+      const item_types = [];
+      // add
       if (item_fortmat.top) {
         item_types.push("TOP");
       }
       if (item_fortmat.mid) {
         item_types.push("MID");
+        this.updateHeadgearMid(item_fortmat);
       }
       if (item_fortmat.bot) {
         item_types.push("BOT");
+        this.updateHeadgearBot(item_fortmat);
       }
       if (item_fortmat.garment) {
         item_types.push("GARMENT");
+        this.updateGarment(item_fortmat);
       }
 
       item_fortmat.location = item_types;
 
-      // MID
-      for (let i = 0; i < item_fortmat.location.length; i++) {
-        if (state_fortmat.headgear_mid_item.location === undefined) break;
-
-        if (
-          state_fortmat.headgear_mid_item.location.includes(
-            item_fortmat.location[i]
-          )
-        ) {
-          this.resetHeadgearMid();
-          break;
-        }
-      }
-      // BOT
-      for (let i = 0; i < item_fortmat.location.length; i++) {
-        if (state_fortmat.headgear_bottom_item.location === undefined)
-          break;
-        if (
-          state_fortmat.headgear_bottom_item.location.includes(
-            item_fortmat.location[i]
-          )
-        ) {
-          this.resetHeadgearBot();
-          break;
-        }
-      }
-      // GARMENT
-      for (let i = 0; i < item_fortmat.location.length; i++) {
-        if (state_fortmat.garment_item.location === undefined) break;
-        if (
-          state_fortmat.garment_item.location.includes(
-            item_fortmat.location[i]
-          )
-        ) {
-          this.resetGarment();
-          break;
-        }
-      }
-
       this.SAVE_HEADGEAR_TOP_ITEM(item_fortmat);
     },
-    resetHeadgearTop: function () {
-      this.SAVE_HEADGEAR_TOP(0);
-      this.SAVE_HEADGEAR_TOP_ITEM({});
+    updateHeadgearTop: function (item) {
+      this.SAVE_HEADGEAR_TOP(item.viewID);
+      this.SAVE_HEADGEAR_TOP_ITEM(item);
     },
-    resetHeadgearMid: function () {
-      this.SAVE_HEADGEAR_MID(0);
-      this.SAVE_HEADGEAR_MID_ITEM({});
+    updateHeadgearMid: function (item) {
+      this.SAVE_HEADGEAR_MID(item.viewID);
+      this.SAVE_HEADGEAR_MID_ITEM(item);
     },
-    resetHeadgearBot: function () {
-      this.SAVE_HEADGEAR_BOTTOM(0);
-      this.SAVE_HEADGEAR_BOTTOM_ITEM({});
+    updateHeadgearBot: function (item) {
+      this.SAVE_HEADGEAR_BOTTOM(item.viewID);
+      this.SAVE_HEADGEAR_BOTTOM_ITEM(item);
     },
-    resetGarment: function () {
-      this.SAVE_GARMENT(0);
-      this.SAVE_GARMENT_ITEM({});
+    updateGarment: function (item) {
+      this.SAVE_GARMENT(item.viewID);
+      this.SAVE_GARMENT_ITEM(item);
     },
   },
 };
