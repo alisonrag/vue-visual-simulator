@@ -5,30 +5,33 @@
       <img v-lazy="{
         src: 'https://static.divine-pride.net/images/items/item/' +
           item.id +
-          '.png', delay: 250
-      }
-        " class="img-item" :class="{
-    'item-selected': parseInt(item.id) == $store.state.headgear_mid_id,
-    'item-disabled': parseInt(item.viewID) == 0,
-  }" :viewID="item.viewID" :id="item.id" data-bs-toggle="tooltip" data-bs-placement="top" :title="item.name"
-        :name="item.name" :top="item.top" :mid="item.mid" :bot="item.bot" :garment="item.garment"
-        @click="clickItem($event)" />
+          '.png', delay: 250 }
+        "
+        class="img-item"
+        :class="{
+          'item-selected': parseInt(item.id) == $store.state.headgear_mid_item.id,
+          'item-disabled': parseInt(item.viewID) == 0,
+        }"
+        :viewID="item.viewID"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        :title="item.name"
+        :item="JSON.stringify(item)"
+        @click="clickItem($event)"
+      />
     </li>
   </ul>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
-import itemsJson from './item_db/items.json';
 
 export default {
   name: "ItemListHeadMid",
   props: ["item_filter"],
   data() {
     return {
-      items: itemsJson.filter(function (item) {
-        return item.mid == true;
-      }),
+      items: this.$store.state.itens.mid,
       active: false,
     };
   },
@@ -38,35 +41,106 @@ export default {
       "SAVE_HEADGEAR_TOP_ID",
       "SAVE_HEADGEAR_TOP_NAME",
       "SAVE_HEADGEAR_MID",
-      "SAVE_HEADGEAR_MID_ID",
-      "SAVE_HEADGEAR_MID_NAME",
+      "SAVE_HEADGEAR_MID_ITEM",
+      "SAVE_HEADGEAR_TOP",
+      "SAVE_HEADGEAR_TOP_ITEM",
       "SAVE_HEADGEAR_BOTTOM",
-      "SAVE_HEADGEAR_BOTTOM_ID",
-      "SAVE_HEADGEAR_BOTTOM_NAME",
+      "SAVE_HEADGEAR_BOTTOM_ITEM",
       "SAVE_GARMENT",
-      "SAVE_GARMENT_ID",
-      "SAVE_GARMENT_NAME"]),
+      "SAVE_GARMENT_ITEM",
+    ]),
     clickItem: function (event) {
-      if (event.target.getAttribute("top")) {
-        this.SAVE_HEADGEAR_TOP(parseInt(event.target.getAttribute("viewID")));
-        this.SAVE_HEADGEAR_TOP_ID(parseInt(event.target.getAttribute("id")));
-        this.SAVE_HEADGEAR_TOP_NAME(event.target.getAttribute("name"));
+      this.SAVE_HEADGEAR_MID(parseInt(event.target.getAttribute("viewID")));
+      this.validMid();
+    },
+    validMid: function () {
+      const item_fortmat = JSON.parse(event.target.getAttribute("item"));
+      // validar interseções
+      const state_fortmat =  JSON.parse(JSON.stringify(this.$store.state));
+
+      const database = []
+      database.push(state_fortmat.headgear_top_item);
+      database.push(state_fortmat.headgear_mid_item);
+      database.push(state_fortmat.headgear_bottom_item);
+      database.push(state_fortmat.garment_item);
+      let novoItem = item_fortmat;
+
+      const itensParaRemover = database.filter(item => (
+        (item?.top && novoItem.top) 
+        || (item?.mid && novoItem.mid) 
+        || (item?.bot && novoItem.bot) 
+        || (item?.garment && novoItem.garment)
+      ));
+
+      // remove caso estjá vazio 
+      const new_dados = database.filter((item) => Object.keys(item).length != 0)
+      // Remover os itens filtrados
+      itensParaRemover.forEach(item => {
+        const index = database.indexOf(item);
+
+        console.log(item, index)
+        if (index !== -1) {
+          database.splice(index, 1);
+        }
+      });
+
+      const remover = itensParaRemover.filter((item) => item.id != novoItem.id)
+
+      database.push(novoItem);
+      console.log("itensParaRemover: ",novoItem, remover)
+
+      // remover
+      for (let index = 0; index < remover.length; index++) {
+        const item = remover[index];
+        const remove_item = {viewID: 0}
+
+        if (item.top) {
+          this.updateHeadgearTop(remove_item);
+        }
+        if (item.bot) {    
+          this.updateHeadgearBot(remove_item);
+        }
+        if (item.garment) {
+          this.updateGarment(remove_item);
+        }
       }
-      if (event.target.getAttribute("mid")) {
-        this.SAVE_HEADGEAR_MID(parseInt(event.target.getAttribute("viewID")));
-        this.SAVE_HEADGEAR_MID_ID(parseInt(event.target.getAttribute("id")));
-        this.SAVE_HEADGEAR_MID_NAME(event.target.getAttribute("name"));
+
+      const item_types = [];
+
+      if (item_fortmat.top) {
+        item_types.push("TOP");
+        this.updateHeadgearTop(item_fortmat);
       }
-      if (event.target.getAttribute("bot")) {
-        this.SAVE_HEADGEAR_BOTTOM(parseInt(event.target.getAttribute("viewID")));
-        this.SAVE_HEADGEAR_BOTTOM_ID(parseInt(event.target.getAttribute("id")));
-        this.SAVE_HEADGEAR_BOTTOM_NAME(event.target.getAttribute("name"));
+      if (item_fortmat.mid) {
+        item_types.push("MID");
       }
-      if (event.target.getAttribute("garment")) {
-        this.SAVE_GARMENT(parseInt(event.target.getAttribute("viewID")));
-        this.SAVE_GARMENT_ID(parseInt(event.target.getAttribute("id")));
-        this.SAVE_GARMENT_NAME(event.target.getAttribute("name"));
+      if (item_fortmat.bot) {
+        item_types.push("BOT");
+        this.updateHeadgearBot(item_fortmat);
       }
+      if (item_fortmat.garment) {
+        item_types.push("GARMENT");
+        this.updateGarment(item_fortmat);
+      }
+
+      item_fortmat.location = item_types;
+      this.SAVE_HEADGEAR_MID_ITEM(item_fortmat);
+    },
+    updateHeadgearTop: function (item) {
+      this.SAVE_HEADGEAR_TOP(item.viewID);
+      this.SAVE_HEADGEAR_TOP_ITEM(item);
+    },
+    updateHeadgearMid: function (item) {
+      this.SAVE_HEADGEAR_MID(item.viewID);
+      this.SAVE_HEADGEAR_MID_ITEM(item);
+    },
+    updateHeadgearBot: function (item) {
+      this.SAVE_HEADGEAR_BOTTOM(item.viewID);
+      this.SAVE_HEADGEAR_BOTTOM_ITEM(item);
+    },
+    updateGarment: function (item) {
+      this.SAVE_GARMENT(item.viewID);
+      this.SAVE_GARMENT_ITEM(item);
     },
   },
 };
