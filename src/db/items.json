@@ -4010,7 +4010,7 @@
         "name": "Cartola do Coelho Mágico",
         "id": 19870,
         "viewID": 923,
-        "garment": true
+        "top": true
     },
     {
         "mid": true,
@@ -9583,25 +9583,25 @@
         "name": "Peruca Angelical Loira",
         "id": 480271,
         "viewID": 2328,
-        "garment": true
+        "bot": true
     },
     {
         "name": "Peruca Angelical Brilhante",
         "id": 480272,
         "viewID": 2329,
-        "garment": true
+        "bot": true
     },
     {
         "name": "Peruca Angelical Prateada",
         "id": 480273,
         "viewID": 2330,
-        "garment": true
+        "bot": true
     },
     {
         "name": "Peruca Angelical Cintilante",
         "id": 480274,
         "viewID": 2331,
-        "garment": true
+        "bot": true
     },
     {
         "bot": true,
