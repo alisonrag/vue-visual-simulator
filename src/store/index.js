@@ -1,11 +1,5 @@
 import { createStore } from "vuex";
 import createPersistedState from "vuex-persistedstate";
-import itemsJson from "../db/items.json";
-
-const ITEM_TOP = itemsJson.filter((item) => item.top === true);
-const ITEM_MID = itemsJson.filter((item) => item.mid === true);
-const ITEM_BOT = itemsJson.filter((item) => item.bot === true);
-const ITEM_GARMENT = itemsJson.filter((item) => item.garment === true);
 
 export default createStore({
   state: {
@@ -21,12 +15,6 @@ export default createStore({
       action: 0,
       canvas: "200x200+100+150",
       outfit: 0,
-    },
-    itens: {
-      top: ITEM_TOP,
-      mid: ITEM_MID,
-      bot: ITEM_BOT,
-      garment: ITEM_GARMENT,
     },
     headgear_type: {
       isTop: false,

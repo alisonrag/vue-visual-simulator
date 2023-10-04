@@ -25,13 +25,16 @@
 
 <script>
 import { mapMutations } from "vuex";
+import itemsJson from '../../db/items.json';
 
 export default {
   name: "ItemListHeadMid",
   props: ["item_filter"],
   data() {
     return {
-      items: this.$store.state.itens.mid,
+      items: itemsJson.filter(function (item) {
+        return item.mid == true;
+      }),
       active: false,
     };
   },
@@ -77,8 +80,6 @@ export default {
       // Remover os itens filtrados
       itensParaRemover.forEach(item => {
         const index = database.indexOf(item);
-
-        console.log(item, index)
         if (index !== -1) {
           database.splice(index, 1);
         }
