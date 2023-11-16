@@ -1,5 +1,283 @@
 [
     {
+        "id": 31202,
+        "top": true,
+        "name": "Quepe do Serumaninho",
+        "viewID": 0
+    },
+    {
+        "id": 20566,
+        "garment": true,
+        "name": "Aura Argêntea",
+        "viewID": 0
+    },
+    {
+        "id": 20567,
+        "garment": true,
+        "name": "Aura Gótica",
+        "viewID": 0
+    },
+    {
+        "id": 20568,
+        "garment": true,
+        "name": "Aura Dourada",
+        "viewID": 0
+    },
+    {
+        "id": 20565,
+        "garment": true,
+        "name": "Aura Trovejante",
+        "viewID": 0
+    },
+    {
+        "id": 20563,
+        "garment": true,
+        "name": "Aura Esverdeada",
+        "viewID": 0
+    },
+    {
+        "id": 20564,
+        "garment": true,
+        "name": "Aura Maligna",
+        "viewID": 0
+    },
+    {
+        "id": 20562,
+        "garment": true,
+        "name": "Aura Azul",
+        "viewID": 0
+    },
+    {
+        "id": 20569,
+        "garment": true,
+        "name": "Aura Esmeralda",
+        "viewID": 0
+    },
+    {
+        "id": 19603,
+        "mid": true,
+        "name": "Óculos Invisíveis",
+        "viewID": 0
+    },
+    {
+        "id": 31201,
+        "top": true,
+        "name": "Coroa da Grandeza",
+        "viewID": 0
+    },
+    {
+        "id": 20251,
+        "top": true,
+        "name": "Capuz da Pastora",
+        "viewID": 0
+    },
+    {
+        "id": 19602,
+        "top": true,
+        "name": "Chapéu Invisível",
+        "viewID": 0
+    },
+    {
+        "id": 20583,
+        "garment": true,
+        "name": "Estrela Guia",
+        "viewID": 0
+    },
+    {
+        "id": 19604,
+        "bot": true,
+        "name": "Máscara Invisível",
+        "viewID": 0
+    },
+    {
+        "id": 20285,
+        "bot": true,
+        "name": "Aura de Amatsu",
+        "viewID": 0
+    },
+    {
+        "id": 20601,
+        "garment": true,
+        "name": "Aura Carmesim do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 19587,
+        "top": true,
+        "name": "Visual do Rei Poring",
+        "viewID": 0
+    },
+    {
+        "id": 20560,
+        "garment": true,
+        "name": "Aura Lazuli",
+        "viewID": 0
+    },
+    {
+        "id": 20551,
+        "garment": true,
+        "name": "Aura Azul do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20552,
+        "garment": true,
+        "name": "Aura Verde do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20553,
+        "garment": true,
+        "name": "Aura Rosa do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20550,
+        "garment": true,
+        "name": "Aura Púrpura do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20549,
+        "garment": true,
+        "name": "Aura Cerúlea do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20344,
+        "bot": true,
+        "name": "Balões de Festa",
+        "viewID": 0
+    },
+    {
+        "id": 20561,
+        "garment": true,
+        "name": "Aura Púrpura",
+        "viewID": 0
+    },
+    {
+        "id": 20554,
+        "garment": true,
+        "name": "Aura Invernal do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20556,
+        "garment": true,
+        "name": "Aura Negra do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20559,
+        "garment": true,
+        "name": "Aura Escarlate",
+        "viewID": 0
+    },
+    {
+        "id": 31391,
+        "mid": true,
+        "name": "Cristal Exuberante",
+        "viewID": 0
+    },
+    {
+        "id": 20555,
+        "garment": true,
+        "name": "Aura Prateada do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 19576,
+        "top": true,
+        "name": "Chapéu da Proteção Divina",
+        "viewID": 0
+    },
+    {
+        "id": 20557,
+        "garment": true,
+        "name": "Aura Dourada do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20558,
+        "garment": true,
+        "name": "Aura Esmeralda do Iniciante",
+        "viewID": 0
+    },
+    {
+        "id": 20346,
+        "top": true,
+        "name": "Chapéu de Batedor",
+        "viewID": 0
+    },
+    {
+        "id": 20240,
+        "bot": true,
+        "name": "Flocos de Neve",
+        "viewID": 0
+    },
+    {
+        "id": 20609,
+        "garment": true,
+        "name": "Aura Anil",
+        "viewID": 0
+    },
+    {
+        "id": 440008,
+        "top": true,
+        "name": "Grande Mestre",
+        "viewID": 0
+    },
+    {
+        "id": 410231,
+        "mid": true,
+        "name": "Chá das Maravilhas",
+        "viewID": 0
+    },
+    {
+        "id": 410127,
+        "mid": true,
+        "name": "Holofote",
+        "viewID": 0
+    },
+    {
+        "id": 400073,
+        "top": true,
+        "name": "Pétalas de Rosa",
+        "viewID": 0
+    },
+    {
+        "id": 480097,
+        "garment": true,
+        "name": "Aura Nevada",
+        "viewID": 0
+    },
+    {
+        "id": 31942,
+        "mid": true,
+        "name": "Rosas Românticas",
+        "viewID": 0
+    },
+    {
+        "id": 31091,
+        "top": true,
+        "name": "Chuva Dourada",
+        "viewID": 0
+    },
+    {
+        "id": 410051,
+        "mid": true,
+        "name": "Mini Geada",
+        "viewID": 0
+    },
+    {
+        "top": true,
+        "mid": true,
+        "name": "Máscara de Sussurro Assustador",
+        "id": 19920,
+        "bot": true,
+        "viewID": 0
+    },
+    {
         "id": 31199,
         "bot": true,
         "name": "Cavanhaque Bifurcado",
@@ -12,111 +290,34 @@
         "viewID": 0
     },
     {
-        "id": 20558,
-        "garment": true,
-        "name": "Aura Esmeralda do Iniciante",
+        "id": 19944,
+        "top": true,
+        "name": "Fadinha Angelical",
         "viewID": 0
     },
     {
-        "id": 20559,
-        "garment": true,
-        "name": "Aura Escarlate",
+        "id": 31193,
+        "top": true,
+        "name": "Chapéu de Ahat",
         "viewID": 0
     },
     {
-        "id": 20556,
-        "garment": true,
-        "name": "Aura Negra do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20554,
-        "garment": true,
-        "name": "Aura Invernal do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20555,
-        "garment": true,
-        "name": "Aura Prateada do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20553,
-        "garment": true,
-        "name": "Aura Rosa do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20560,
-        "garment": true,
-        "name": "Aura Lazuli",
-        "viewID": 0
-    },
-    {
-        "id": 20562,
-        "garment": true,
-        "name": "Aura Azul",
-        "viewID": 0
-    },
-    {
-        "id": 410231,
         "mid": true,
-        "name": "Chá das Maravilhas",
-        "viewID": 0
-    },
-    {
-        "id": 31316,
+        "name": "Máscara de Lude",
+        "id": 19918,
         "bot": true,
-        "name": "Revoada de Borboletas",
         "viewID": 0
     },
     {
-        "id": 20561,
-        "garment": true,
-        "name": "Aura Púrpura",
-        "viewID": 0
-    },
-    {
-        "id": 20564,
-        "garment": true,
-        "name": "Aura Maligna",
-        "viewID": 0
-    },
-    {
-        "id": 20563,
-        "garment": true,
-        "name": "Aura Esverdeada",
-        "viewID": 0
-    },
-    {
-        "id": 440008,
+        "id": 19917,
         "top": true,
-        "name": "Grande Mestre",
+        "name": "Chapéu de Abóbora Iluminado",
         "viewID": 0
     },
     {
-        "id": 20565,
+        "id": 20608,
         "garment": true,
-        "name": "Aura Trovejante",
-        "viewID": 0
-    },
-    {
-        "id": 20552,
-        "garment": true,
-        "name": "Aura Verde do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 19604,
-        "bot": true,
-        "name": "Máscara Invisível",
-        "viewID": 0
-    },
-    {
-        "id": 19576,
-        "top": true,
-        "name": "Chapéu da Proteção Divina",
+        "name": "Aura Anil do Iniciante",
         "viewID": 0
     },
     {
@@ -126,93 +327,27 @@
         "viewID": 0
     },
     {
-        "id": 31091,
-        "top": true,
-        "name": "Chuva Dourada",
-        "viewID": 0
-    },
-    {
-        "id": 20548,
-        "garment": true,
-        "name": "Aura de Poring",
-        "viewID": 0
-    },
-    {
-        "id": 20344,
-        "bot": true,
-        "name": "Balões de Festa",
-        "viewID": 0
-    },
-    {
-        "id": 20547,
-        "garment": true,
-        "name": "Mil e Uma Assombrações",
-        "viewID": 0
-    },
-    {
-        "id": 20551,
-        "garment": true,
-        "name": "Aura Azul do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 19587,
-        "top": true,
-        "name": "Visual do Rei Poring",
-        "viewID": 0
-    },
-    {
-        "id": 20549,
-        "garment": true,
-        "name": "Aura Cerúlea do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 19602,
-        "top": true,
-        "name": "Chapéu Invisível",
-        "viewID": 0
-    },
-    {
-        "id": 19603,
-        "mid": true,
-        "name": "Óculos Invisíveis",
-        "viewID": 0
-    },
-    {
-        "id": 480097,
-        "garment": true,
-        "name": "Aura Nevada",
-        "viewID": 0
-    },
-    {
-        "id": 31602,
-        "top": true,
-        "name": "Brasão de Midgard",
-        "viewID": 0
-    },
-    {
         "id": 480131,
         "garment": true,
         "name": "Chama Circular",
         "viewID": 0
     },
     {
-        "id": 20550,
-        "garment": true,
-        "name": "Aura Púrpura do Iniciante",
+        "id": 31316,
+        "bot": true,
+        "name": "Revoada de Borboletas",
         "viewID": 0
     },
     {
-        "id": 20346,
-        "top": true,
-        "name": "Chapéu de Batedor",
-        "viewID": 0
-    },
-    {
-        "id": 31313,
+        "id": 20209,
         "mid": true,
-        "name": "Asas do Anjo Renegado",
+        "name": "Bolhas de Sabão",
+        "viewID": 0
+    },
+    {
+        "id": 20202,
+        "bot": true,
+        "name": "Balão de Deviruchi",
         "viewID": 0
     },
     {
@@ -234,162 +369,15 @@
         "viewID": 0
     },
     {
-        "id": 20209,
+        "id": 20062,
+        "top": true,
+        "name": "Brilho do Sol Nascente",
+        "viewID": 0
+    },
+    {
+        "id": 31313,
         "mid": true,
-        "name": "Bolhas de Sabão",
-        "viewID": 0
-    },
-    {
-        "id": 20609,
-        "garment": true,
-        "name": "Aura Anil",
-        "viewID": 0
-    },
-    {
-        "id": 400073,
-        "top": true,
-        "name": "Pétalas de Rosa",
-        "viewID": 0
-    },
-    {
-        "id": 20608,
-        "garment": true,
-        "name": "Aura Anil do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20601,
-        "garment": true,
-        "name": "Aura Carmesim do Iniciante",
-        "viewID": 0
-    },
-    {
-        "id": 20950,
-        "garment": true,
-        "name": "Aura Alaranjada",
-        "viewID": 0
-    },
-    {
-        "mid": true,
-        "name": "Máscara de Lude",
-        "id": 19918,
-        "bot": true,
-        "viewID": 0
-    },
-    {
-        "id": 31202,
-        "top": true,
-        "name": "Quepe do Serumaninho",
-        "viewID": 0
-    },
-    {
-        "id": 31201,
-        "top": true,
-        "name": "Coroa da Grandeza",
-        "viewID": 0
-    },
-    {
-        "top": true,
-        "mid": true,
-        "name": "Máscara de Sussurro Assustador",
-        "id": 19920,
-        "bot": true,
-        "viewID": 0
-    },
-    {
-        "id": 31193,
-        "top": true,
-        "name": "Chapéu de Ahat",
-        "viewID": 0
-    },
-    {
-        "id": 19917,
-        "top": true,
-        "name": "Chapéu de Abóbora Iluminado",
-        "viewID": 0
-    },
-    {
-        "id": 20202,
-        "bot": true,
-        "name": "Balão de Deviruchi",
-        "viewID": 0
-    },
-    {
-        "id": 20566,
-        "garment": true,
-        "name": "Aura Argêntea",
-        "viewID": 0
-    },
-    {
-        "id": 31942,
-        "mid": true,
-        "name": "Rosas Românticas",
-        "viewID": 0
-    },
-    {
-        "id": 19944,
-        "top": true,
-        "name": "Fadinha Angelical",
-        "viewID": 0
-    },
-    {
-        "id": 480203,
-        "garment": true,
-        "name": "Círculo Mágico",
-        "viewID": 0
-    },
-    {
-        "id": 480205,
-        "garment": true,
-        "name": "Aura Astrológica",
-        "viewID": 0
-    },
-    {
-        "id": 410127,
-        "mid": true,
-        "name": "Holofote",
-        "viewID": 0
-    },
-    {
-        "id": 20569,
-        "garment": true,
-        "name": "Aura Esmeralda",
-        "viewID": 0
-    },
-    {
-        "id": 20567,
-        "garment": true,
-        "name": "Aura Gótica",
-        "viewID": 0
-    },
-    {
-        "id": 20568,
-        "garment": true,
-        "name": "Aura Dourada",
-        "viewID": 0
-    },
-    {
-        "id": 20240,
-        "bot": true,
-        "name": "Flocos de Neve",
-        "viewID": 0
-    },
-    {
-        "id": 20285,
-        "bot": true,
-        "name": "Aura de Amatsu",
-        "viewID": 0
-    },
-    {
-        "id": 410051,
-        "mid": true,
-        "name": "Mini Geada",
-        "viewID": 0
-    },
-    {
-        "id": 20251,
-        "top": true,
-        "name": "Capuz da Pastora",
+        "name": "Asas do Anjo Renegado",
         "viewID": 0
     },
     {
@@ -399,9 +387,9 @@
         "viewID": 0
     },
     {
-        "id": 24422,
-        "garment": true,
-        "name": "Aura Laranja do Iniciante",
+        "id": 31289,
+        "bot": true,
+        "name": "Asinhas Estilosas (Baixo)",
         "viewID": 0
     },
     {
@@ -411,45 +399,87 @@
         "viewID": 0
     },
     {
-        "id": 20583,
+        "id": 20950,
         "garment": true,
-        "name": "Estrela Guia",
+        "name": "Aura Alaranjada",
         "viewID": 0
     },
     {
-        "id": 31289,
-        "bot": true,
-        "name": "Asinhas Estilosas (Baixo)",
-        "viewID": 0
-    },
-    {
-        "id": 31391,
-        "mid": true,
-        "name": "Cristal Exuberante",
-        "viewID": 0
-    },
-    {
-        "id": 20557,
+        "id": 480203,
         "garment": true,
-        "name": "Aura Dourada do Iniciante",
+        "name": "Círculo Mágico",
         "viewID": 0
     },
     {
-        "id": 5914,
-        "bot": true,
-        "name": "Aura Esplêndida",
+        "id": 24422,
+        "garment": true,
+        "name": "Aura Laranja do Iniciante",
         "viewID": 0
     },
     {
-        "id": 20439,
-        "mid": true,
-        "name": "Aura Solar",
+        "id": 480205,
+        "garment": true,
+        "name": "Aura Astrológica",
         "viewID": 0
     },
     {
-        "id": 20062,
+        "id": 20548,
+        "garment": true,
+        "name": "Aura de Poring",
+        "viewID": 0
+    },
+    {
+        "id": 31602,
         "top": true,
-        "name": "Brilho do Sol Nascente",
+        "name": "Brasão de Midgard",
+        "viewID": 0
+    },
+    {
+        "id": 20535,
+        "garment": true,
+        "name": "Holograma Futurista",
+        "viewID": 0
+    },
+    {
+        "id": 20519,
+        "garment": true,
+        "name": "Aura de Folhas de Outono",
+        "viewID": 0
+    },
+    {
+        "id": 20515,
+        "garment": true,
+        "name": "Círculo de Conjuração",
+        "viewID": 0
+    },
+    {
+        "id": 20537,
+        "garment": true,
+        "name": "Folhas Dançantes",
+        "viewID": 0
+    },
+    {
+        "id": 20538,
+        "garment": true,
+        "name": "Círculo Arco-íris",
+        "viewID": 0
+    },
+    {
+        "id": 31435,
+        "top": true,
+        "name": "Gorro de Tricô Hipster",
+        "viewID": 0
+    },
+    {
+        "id": 20522,
+        "garment": true,
+        "name": "Miaura",
+        "viewID": 0
+    },
+    {
+        "id": 31515,
+        "mid": true,
+        "name": "Gatinho Curioso",
         "viewID": 0
     },
     {
@@ -460,15 +490,21 @@
         "viewID": 0
     },
     {
+        "id": 20524,
+        "garment": true,
+        "name": "Asas Holográficas",
+        "viewID": 0
+    },
+    {
         "id": 480296,
         "garment": true,
         "name": "Fragrância de Rosas",
         "viewID": 0
     },
     {
-        "id": 20537,
-        "garment": true,
-        "name": "Folhas Dançantes",
+        "id": 20439,
+        "mid": true,
+        "name": "Aura Solar",
         "viewID": 0
     },
     {
@@ -478,33 +514,15 @@
         "viewID": 0
     },
     {
-        "id": 20535,
+        "id": 20547,
         "garment": true,
-        "name": "Holograma Futurista",
+        "name": "Mil e Uma Assombrações",
         "viewID": 0
     },
     {
-        "id": 31515,
-        "mid": true,
-        "name": "Gatinho Curioso",
-        "viewID": 0
-    },
-    {
-        "id": 31435,
-        "top": true,
-        "name": "Gorro de Tricô Hipster",
-        "viewID": 0
-    },
-    {
-        "id": 20524,
-        "garment": true,
-        "name": "Asas Holográficas",
-        "viewID": 0
-    },
-    {
-        "id": 20519,
-        "garment": true,
-        "name": "Aura de Folhas de Outono",
+        "id": 5914,
+        "bot": true,
+        "name": "Aura Esplêndida",
         "viewID": 0
     },
     {
@@ -514,22 +532,10 @@
         "viewID": 0
     },
     {
-        "id": 20515,
+        "id": 20765,
         "garment": true,
-        "name": "Círculo de Conjuração",
-        "viewID": 0
-    },
-    {
-        "id": 20522,
-        "garment": true,
-        "name": "Miaura",
-        "viewID": 0
-    },
-    {
-        "id": 20538,
-        "garment": true,
-        "name": "Círculo Arco-íris",
-        "viewID": 0
+        "name": "Asas Imaculadas de Arcanjo",
+        "viewID": 1
     },
     {
         "top": true,
@@ -539,21 +545,15 @@
         "viewID": 1
     },
     {
-        "id": 20765,
+        "id": 20521,
         "garment": true,
-        "name": "Asas Imaculadas de Arcanjo",
-        "viewID": 1
+        "name": "Miau-chila de Bichano Preto",
+        "viewID": 2
     },
     {
         "id": 20512,
         "garment": true,
         "name": "Mochila de Caça",
-        "viewID": 2
-    },
-    {
-        "id": 20521,
-        "garment": true,
-        "name": "Miau-chila de Bichano Preto",
         "viewID": 2
     },
     {
@@ -635,15 +635,15 @@
         "viewID": 14
     },
     {
-        "id": 20505,
-        "garment": true,
-        "name": "Asas de Quero",
-        "viewID": 15
-    },
-    {
         "id": 19625,
         "top": true,
         "name": "Orelhas Lunares",
+        "viewID": 15
+    },
+    {
+        "id": 20505,
+        "garment": true,
+        "name": "Asas de Quero",
         "viewID": 15
     },
     {
@@ -659,27 +659,27 @@
         "viewID": 17
     },
     {
-        "id": 19629,
-        "top": true,
-        "name": "Diadema em Ouro",
-        "viewID": 19
-    },
-    {
         "id": 20510,
         "garment": true,
         "name": "Asas das Mil Lâminas",
         "viewID": 19
     },
     {
-        "id": 20587,
-        "garment": true,
-        "name": "Asas da Justiça",
-        "viewID": 20
+        "id": 19629,
+        "top": true,
+        "name": "Diadema em Ouro",
+        "viewID": 19
     },
     {
         "id": 19982,
         "top": true,
         "name": "Gorro de Noel",
+        "viewID": 20
+    },
+    {
+        "id": 20587,
+        "garment": true,
+        "name": "Asas da Justiça",
         "viewID": 20
     },
     {
@@ -707,15 +707,15 @@
         "viewID": 24
     },
     {
-        "id": 20517,
-        "garment": true,
-        "name": "Miau-chila de Bichano",
-        "viewID": 25
-    },
-    {
         "id": 19783,
         "bot": true,
         "name": "Bigode Grosso",
+        "viewID": 25
+    },
+    {
+        "id": 20517,
+        "garment": true,
+        "name": "Miau-chila de Bichano",
         "viewID": 25
     },
     {
@@ -821,27 +821,27 @@
         "viewID": 43
     },
     {
-        "id": 19790,
-        "top": true,
-        "name": "Véu de Matrimônio",
-        "viewID": 44
-    },
-    {
         "id": 20543,
         "garment": true,
         "name": "Mochila de Poring Assombrado",
         "viewID": 44
     },
     {
-        "id": 20545,
-        "garment": true,
-        "name": "Asas de Natal",
-        "viewID": 45
+        "id": 19790,
+        "top": true,
+        "name": "Véu de Matrimônio",
+        "viewID": 44
     },
     {
         "id": 19630,
         "top": true,
         "name": "Coroa Valiosa",
+        "viewID": 45
+    },
+    {
+        "id": 20545,
+        "garment": true,
+        "name": "Asas de Natal",
         "viewID": 45
     },
     {
@@ -857,15 +857,15 @@
         "viewID": 47
     },
     {
-        "id": 20161,
-        "top": true,
-        "name": "Chapéu da Guarda de Prontera",
-        "viewID": 48
-    },
-    {
         "id": 20571,
         "garment": true,
         "name": "Voo das Valquírias",
+        "viewID": 48
+    },
+    {
+        "id": 20161,
+        "top": true,
+        "name": "Chapéu da Guarda de Prontera",
         "viewID": 48
     },
     {
@@ -901,15 +901,15 @@
         "viewID": 52
     },
     {
-        "id": 19528,
-        "bot": true,
-        "name": "Bevor de Plástico",
-        "viewID": 53
-    },
-    {
         "id": 20576,
         "garment": true,
         "name": "Garfo do Glutão",
+        "viewID": 53
+    },
+    {
+        "id": 19528,
+        "bot": true,
+        "name": "Bevor de Plástico",
         "viewID": 53
     },
     {
@@ -943,15 +943,15 @@
         "viewID": 57
     },
     {
-        "id": 20987,
-        "garment": true,
-        "name": "Mochila de Angeling",
-        "viewID": 58
-    },
-    {
         "id": 19525,
         "top": true,
         "name": "Óculos Elegantes",
+        "viewID": 58
+    },
+    {
+        "id": 20987,
+        "garment": true,
+        "name": "Mochila de Angeling",
         "viewID": 58
     },
     {
@@ -985,15 +985,15 @@
         "viewID": 63
     },
     {
-        "id": 20586,
-        "garment": true,
-        "name": "Brilho da Lua Crescente",
-        "viewID": 64
-    },
-    {
         "id": 19637,
         "top": true,
         "name": "Chapéu de Ambulatório",
+        "viewID": 64
+    },
+    {
+        "id": 20586,
+        "garment": true,
+        "name": "Brilho da Lua Crescente",
         "viewID": 64
     },
     {
@@ -1016,15 +1016,15 @@
         "viewID": 66
     },
     {
-        "id": 19639,
-        "top": true,
-        "name": "Chapéu Rural",
-        "viewID": 67
-    },
-    {
         "id": 20590,
         "garment": true,
         "name": "Cruz do Druida Maligno",
+        "viewID": 67
+    },
+    {
+        "id": 19639,
+        "top": true,
+        "name": "Chapéu Rural",
         "viewID": 67
     },
     {
@@ -1040,22 +1040,16 @@
         "viewID": 69
     },
     {
-        "id": 20592,
-        "garment": true,
-        "name": "Bolsa de Brinquedos",
-        "viewID": 70
-    },
-    {
         "id": 19941,
         "top": true,
         "name": "Protetores de Ouvido",
         "viewID": 70
     },
     {
-        "id": 20593,
+        "id": 20592,
         "garment": true,
-        "name": "Asas das Lágrimas de Gelo",
-        "viewID": 71
+        "name": "Bolsa de Brinquedos",
+        "viewID": 70
     },
     {
         "id": 19939,
@@ -1064,10 +1058,10 @@
         "viewID": 71
     },
     {
-        "id": 480055,
+        "id": 20593,
         "garment": true,
-        "name": "Asas Encantadas de Rudra",
-        "viewID": 72
+        "name": "Asas das Lágrimas de Gelo",
+        "viewID": 71
     },
     {
         "id": 19797,
@@ -1076,15 +1070,21 @@
         "viewID": 72
     },
     {
-        "id": 19551,
-        "mid": true,
-        "name": "Símbolo Élfico",
-        "viewID": 73
+        "id": 480055,
+        "garment": true,
+        "name": "Asas Encantadas de Rudra",
+        "viewID": 72
     },
     {
         "id": 480056,
         "garment": true,
         "name": "Asas Amaldiçoadas de Arcanjo",
+        "viewID": 73
+    },
+    {
+        "id": 19551,
+        "mid": true,
+        "name": "Símbolo Élfico",
         "viewID": 73
     },
     {
@@ -1094,27 +1094,27 @@
         "viewID": 75
     },
     {
-        "id": 19913,
-        "top": true,
-        "name": "Chapéu de Esterco",
-        "viewID": 76
-    },
-    {
         "id": 20594,
         "garment": true,
         "name": "Laço Pomposo",
         "viewID": 76
     },
     {
-        "id": 20059,
-        "mid": true,
-        "name": "Máscara de Soldagem",
-        "viewID": 79
+        "id": 19913,
+        "top": true,
+        "name": "Chapéu de Esterco",
+        "viewID": 76
     },
     {
         "id": 20597,
         "garment": true,
         "name": "Foice Maligna",
+        "viewID": 79
+    },
+    {
+        "id": 20059,
+        "mid": true,
+        "name": "Máscara de Soldagem",
         "viewID": 79
     },
     {
@@ -1136,15 +1136,15 @@
         "viewID": 82
     },
     {
-        "id": 19734,
-        "mid": true,
-        "name": "Amplificador Ocular",
-        "viewID": 83
-    },
-    {
         "id": 20599,
         "garment": true,
         "name": "Asas de Sakura",
+        "viewID": 83
+    },
+    {
+        "id": 19734,
+        "mid": true,
+        "name": "Amplificador Ocular",
         "viewID": 83
     },
     {
@@ -1196,15 +1196,15 @@
         "viewID": 89
     },
     {
-        "id": 20612,
-        "garment": true,
-        "name": "Escudo de Oridecon",
-        "viewID": 90
-    },
-    {
         "id": 31712,
         "bot": true,
         "name": "Respirador",
+        "viewID": 90
+    },
+    {
+        "id": 20612,
+        "garment": true,
+        "name": "Escudo de Oridecon",
         "viewID": 90
     },
     {
@@ -1310,15 +1310,15 @@
         "viewID": 107
     },
     {
-        "id": 480117,
-        "garment": true,
-        "name": "Guitarra de Rockstar",
-        "viewID": 108
-    },
-    {
         "id": 20453,
         "top": true,
         "name": "Fardo de Roupas",
+        "viewID": 108
+    },
+    {
+        "id": 480117,
+        "garment": true,
+        "name": "Guitarra de Rockstar",
         "viewID": 108
     },
     {
@@ -1358,15 +1358,15 @@
         "viewID": 113
     },
     {
-        "id": 480118,
-        "garment": true,
-        "name": "Espada do General",
-        "viewID": 114
-    },
-    {
         "id": 19533,
         "top": true,
         "name": "Touca de Esporo",
+        "viewID": 114
+    },
+    {
+        "id": 480118,
+        "garment": true,
+        "name": "Espada do General",
         "viewID": 114
     },
     {
@@ -1382,27 +1382,27 @@
         "viewID": 116
     },
     {
-        "id": 480130,
-        "garment": true,
-        "name": "Raguaraná",
-        "viewID": 117
-    },
-    {
         "id": 20348,
         "top": true,
         "name": "Chapéu de Veraneio",
         "viewID": 117
     },
     {
-        "id": 20304,
-        "top": true,
-        "name": "Touca de Fumacento",
-        "viewID": 118
+        "id": 480130,
+        "garment": true,
+        "name": "Raguaraná",
+        "viewID": 117
     },
     {
         "id": 480137,
         "garment": true,
         "name": "Mochila de Filir",
+        "viewID": 118
+    },
+    {
+        "id": 20304,
+        "top": true,
+        "name": "Touca de Fumacento",
         "viewID": 118
     },
     {
@@ -1418,15 +1418,15 @@
         "viewID": 122
     },
     {
-        "id": 480158,
-        "garment": true,
-        "name": "Mochila Lunática",
-        "viewID": 123
-    },
-    {
         "id": 19547,
         "top": true,
         "name": "Touca de Anime",
+        "viewID": 123
+    },
+    {
+        "id": 480158,
+        "garment": true,
+        "name": "Mochila Lunática",
         "viewID": 123
     },
     {
@@ -1484,15 +1484,15 @@
         "viewID": 131
     },
     {
-        "id": 20207,
-        "top": true,
-        "name": "Bandana Listrada",
-        "viewID": 133
-    },
-    {
         "id": 20618,
         "garment": true,
         "name": "Mochila de Coelho Angorá",
+        "viewID": 133
+    },
+    {
+        "id": 20207,
+        "top": true,
+        "name": "Bandana Listrada",
         "viewID": 133
     },
     {
@@ -1617,15 +1617,15 @@
         "viewID": 156
     },
     {
-        "id": 480237,
-        "garment": true,
-        "name": "Katanas do Mestre Tengu",
-        "viewID": 158
-    },
-    {
         "id": 19781,
         "mid": true,
         "name": "Orelhas Angelicais",
+        "viewID": 158
+    },
+    {
+        "id": 480237,
+        "garment": true,
+        "name": "Katanas do Mestre Tengu",
         "viewID": 158
     },
     {
@@ -1677,15 +1677,15 @@
         "viewID": 166
     },
     {
-        "id": 480295,
-        "garment": true,
-        "name": "Ramo Primaveril",
-        "viewID": 167
-    },
-    {
         "id": 20224,
         "top": true,
         "name": "Laço Vermelho Delicado",
+        "viewID": 167
+    },
+    {
+        "id": 480295,
+        "garment": true,
+        "name": "Ramo Primaveril",
         "viewID": 167
     },
     {
@@ -2500,6 +2500,12 @@
         "viewID": 418
     },
     {
+        "id": 31173,
+        "top": true,
+        "name": "Calopsita",
+        "viewID": 419
+    },
+    {
         "id": 19956,
         "top": true,
         "name": "Chapéu Vermelho de Fanfarra",
@@ -2606,15 +2612,15 @@
         "viewID": 454
     },
     {
-        "id": 19803,
-        "top": true,
-        "name": "Cata-vento Vermelho",
-        "viewID": 456
-    },
-    {
         "id": 31320,
         "top": true,
         "name": "Cata-Vento Festivo",
+        "viewID": 456
+    },
+    {
+        "id": 19803,
+        "top": true,
+        "name": "Cata-vento Vermelho",
         "viewID": 456
     },
     {
@@ -2895,6 +2901,13 @@
         "top": true,
         "name": "Boina de Marinheiro Aposentado",
         "viewID": 529
+    },
+    {
+        "mid": true,
+        "name": "Máscara de 50 Reais",
+        "id": 31256,
+        "bot": true,
+        "viewID": 530
     },
     {
         "id": 19536,
@@ -3340,15 +3353,15 @@
         "viewID": 660
     },
     {
-        "id": 31262,
-        "mid": true,
-        "name": "Óculos Descartáveis",
-        "viewID": 661
-    },
-    {
         "id": 19954,
         "mid": true,
         "name": "Óculos Visuais 3D",
+        "viewID": 661
+    },
+    {
+        "id": 31262,
+        "mid": true,
+        "name": "Óculos Descartáveis",
         "viewID": 661
     },
     {
@@ -3558,6 +3571,12 @@
         "top": true,
         "name": "Árvore de Natal",
         "viewID": 727
+    },
+    {
+        "id": 19857,
+        "top": true,
+        "name": "Rei Camarão",
+        "viewID": 728
     },
     {
         "id": 20008,
@@ -3888,6 +3907,12 @@
         "viewID": 857
     },
     {
+        "id": 20179,
+        "top": true,
+        "name": "Touca de Yoyo",
+        "viewID": 858
+    },
+    {
         "id": 31247,
         "top": true,
         "name": "Chapopótamo",
@@ -4122,7 +4147,7 @@
     },
     {
         "id": 19870,
-        "top": true,
+        "garment": true,
         "name": "Cartola do Coelho Mágico",
         "viewID": 923
     },
@@ -4228,6 +4253,12 @@
         "bot": true,
         "name": "Espírito da Banshee",
         "viewID": 959
+    },
+    {
+        "id": 20345,
+        "mid": true,
+        "name": "Barbatanas de Netuno",
+        "viewID": 960
     },
     {
         "id": 19685,
@@ -4405,6 +4436,12 @@
         "viewID": 999
     },
     {
+        "id": 20104,
+        "top": true,
+        "name": "Picky Feliz",
+        "viewID": 1001
+    },
+    {
         "id": 19777,
         "top": true,
         "name": "Estrelinha Lumma",
@@ -4561,15 +4598,15 @@
         "viewID": 1050
     },
     {
-        "id": 20150,
-        "bot": true,
-        "name": "Leque da Ventania",
-        "viewID": 1051
-    },
-    {
         "id": 31319,
         "bot": true,
         "name": "Leque Festivo",
+        "viewID": 1051
+    },
+    {
+        "id": 20150,
+        "bot": true,
+        "name": "Leque da Ventania",
         "viewID": 1051
     },
     {
@@ -5077,6 +5114,12 @@
         "top": true,
         "name": "Coroa de Dewata",
         "viewID": 1217
+    },
+    {
+        "id": 31785,
+        "mid": true,
+        "name": "Barbatanas de Tritão",
+        "viewID": 1218
     },
     {
         "id": 20467,
@@ -6357,17 +6400,17 @@
         "viewID": 1496
     },
     {
-        "top": true,
         "mid": true,
-        "name": "Máscara do Alquimista",
-        "id": 31052,
+        "name": "Máscara do Alquimista (Variação)",
+        "id": 31578,
         "bot": true,
         "viewID": 1497
     },
     {
+        "top": true,
         "mid": true,
-        "name": "Máscara do Alquimista (Variação)",
-        "id": 31578,
+        "name": "Máscara do Alquimista",
+        "id": 31052,
         "bot": true,
         "viewID": 1497
     },
@@ -7300,15 +7343,15 @@
         "viewID": 1703
     },
     {
-        "id": 31437,
-        "mid": true,
-        "name": "Pequeno Pinguim",
-        "viewID": 1705
-    },
-    {
         "id": 31480,
         "mid": true,
         "name": "Gioia Dorminhoco",
+        "viewID": 1705
+    },
+    {
+        "id": 31437,
+        "mid": true,
+        "name": "Pequeno Pinguim",
         "viewID": 1705
     },
     {
@@ -7437,6 +7480,12 @@
         "top": true,
         "name": "Chapéu do Desabrochar",
         "viewID": 1727
+    },
+    {
+        "id": 31481,
+        "top": true,
+        "name": "Gatoneco",
+        "viewID": 1731
     },
     {
         "id": 31732,
@@ -8111,15 +8160,15 @@
         "viewID": 1880
     },
     {
-        "id": 31813,
-        "mid": true,
-        "name": "Lunático Simpático",
-        "viewID": 1881
-    },
-    {
         "id": 19459,
         "bot": true,
         "name": "Bebê Lunático",
+        "viewID": 1881
+    },
+    {
+        "id": 31813,
+        "mid": true,
+        "name": "Lunático Simpático",
         "viewID": 1881
     },
     {
@@ -9634,6 +9683,12 @@
         "viewID": 2265
     },
     {
+        "id": 400458,
+        "top": true,
+        "name": "Faixa da Preula Azul",
+        "viewID": 2268
+    },
+    {
         "id": 420162,
         "bot": true,
         "name": "Peruca Preta Estelar",
@@ -9957,6 +10012,12 @@
         "bot": true,
         "name": "Peruca de Skia",
         "viewID": 2389
+    },
+    {
+        "id": 400450,
+        "top": true,
+        "name": "Leão Rei",
+        "viewID": 2390
     },
     {
         "id": 400462,
